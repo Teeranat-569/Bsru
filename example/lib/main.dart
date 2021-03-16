@@ -5,8 +5,17 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_google_maps/flutter_google_maps.dart';
+import 'package:intl/date_symbol_data_local.dart';
+import 'package:intl/intl.dart';
+import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
+
+import 'home.dart';
+import 'splash_screen.dart';
 
 void main() {
+  Intl.defaultLocale = "th" ;
+  initializeDateFormatting();
+  PdfView.platform = SurfaceAndroidPdfViewer();
   GoogleMap.init('AIzaSyA0yrWU1w1pT0jkQ-nHKZL5qL3j-TZpLj0');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
@@ -16,11 +25,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Google Map Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
-      home: MyHomePage(),
+      // title: 'Google Map Demo',
+      // theme: ThemeData(
+      //   primarySwatch: Colors.blue,
+      // ),
+      // home: MyHomePage(),
+      initialRoute: '/',
+      routes: <String, WidgetBuilder>{
+        '/': (BuildContext context) => SplashScreen(),
+        '/home': (BuildContext context) => Home(),
+      },
+      theme: ThemeData(fontFamily: 'Pridi',
+      primarySwatch: Colors.purple),
     );
   }
 }
@@ -155,6 +171,8 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ];
 
+      
+
   @override
   Widget build(BuildContext context) => Scaffold(
         key: _scaffoldKey,
@@ -169,6 +187,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 markers: {
                   Marker(
                     GeoCoord(13.73242603347886, 100.4903190549412),
+                     
+                  ),
+                  Marker(
+                    GeoCoord(13.731498139213253, 100.49099313835245,),
+                     
                   ),
                 },
                 initialZoom: 18,
@@ -192,68 +215,68 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Positioned(
-              top: 16,
-              left: 16,
-              child: FloatingActionButton(
-                child: Icon(Icons.person_pin_circle),
-                onPressed: () {
-                  final bounds = GeoCoordBounds(
-                    northeast: GeoCoord(13.73242603347886, 100.4903190549412),
-                    southwest: GeoCoord(13.73242603347886, 100.4903190549412),
-                  );
-                  GoogleMap.of(_key).moveCameraBounds(bounds);
-                  GoogleMap.of(_key).addMarkerRaw(
-                    GeoCoord(
-                      (bounds.northeast.latitude + bounds.southwest.latitude) /
-                          2,
-                      (bounds.northeast.longitude +
-                              bounds.southwest.longitude) /
-                          2,
-                    ),
-                    onTap: (markerId) async {
-                      await showDialog(
-                        context: context,
-                        builder: (context) => AlertDialog(
-                          content: Text(
-                            'This dialog was opened by tapping on the marker!\n'
-                            'Marker ID is $markerId',
-                          ),
-                          actions: <Widget>[
-                            FlatButton(
-                              onPressed: Navigator.of(context).pop,
-                              child: Text('CLOSE'),
-                            ),
-                          ],
-                        ),
-                      );
-                    },
-                  );
-                },
-              ),
-            ),
-            Positioned(
-              top: 16,
-              right: kIsWeb ? 60 : 16,
-              child: FloatingActionButton(
-                onPressed: () {
-                  if (_darkMapStyle) {
-                    GoogleMap.of(_key).changeMapStyle(null);
-                    _mapStyle = null;
-                  } else {
-                    GoogleMap.of(_key).changeMapStyle(darkMapStyle);
-                    _mapStyle = darkMapStyle;
-                  }
+            // Positioned(
+            //   top: 16,
+            //   left: 16,
+            //   child: FloatingActionButton(
+            //     child: Icon(Icons.person_pin_circle),
+            //     onPressed: () {
+            //       final bounds = GeoCoordBounds(
+            //         northeast: GeoCoord(13.73242603347886, 100.4903190549412),
+            //         southwest: GeoCoord(13.73242603347886, 100.4903190549412),
+            //       );
+            //       GoogleMap.of(_key).moveCameraBounds(bounds);
+            //       GoogleMap.of(_key).addMarkerRaw(
+            //         GeoCoord(
+            //           (bounds.northeast.latitude + bounds.southwest.latitude) /
+            //               2,
+            //           (bounds.northeast.longitude +
+            //                   bounds.southwest.longitude) /
+            //               2,
+            //         ),
+            //         onTap: (markerId) async {
+            //           await showDialog(
+            //             context: context,
+            //             builder: (context) => AlertDialog(
+            //               content: Text(
+            //                 'This dialog was opened by tapping on the marker!\n'
+            //                 'Marker ID is $markerId',
+            //               ),
+            //               actions: <Widget>[
+            //                 FlatButton(
+            //                   onPressed: Navigator.of(context).pop,
+            //                   child: Text('CLOSE'),
+            //                 ),
+            //               ],
+            //             ),
+            //           );
+            //         },
+            //       );
+            //     },
+            //   ),
+            // ),
+            // Positioned(
+            //   top: 16,
+            //   right: kIsWeb ? 60 : 16,
+            //   child: FloatingActionButton(
+            //     onPressed: () {
+            //       if (_darkMapStyle) {
+            //         GoogleMap.of(_key).changeMapStyle(null);
+            //         _mapStyle = null;
+            //       } else {
+            //         GoogleMap.of(_key).changeMapStyle(darkMapStyle);
+            //         _mapStyle = darkMapStyle;
+            //       }
 
-                  setState(() => _darkMapStyle = !_darkMapStyle);
-                },
-                backgroundColor: _darkMapStyle ? Colors.black : Colors.white,
-                child: Icon(
-                  _darkMapStyle ? Icons.wb_sunny : Icons.brightness_3,
-                  color: _darkMapStyle ? Colors.white : Colors.black,
-                ),
-              ),
-            ),
+            //       setState(() => _darkMapStyle = !_darkMapStyle);
+            //     },
+            //     backgroundColor: _darkMapStyle ? Colors.black : Colors.white,
+            //     child: Icon(
+            //       _darkMapStyle ? Icons.wb_sunny : Icons.brightness_3,
+            //       color: _darkMapStyle ? Colors.white : Colors.black,
+            //     ),
+            //   ),
+            // ),
             // Positioned(
             //   left: 16,
             //   right: kIsWeb ? 0 : 0,

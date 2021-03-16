@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "874699511157",
+    "project_id": "bsru-app",
+    "storage_bucket": "bsru-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874699511157:android:956418639afe565894af3c",
+        "android_client_info": {
+          "package_name": "marchdev.tk.flutter_google_maps_example"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "874699511157-9kkmqnqpmq98g9omlb22ee9qgju978ie.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAvzcb7zvAkCdK1RkrxEZgDSrL0fzid7pI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "874699511157-9kkmqnqpmq98g9omlb22ee9qgju978ie.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

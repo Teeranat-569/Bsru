@@ -10,8 +10,124 @@ dependencies:
 
   flutter_google_maps:
     path: ../
+  cupertino_icons: ^1.0.1
+  imagebutton: ^0.0.6
+  url_launcher: ^5.7.10
+  shared_preferences: ^0.5.12+4
+  firebase_core: ^0.5.0+1
+  cloud_firestore: ^0.14.1+3
+  firebase_storage: ^4.0.1
+  datetime_picker_formfield: ^1.0.0
+  buddhist_datetime_dateformat: ^1.0.6
+  fluttertoast: ^7.1.8
+  firebase_auth: 0.18.1+2
+  image_picker: 
+  # flutter_pdfview: ^1.0.4
+  pdf_viewer_plugin: ^1.1.1
+  path_provider: ^1.6.27
+  webview_flutter: ^1.0.7
+  intl:
+  http: ^0.12.2
 
 flutter:
   uses-material-design: true
   assets:
     - assets/images/map-marker-warehouse.png
+    - images/Logo_BSRU.png
+    - images/BSRU.png
+    - images/bsru-1.png
+    - images/history-book.png
+    - images/news.png
+    - images/penitentiary.png
+    - images/person.png
+    - images/employee.png
+    - images/schedule.png
+    - images/22.png
+    - images/information.png
+    - images/map.png
+    - images/66.png
+    - images/file.png
+    - images/contact.png
+    - images/buttonBG.png
+    - images/facebook.png
+    - images/domain.png
+    - images/footer.png
+    - images/address.png
+    - images/agencyOne.jpg
+    - images/cropped-banner.hrmd_.jpg
+    - images/cropped-web.jpg
+    - images/nn.png
+    - images/bv.png
+    - images/gd.jpg
+    - images/gw.jpg
+    - images/hr.jpg
+    - images/web.png
+    - images/gj.png
+    - images/fl.png
+    - images/cc.png
+    - images/y4.jpg
+    - images/ej.jpg
+    - images/Hard-Culture.jpg
+    - images/hd.jpg
+    - images/df.jpg
+    - images/hp.jpg
+    - images/BN.jpg
+    - images/gk.jpg
+    - images/pj.jpg
+    - images/ui.png
+    - images/histo1.png
+    - images/parchment.png
+    - images/BSRUhis.png
+    - images/headp1.jpg
+    - images/knowledge.png
+    - images/BSRU1-2.jpg
+    - images/executive.png
+    - images/Tarbsru.jpeg
+    - images/unnamed.jpg
+    - images/idea.png
+    - images/shuttle.png
+    - images/sci.png
+    - images/gradbanner.gif
+    - images/elec.jpg
+    - images/song.jpg
+    - images/human.png
+    - images/manage.png
+    - images/teah.png
+    - images/PopUp.png
+    - images/page.jpg
+    - images/hhoo.jpg
+    - images/key11.png
+    - images/web11.png
+    - images/diagram.png
+    - images/business.png
+    - images/document.png
+    - images/pie-chart.png
+    - images/calendar.png
+    - images/email.png
+    - images/steering-wheel.png
+    - images/search.png
+    - images/seo.png
+    - images/world-grid.png
+    - images/television.png
+    - images/bad-review.png
+    - images/radio-antenna.png
+    - images/certificate.png
+    - images/flat.png
+    - images/multimedia.png
+    - images/nurse.png
+    - images/sofa.png
+    - images/studentNew.png
+    - images/purse.png
+    - images/briefcase.png
+    - images/scholarship.png
+    - images/employeeii.png
+    - images/user.png
+  fonts:
+    - family: Pridi
+      fonts:
+        - asset: fonts/Pridi-Regular.ttf
+    - family: Sarabun
+      fonts:
+        - asset: fonts/Sarabun-Regular.ttf
+
+
