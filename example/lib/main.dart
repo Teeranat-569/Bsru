@@ -199,8 +199,8 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Icon(Icons.person_pin_circle),
                 onPressed: () {
                   final bounds = GeoCoordBounds(
-                    northeast: GeoCoord(34.021307, -117.432317),
-                    southwest: GeoCoord(33.835745, -117.712785),
+                    northeast: GeoCoord(13.73242603347886, 100.4903190549412),
+                    southwest: GeoCoord(13.73242603347886, 100.4903190549412),
                   );
                   GoogleMap.of(_key).moveCameraBounds(bounds);
                   GoogleMap.of(_key).addMarkerRaw(
