@@ -7,7 +7,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter_google_maps/flutter_google_maps.dart';
 
 void main() {
-  GoogleMap.init('API_KEY');
+  GoogleMap.init('AIzaSyA0yrWU1w1pT0jkQ-nHKZL5qL3j-TZpLj0');
   WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp());
 }
@@ -168,12 +168,12 @@ class _MyHomePageState extends State<MyHomePage> {
                 key: _key,
                 markers: {
                   Marker(
-                    GeoCoord(34.0469058, -118.3503948),
+                    GeoCoord(13.73242603347886, 100.4903190549412),
                   ),
                 },
-                initialZoom: 12,
+                initialZoom: 18,
                 initialPosition:
-                    GeoCoord(34.0469058, -118.3503948), // Los Angeles, CA
+                    GeoCoord(13.73242603347886, 100.4903190549412), // Los Angeles, CA
                 mapType: MapType.roadmap,
                 mapStyle: _mapStyle,
                 interactive: true,
@@ -254,26 +254,26 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            Positioned(
-              left: 16,
-              right: kIsWeb ? 60 : 16,
-              bottom: 16,
-              child: Row(
-                children: <Widget>[
-                  LayoutBuilder(
-                    builder: (context, constraints) =>
-                        constraints.maxWidth < 1000
-                            ? Row(children: _buildClearButtons())
-                            : Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: _buildClearButtons(),
-                              ),
-                  ),
-                  Spacer(),
-                  ..._buildAddButtons(),
-                ],
-              ),
-            ),
+            // Positioned(
+            //   left: 16,
+            //   right: kIsWeb ? 0 : 0,
+            //   bottom: 16,
+            //   child: Row(
+            //     children: <Widget>[
+            //       LayoutBuilder(
+            //         builder: (context, constraints) =>
+            //             constraints.maxWidth < 1000
+            //                 ? Row(children: _buildClearButtons())
+            //                 : Column(
+            //                     crossAxisAlignment: CrossAxisAlignment.start,
+            //                     children: _buildClearButtons(),
+            //                   ),
+            //       ),
+            //       Spacer(),
+            //       ..._buildAddButtons(),
+            //     ],
+            //   ),
+            // ),
           ],
         ),
       );
