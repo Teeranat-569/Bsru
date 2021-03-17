@@ -38,7 +38,8 @@ class _ContactPageState extends State<ContactPage> {
                   contact(),
                   contact2(),
                   SizedBox(height: 20),
-                  showMap()
+                  // showMap()
+                  showmapButton()
                 ],
               ),
             ),
@@ -85,27 +86,31 @@ class _ContactPageState extends State<ContactPage> {
     );
   }
 
-  Widget showMap() {
-    LatLng latlng = LatLng(13.732272022207257, 100.49022211024408);
-    CameraPosition cameraPosition = CameraPosition(
-      target: latlng,
-      zoom: 20.0,
-    );
-    return Container(
-      height: 300,
-      child: GoogleMap(
-        initialCameraPosition: cameraPosition,
-        mapType: MapType.normal,
-        onMapCreated: (controller) {},
-        markers: {
-          Marker(
-            icon: BitmapDescriptor.defaultMarkerWithHue(300),
-            markerId: MarkerId("1"),
-            position: latlng,
-            onTap: () {},
-            infoWindow: InfoWindow(title: 'll'),
+   Future _launchURLMAp() async {
+    const url = 'https://maps.app.goo.gl/DKoiVgDkk7bYTJSY7';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
+  Widget showmapButton() {
+    return RaisedButton(
+      color: Colors.cyan,
+      onPressed: () {
+
+        _launchURLMAp();
+      },
+      child: Row(mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.map_outlined,
+            color: Colors.white,
+            size: 50,
           ),
-        },
+          Text('แผนที่มหาวิทยาลัย',style: TextStyle(color: Colors.white,fontSize: 25),),
+        ],
       ),
     );
   }

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:webview_flutter/webview_flutter.dart';
 
@@ -6,6 +8,13 @@ class NewsPage extends StatefulWidget {
   _NewsPageState createState() => _NewsPageState();
 }     
 class _NewsPageState extends State<NewsPage> {
+
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    if (Platform.isAndroid) WebView.platform = SurfaceAndroidWebView();
+  }
   @override
   Widget build(BuildContext context) {
     return SafeArea(

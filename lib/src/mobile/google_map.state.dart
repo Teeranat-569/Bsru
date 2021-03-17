@@ -163,6 +163,7 @@ class GoogleMapState extends gmap.GoogleMapStateBase {
     String icon,
     String info,
     String infoSnippet,
+    double hue,
     ValueChanged<String> onTap,
     VoidCallback onInfoWindowTap,
   }) async {
@@ -179,6 +180,10 @@ class GoogleMapState extends gmap.GoogleMapStateBase {
     }());
 
     final key = position.toString();
+    final po11 = GeoCoord(13.73242603347886, 100.4903190549412);
+    final po2 = GeoCoord(13.731498139213253, 100.49099313835245);
+    final pohh = po11.toLatLng();
+    final pp = po2.toLatLng();
 
     if (_markers.containsKey(key)) return;
 
@@ -187,10 +192,14 @@ class GoogleMapState extends gmap.GoogleMapStateBase {
       markerId: markerId,
       onTap: onTap != null ? () => onTap(key) : null,
       consumeTapEvents: onTap != null,
-      position: position.toLatLng(),
-      icon: icon == null
-          ? BitmapDescriptor.defaultMarker
-          : await _getBmpDesc('${fixAssetPath(icon)}$icon'),
+      position: 
+      // pohh,
+      position.toLatLng(),
+      // icon: icon == null
+      icon: BitmapDescriptor.defaultMarkerWithHue(21),
+          // : 
+          // // BitmapDescriptor.defaultMarkerWithHue(21),
+          // await _getBmpDesc('${fixAssetPath(icon)}$icon'),
       infoWindow: info != null
           ? InfoWindow(
               title: info,
@@ -199,8 +208,32 @@ class GoogleMapState extends gmap.GoogleMapStateBase {
             )
           : null,
     );
+    // final marker2 = Marker(
+    //   markerId: markerId,
+    //   onTap: onTap != null ? () => onTap(key) : null,
+    //   consumeTapEvents: onTap != null,
+    //   position: pp,
+    //   // position.toLatLng(),
+    //   // icon: icon == null
+    //   icon: icon2 == null
+    //       ? BitmapDescriptor.defaultMarker
+    //       : BitmapDescriptor.defaultMarkerWithHue(212),
+    //       // await _getBmpDesc('${fixAssetPath(icon)}$icon'),
+    //   infoWindow: info != null
+    //       ? InfoWindow(
+    //           title: info,
+    //           snippet: infoSnippet,
+    //           onTap: onInfoWindowTap,
+    //         )
+    //       : null,
+    // );
 
-    _setState(() => _markers[key] = marker);
+
+setState(() {
+  _markers[key] = marker;
+  // _markers[key] = marker2;
+});
+    
   }
 
   @override

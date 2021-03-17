@@ -25,9 +25,11 @@ dependencies:
   # flutter_pdfview: ^1.0.4
   pdf_viewer_plugin: ^1.1.1
   path_provider: ^1.6.27
-  webview_flutter: ^1.0.7
+  webview_flutter: ^2.0.2
   intl:
   http: ^0.12.2
+  dio: ^3.0.10
+  provider:
 
 flutter:
   uses-material-design: true
@@ -122,6 +124,7 @@ flutter:
     - images/scholarship.png
     - images/employeeii.png
     - images/user.png
+    - images/maps.png
   fonts:
     - family: Pridi
       fonts:

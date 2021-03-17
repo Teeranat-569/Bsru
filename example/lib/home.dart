@@ -55,8 +55,8 @@ class _HomeState extends State<Home> {
                 SizedBox(
                   height: 20,
                 ),
-                // Image.asset('images/page.jpg'),
-                Image.network('$pic'),
+                Image.asset('images/page.jpg'),
+                // Image.network('$pic'),
                 SizedBox(
                   height: 20,
                 ),
