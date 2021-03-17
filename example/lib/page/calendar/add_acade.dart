@@ -12,7 +12,7 @@ class CalendarPageAca extends StatefulWidget {
 }
 
 class _CalendarPageAcaState extends State<CalendarPageAca> {
-  List<dynamic> widgets3 = [];
+  List<dynamic> widgets2 = [];
   String dateStart;
   String dateEnd;
   String name;
@@ -40,7 +40,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
           AcadeCalModel2 model2 = AcadeCalModel2.fromMap(map);
 
           setState(() {
-            widgets3.add(model2);
+            widgets2.add(model2);
             dateStart = model2.datetimeStart;
             dateEnd = model2.datetimeEnd;
             name = model2.eventname;
@@ -81,7 +81,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
         padding: EdgeInsets.only(top: 12),
         shrinkWrap: true,
         physics: ScrollPhysics(),
-        itemCount: widgets3.length,
+        itemCount: widgets2.length,
         itemBuilder: (context, index) {
           // ignore: deprecated_member_use
           return Stack(
@@ -96,7 +96,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                     Row(
                       children: [
                         Text(
-                          '${widgets3[index].eventname}',
+                          '${widgets2[index].eventname}',
                           style: TextStyle(fontSize: 25.0),
                         ),
                       ],
@@ -130,7 +130,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                '${widgets3[index].datetimeStart}',
+                                '${widgets2[index].datetimeStart}',
                                 style: TextStyle(fontSize: 14.0),
                               )
                             ],
@@ -169,7 +169,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               Text(
-                                '${widgets3[index].datetimeEnd}',
+                                '${widgets2[index].datetimeEnd}',
                                 style: TextStyle(fontSize: 14.0),
                               )
                             ],
@@ -293,7 +293,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
               ],
             ),
           ),
-          child: widgets3.length == 0
+          child: widgets2.length == 0
               ? Center(
                   child: Text('ไม่มีปฏิทินกิจกรรม',
                       style: TextStyle(color: Colors.grey, fontSize: 22)))

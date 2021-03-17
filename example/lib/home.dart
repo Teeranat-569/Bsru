@@ -16,7 +16,8 @@ import 'page/information_page.dart';
 import 'page/manual/manual_page.dart';
 import 'page/map/map_page.dart';
 import 'page/modelPIC.dart';
-import 'page/news_page.dart';
+import 'page/news/news_page.dart';
+// import 'page/news_page.dart';
 import 'page/people_page.dart';
 import 'page/student/student_page.dart';
 
@@ -713,7 +714,7 @@ class _HomeState extends State<Home> {
               unpressedImage: Image.asset('images/news.png'),
               onTap: () {
                 print('test');
-                route(NewsPage());
+                route(Home());
               },
             ),
           ),
