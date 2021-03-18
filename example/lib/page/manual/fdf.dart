@@ -64,40 +64,49 @@ class _MyApp3State extends State<MyApp3> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          title: Text('Plugin example app'),
-        ),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              if (path != null)
-                Container(
-                  height: 300.0,
-                  child: PdfView(
-                    path: path,
-                  ),
-                )
-              else
-                Column(
-                  children: [
-                    Center(child: CircularProgressIndicator()),
-                    Text(
-                      'กำลังดาวน์โหลดเอกสาร',
-                      style: TextStyle(fontFamily: 'Pridi'),
-                    ),
-                    Text(
-                      'โปรดรอสักครู่...',
-                      style: TextStyle(fontFamily: 'Pridi'),
-                    ),
-                  ],
-                )
-              //   Text("Pdf is not Loaded"),
-              // RaisedButton(
-              //   child: Text("Load pdf"),
-              //   onPressed: loadPdf,
-              // ),
-            ],
-          ),
+        // appBar: AppBar(
+        //   toolbarHeight: 40,
+        //   title: Text('Plugin example app'),
+        // ),
+        body: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            if (path != null)
+              Container(
+                height: MediaQuery.of(context).size.height,
+                child: PdfView(
+                  path: path,
+                ),
+              )
+            else
+
+              // Column(
+              // mainAxisAlignment: MainAxisAlignment.end,
+              // children: [
+              Center(child: Column(
+                children: [
+                  CircularProgressIndicator(),
+                  Text(
+              'กำลังดาวน์โหลดเอกสาร',
+              style: TextStyle(fontFamily: 'Pridi'),
+            ),
+            Text(
+              'โปรดรอสักครู่...',
+              style: TextStyle(fontFamily: 'Pridi'),
+            ),
+                ],
+              ))
+            // 
+            
+            // ],
+            // ),
+
+            //   Text("Pdf is not Loaded"),
+            // RaisedButton(
+            //   child: Text("Load pdf"),
+            //   onPressed: loadPdf,
+            // ),
+          ],
         ),
       ),
     );

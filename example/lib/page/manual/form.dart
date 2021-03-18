@@ -68,46 +68,49 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(
-          toolbarHeight: 40,
-          title: Text(
-            'คู่มือนักศึกษาปีการศึกษา 2562 - 2563',
-            style: TextStyle(fontSize: 16, fontFamily: 'Pridi'),
-          ),
-          leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back_ios),
-          ),
-        ),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              if (path != null)
-                Container(
-                  height: 600,
-                  child: PdfView(
-                    path: path,
-                  ),
-                )
-              else
-                Column(
-                  children: [
-                    Center(child: CircularProgressIndicator()),
-                    Text(
-                      'กำลังดาวน์โหลดเอกสาร',
-                      style: TextStyle(fontFamily: 'Pridi'),
+      home: SafeArea(
+              child: Scaffold(
+          // appBar: AppBar(
+          //   toolbarHeight: 40,
+          //   title: Text(
+          //     'คู่มือนักศึกษาปีการศึกษา 2562 - 2563',
+          //     style: TextStyle(fontSize: 16, fontFamily: 'Pridi'),
+          //   ),
+          //   leading: IconButton(
+          //     onPressed: () {
+          //       Navigator.of(context).pop();
+          //     },
+          //     icon: Icon(Icons.arrow_back_ios),
+          //   ),
+          // ),
+          body: 
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                if (path != null)
+                  Container(
+                    height: 600,
+                    child: PdfView(
+                      path: path,
                     ),
-                    Text(
-                      'โปรดรอสักครู่...',
-                      style: TextStyle(fontFamily: 'Pridi'),
-                    ),
-                  ],
-                )
-            ],
-          ),
+                  )
+                else
+                  Column(
+                    children: [
+                      Center(child: CircularProgressIndicator()),
+                      Text(
+                        'กำลังดาวน์โหลดเอกสาร',
+                        style: TextStyle(fontFamily: 'Pridi'),
+                      ),
+                      Text(
+                        'โปรดรอสักครู่...',
+                        style: TextStyle(fontFamily: 'Pridi'),
+                      ),
+                    ],
+                  )
+              ],
+            ),
+          
         ),
       ),
     );

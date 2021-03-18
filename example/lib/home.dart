@@ -2,6 +2,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_google_maps_example/main.dart';
+import 'package:flutter_google_maps_example/page/news/web_view_container.dart';
 import 'package:imagebutton/imagebutton.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,12 +15,14 @@ import 'page/download/download_page.dart';
 import 'page/history/history_page.dart';
 import 'page/information_page.dart';
 import 'page/manual/manual_page.dart';
-import 'page/map/map_page.dart';
+// import 'page/map/map_page.dart';
 import 'page/modelPIC.dart';
-import 'page/news/news_page.dart';
+// import 'page/news/news_page.dart';
 // import 'page/news_page.dart';
+import 'page/news/news_page.dart';
 import 'page/people_page.dart';
 import 'page/student/student_page.dart';
+// import 'web_view_container.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -712,10 +715,20 @@ class _HomeState extends State<Home> {
                 'images/news.png',
               ),
               unpressedImage: Image.asset('images/news.png'),
-              onTap: () {
-                print('test');
-                route(Home());
-              },
+              // onTap: () {
+              //   print('test');
+              //   // route(Homenews());
+              //   route(NewsPage());
+              // },
+              onTap: () async {
+                    const url =
+                        'https://bsru.ac.th/news/';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Couid not launch $url';
+                    }
+                  },
             ),
           ),
         ),
