@@ -166,66 +166,68 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        bottomNavigationBar: BottomAppBar(
-          child: Container(
-            height: 85,
-            width: 700,
-            decoration: BoxDecoration(
-              image: DecorationImage(
-                image: AssetImage('images/footer.png'),
-                fit: BoxFit.cover,
-              ),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Image.asset(
-                  'images/address.png',
-                  height: 18,
-                ),
-                Text(
-                  '1061',
-                  style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      letterSpacing: 1.0,
-                      fontFamily: 'Sarabun'),
-                ),
-                Text(
-                  'ซอยอิสรภาพ 15',
-                  style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Sarabun'),
-                ),
-                Text(
-                  'ถนนอิสรภาพ',
-                  style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Sarabun'),
-                ),
-                Text(
-                  'แขวงหิรัญรูจี',
-                  style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Sarabun'),
-                ),
-                Text(
-                  'เขตธนบุรี กทม. 10600',
-                  style: TextStyle(
-                      fontSize: 9,
-                      fontWeight: FontWeight.bold,
-                      fontFamily: 'Sarabun'),
-                ),
-              ],
-            ),
-          ),
-        ),
-        body:
+    return Material(
+      type: MaterialType.canvas,
+      child: SafeArea(
+        // bottomNavigationBar: BottomAppBar(
+        //   child: Container(
+        //     height: 85,
+        //     width: 700,
+        //     decoration: BoxDecoration(
+        //       image: DecorationImage(
+        //         image: AssetImage('images/footer.png'),
+        //         fit: BoxFit.cover,
+        //       ),
+        //     ),
+        //     child: Column(
+        //       crossAxisAlignment: CrossAxisAlignment.start,
+        //       children: [
+        //         Image.asset(
+        //           'images/address.png',
+        //           height: 18,
+        //         ),
+        //         Text(
+        //           '1061',
+        //           style: TextStyle(
+        //               fontSize: 9,
+        //               fontWeight: FontWeight.bold,
+        //               letterSpacing: 1.0,
+        //               fontFamily: 'Sarabun'),
+        //         ),
+        //         Text(
+        //           'ซอยอิสรภาพ 15',
+        //           style: TextStyle(
+        //               fontSize: 9,
+        //               fontWeight: FontWeight.bold,
+        //               fontFamily: 'Sarabun'),
+        //         ),
+        //         Text(
+        //           'ถนนอิสรภาพ',
+        //           style: TextStyle(
+        //               fontSize: 9,
+        //               fontWeight: FontWeight.bold,
+        //               fontFamily: 'Sarabun'),
+        //         ),
+        //         Text(
+        //           'แขวงหิรัญรูจี',
+        //           style: TextStyle(
+        //               fontSize: 9,
+        //               fontWeight: FontWeight.bold,
+        //               fontFamily: 'Sarabun'),
+        //         ),
+        //         Text(
+        //           'เขตธนบุรี กทม. 10600',
+        //           style: TextStyle(
+        //               fontSize: 9,
+        //               fontWeight: FontWeight.bold,
+        //               fontFamily: 'Sarabun'),
+        //         ),
+        //       ],
+        //     ),
+        //   ),
+        // ),,
+        
+        child:
             // appBar: AppBar(toolbarHeight: 20,),
 
             Container(
@@ -721,14 +723,13 @@ class _HomeState extends State<Home> {
               //   route(NewsPage());
               // },
               onTap: () async {
-                    const url =
-                        'https://bsru.ac.th/news/';
-                    if (await canLaunch(url)) {
-                      await launch(url);
-                    } else {
-                      throw 'Couid not launch $url';
-                    }
-                  },
+                const url = 'https://bsru.ac.th/nesws';
+                if (await canLaunch(url)) {
+                  await launch(url);
+                } else {
+                  throw 'Couid not launch $url';
+                }
+              },
             ),
           ),
         ),
