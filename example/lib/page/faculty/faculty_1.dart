@@ -64,7 +64,7 @@ class _Faculty1State extends State<Faculty1> {
           ),
           ListTile(
             title: facebook('https://www.facebook.com/BSRU.science',
-                'คณะวิทยาศาสตร์และเทคโนโลยี มบส.'),
+                '@BSRU.science'),
           )
         ],
       ),
@@ -91,7 +91,7 @@ class _Faculty1State extends State<Faculty1> {
           ),
           ListTile(
             title: facebook('https://www.facebook.com/BSRUFacultyOfEducation/',
-                'คณะครุศาสตร์ \nมหาวิทยาลัยราชภัฏบ้านสมเด็จ'),
+                '@BSRUFacultyOfEducation'),
           )
         ],
       ),
@@ -117,7 +117,7 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://ms.bsru.ac.th/new/'),
           ),
           ListTile(
-            title: facebook('https://www.facebook.com/MsBSRU/', 'MS BSRU'),
+            title: facebook('https://www.facebook.com/MsBSRU/', '@MsBSRU'),
           )
         ],
       ),
@@ -171,7 +171,7 @@ class _Faculty1State extends State<Faculty1> {
           ),
           ListTile(
             title: facebook('https://www.facebook.com/bsrumusic2558',
-                'College of Music BSRU'),
+                '@bsrumusic2558'),
           )
         ],
       ),

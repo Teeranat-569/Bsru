@@ -53,7 +53,7 @@ class _StudentPageState extends State<StudentPage> {
               width: 150,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: Colors.yellow[50]),
+                  color: Colors.purple[500]),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -72,7 +72,7 @@ class _StudentPageState extends State<StudentPage> {
             ),
                   Text(
                     'นักศึกษาใหม่',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 20,color: Colors.white),
                   ),
                 ],
               ),
@@ -94,7 +94,7 @@ class _StudentPageState extends State<StudentPage> {
               width: 150,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(50),
-                  color: Colors.yellow[50]),
+                  color: Colors.purple[500]),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -113,7 +113,7 @@ class _StudentPageState extends State<StudentPage> {
             ),
                   Text(
                     'นักศึกษาปัจจุบัน',
-                    style: TextStyle(fontSize: 20),
+                    style: TextStyle(fontSize: 20,color: Colors.white),
                   ),
                 ],
               ),

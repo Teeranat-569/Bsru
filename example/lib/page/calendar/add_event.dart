@@ -47,12 +47,12 @@ class _CalendarPageState extends State<CalendarPage> {
         children: [
           Container(
               width: MediaQuery.of(context).size.width,
-              color: Colors.purple[100],
+              color: Colors.purple[900],
               child: Text(
                 '${model3.datetime}',
                 style: TextStyle(
                   fontSize: 18.0,
-                  color: Colors.purple[800],
+                  color: Colors.white,
                   // fontWeight: FontWeight.bold,
                 ),
               )),
@@ -81,7 +81,7 @@ class _CalendarPageState extends State<CalendarPage> {
               end: Alignment.bottomCenter,
               colors: [
                 const Color(0xFFffffff),
-                const Color(0xFFffe2e2),
+                const Color(0xFe3c0ab),
               ],
             ),
           ),

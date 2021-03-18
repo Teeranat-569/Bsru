@@ -68,8 +68,8 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: SafeArea(
-              child: Scaffold(
+      home: 
+              Scaffold(
           // appBar: AppBar(
           //   toolbarHeight: 40,
           //   title: Text(
@@ -89,7 +89,7 @@ class _MyAppState extends State<MyApp> {
               children: <Widget>[
                 if (path != null)
                   Container(
-                    height: 600,
+                    height: MediaQuery.of(context).size.height,
                     child: PdfView(
                       path: path,
                     ),
@@ -112,7 +112,7 @@ class _MyAppState extends State<MyApp> {
             ),
           
         ),
-      ),
+      
     );
   }
 }

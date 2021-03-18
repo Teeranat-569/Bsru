@@ -1,6 +1,6 @@
-
 // import 'package:bsru/page/calendar/acadeCal_Model.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -84,31 +84,43 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
         itemCount: widgets2.length,
         itemBuilder: (context, index) {
           // ignore: deprecated_member_use
-          return Stack(
-                      children: [Positioned(
+          return Stack(children: [
+            Positioned(
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                height: MediaQuery.of(context).size.height-450,
+                height: MediaQuery.of(context).size.height - 450,
                 width: MediaQuery.of(context).size.width,
 
                 child: Column(
                   children: [
                     Row(
                       children: [
-                        Text(
-                          '${widgets2[index].eventname}',
-                          style: TextStyle(fontSize: 25.0),
+                        Container(
+                          padding: EdgeInsets.all(10),
+                          // height: 60,
+                          color: Colors.cyan,
+                          // decoration: BoxDecoration(
+                          //   color: Colors.green[100],
+                          //   borderRadius: BorderRadius.circular(40),
+                          // ),
+                          child: Center(
+                            child: Text(
+                              '${widgets2[index].eventname}',
+                              style: TextStyle(
+                                  fontSize: 16.0, color: Colors.white),
+                            ),
+                          ),
                         ),
                       ],
                     ),
-                    SizedBox(height: 20,),
                     Container(
                       padding: EdgeInsets.all(10),
                       height: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.green[100],
-                        borderRadius: BorderRadius.circular(40),
-                      ),
+                      color: Colors.white,
+                      // decoration: BoxDecoration(
+                      //   color: Colors.green[100],
+                      //   borderRadius: BorderRadius.circular(40),
+                      // ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -131,7 +143,8 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             children: [
                               Text(
                                 '${widgets2[index].datetimeStart}',
-                                style: TextStyle(fontSize: 14.0),
+                                style: TextStyle(
+                                    fontSize: 14.0, color: Colors.cyan),
                               )
                             ],
                           )
@@ -144,10 +157,11 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                     Container(
                       padding: EdgeInsets.all(10),
                       height: 60,
-                      decoration: BoxDecoration(
-                        color: Colors.green[100],
-                        borderRadius: BorderRadius.circular(40),
-                      ),
+                      color: Colors.white,
+                      // decoration: BoxDecoration(
+                      //   color: Colors.green[100],
+                      //   borderRadius: BorderRadius.circular(40),
+                      // ),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
@@ -168,10 +182,16 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                           Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Text(
-                                '${widgets2[index].datetimeEnd}',
-                                style: TextStyle(fontSize: 14.0),
-                              )
+                              if (widgets2[index].datetimeEnd == null)
+                                Text(
+                                  'ไม่มี',
+                                  style: TextStyle(color: Colors.cyan),
+                                ),
+                              if (widgets2[index].datetimeEnd != null)
+                                Text(
+                                  '${widgets2[index].datetimeEnd}',
+                                  style: TextStyle(fontSize: 14.0,color: Colors.cyan),
+                                )
                             ],
                           )
                         ],
@@ -245,12 +265,13 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                 //   ],
                 // ),
               ),
-            ),] 
-          );
+            ),
+          ]);
         },
         separatorBuilder: (BuildContext context, int index) {
           return Divider(
-            height: 10,
+            color: Colors.black,
+            height: 1,
           );
         },
       ),
@@ -289,13 +310,13 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
               end: Alignment.bottomCenter,
               colors: [
                 const Color(0xFFffffff),
-                const Color(0xFFffe2e2),
+                const Color(0xF00796e),
               ],
             ),
           ),
           child: widgets2.length == 0
               ? Center(
-                  child: Text('ไม่มีปฏิทินกิจกรรม',
+                  child: Text('ไม่มีปฏิทินวิชาการ',
                       style: TextStyle(color: Colors.grey, fontSize: 22)))
               : showListdata()),
     ));

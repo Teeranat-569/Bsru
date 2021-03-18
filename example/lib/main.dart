@@ -13,7 +13,6 @@ import 'home.dart';
 import 'splash_screen.dart';
 
 
-
 void main() {
   Intl.defaultLocale = "th";
   initializeDateFormatting();
