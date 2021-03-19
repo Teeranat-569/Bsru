@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-// import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
-import 'package:sizer/sizer.dart';
 
 class ContactPage extends StatefulWidget {
   @override
@@ -37,7 +36,7 @@ class _ContactPageState extends State<ContactPage> {
                 children: [
                   contact(),
                   contact2(),
-                  SizedBox(height: 20.0.h),
+                  SizedBox(height: 20),
                   // showMap()
                   showmapButton()
                 ],
@@ -66,7 +65,7 @@ class _ContactPageState extends State<ContactPage> {
       children: [
         Text(
           '0-2473-7000 ',
-          style: TextStyle(color: Colors.blue, fontSize: 22.0.sp),
+          style: TextStyle(color: Colors.blue, fontSize: 22),
         ),
         IconButton(
             icon: Icon(

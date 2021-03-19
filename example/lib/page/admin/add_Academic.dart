@@ -5,7 +5,6 @@ import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
-import 'package:sizer/sizer.dart';
 
 import 'add.dart';
 
@@ -63,7 +62,7 @@ class _AcademicState extends State<Academic> {
           ),
           labelText: 'ระบุชื่องานวิชาการ',
           labelStyle: TextStyle(
-            fontSize: 16.0.sp,
+            fontSize: 16.0,
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
@@ -82,7 +81,7 @@ class _AcademicState extends State<Academic> {
             ),
           ),
           labelText: 'วันที่เริ่ม',
-          labelStyle: TextStyle(fontSize: 16.0.sp, color: Colors.black),
+          labelStyle: TextStyle(fontSize: 16, color: Colors.black),
         ),
         onChanged: (value) => timeStart = DateFormat.yMMMMEEEEd().format(value),
         format: format,
@@ -109,7 +108,7 @@ class _AcademicState extends State<Academic> {
             ),
           ),
           labelText: 'วันที่สิ้นสุด',
-          labelStyle: TextStyle(fontSize: 16.0.sp, color: Colors.black),
+          labelStyle: TextStyle(fontSize: 16, color: Colors.black),
         ),
         onChanged: (value) => timeEnd = DateFormat.yMMMMEEEEd().format(value),
         format: format,
@@ -170,15 +169,15 @@ class _AcademicState extends State<Academic> {
               key: textFill,
               child: ListView(children: <Widget>[
                 SizedBox(
-                  height: 10.0.h,
+                  height: 10.0,
                 ),
                 nameform(),
                 SizedBox(
-                  height: 10.0.h,
+                  height: 10.0,
                 ),
                 timeStartForm(),
                 SizedBox(
-                  height: 10.0.h,
+                  height: 10.0,
                 ),
                 timeEndForm(),
               ])),

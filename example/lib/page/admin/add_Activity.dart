@@ -5,7 +5,6 @@ import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
-import 'package:sizer/sizer.dart';
 
 import 'add.dart';
 
@@ -85,7 +84,7 @@ class _ActivityState extends State<Activity> {
             ),
           ),
           labelText: 'วันที่ทำกิจกรรม',
-          labelStyle: TextStyle(fontSize: 16.0.sp, color: Colors.black),
+          labelStyle: TextStyle(fontSize: 16, color: Colors.black),
         ),
         onChanged: (value) => time = DateFormat.yMMMMEEEEd().format(value),
         format: format,
@@ -146,15 +145,15 @@ class _ActivityState extends State<Activity> {
               key: textFill,
               child: ListView(children: <Widget>[
                 SizedBox(
-                  height: 10.0.h,
+                  height: 10.0,
                 ),
                 nameform(),
                 SizedBox(
-                  height: 10.0.h,
+                  height: 10.0,
                 ),
                 timeForm(),
                 SizedBox(
-                  height: 15.0.h,
+                  height: 15.0,
                 ),
               ])),
         )),

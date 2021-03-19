@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:sizer/sizer.dart';
 
 import 'add.dart';
 
@@ -39,11 +38,11 @@ class _AdminState extends State<Admin> {
           children: <Widget>[
             usernameText(),
             SizedBox(
-              height: 10.0.h,
+              height: 10.0,
             ),
             passwordText(),
             SizedBox(
-              height: 20.0.h,
+              height: 20.0,
             ),
             loginButton(),
           ],
@@ -78,7 +77,7 @@ class _AdminState extends State<Admin> {
 
   Widget passwordText() {
     return Container(
-      width: 250.0.w,
+      width: 250.0,
       child: TextField(
         onChanged: (value) => password = value.trim(),
         controller: passwordCon,
@@ -143,7 +142,7 @@ class _AdminState extends State<Admin> {
       color: Colors.deepOrange[900],
       child: Text(
         'เข้าสู่ระบบ',
-        style: TextStyle(fontSize: 18.0.sp, color: Colors.white),
+        style: TextStyle(fontSize: 18.0, color: Colors.white),
       ),
       onPressed: () {
         textFill.currentState.save();
@@ -177,7 +176,7 @@ class _AdminState extends State<Admin> {
           child: ListView(
             children: <Widget>[
               SizedBox(
-                height: 40.0.h,
+                height: 40,
               ),
               content(),
             ],

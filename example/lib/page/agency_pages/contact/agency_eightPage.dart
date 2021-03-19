@@ -22,7 +22,7 @@ class _AgencyEightState extends State<AgencyEight> {
       // ),
       appBar: AppBar(
           backgroundColor: Colors.purple[100],
-          // title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
+          title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
           titleSpacing: 00.0,
           centerTitle: true,
           toolbarHeight: 40,

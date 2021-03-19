@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_google_maps_example/page/admin/calendar_page.dart';
-import 'package:sizer/sizer.dart';
 
 import '../../home.dart';
 import 'upPic.dart';
@@ -26,7 +25,7 @@ class _AddState extends State<Add> {
      
         title: Text(
           'ผู้ดูแลระบบ',
-          style: TextStyle(fontSize: 14.0.sp),
+          style: TextStyle(fontSize: 14),
         ),
         leading: IconButton(
             icon: Icon(Icons.arrow_back_ios),
@@ -46,7 +45,7 @@ class _AddState extends State<Add> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               SizedBox(
-                height: 30.0.h,
+                height: 30,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -67,10 +66,10 @@ class _AddState extends State<Add> {
                           Icons.calendar_today,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 5.0.w,),
+                        SizedBox(width: 5,),
                         Text(
                           'ปฏิทินกิจกรรม ปฏิทินวิชาการ',
-                          style: TextStyle(fontSize: 20.0.sp, color: Colors.white),
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ],
                     ),
@@ -100,10 +99,10 @@ class _AddState extends State<Add> {
                           Icons.image,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 5.0.w,),
+                        SizedBox(width: 5,),
                         Text(
                           'แก้ไขรูปภาพข่าวรับสมัคร',
-                          style: TextStyle(fontSize: 20.0.sp, color: Colors.white),
+                          style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ],
                     ),
@@ -127,7 +126,7 @@ class _AddState extends State<Add> {
                 ],
               ),
               SizedBox(
-                height: 15.0.h,
+                height: 15,
               ),
               // Container(
               //   width: MediaQuery.of(context).size.width,

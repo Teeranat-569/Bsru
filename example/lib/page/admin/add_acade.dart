@@ -4,7 +4,6 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_google_maps_example/page/calendar/acadeCal_Model.dart';
-import 'package:sizer/sizer.dart';
 
 class CalendarPageAc extends StatefulWidget {
   @override
@@ -158,7 +157,7 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
                         child: Center(
                           child: Text(
                             '${widgets2[index]["Eventname"]}',
-                            style: TextStyle(fontSize: 18.0.sp),
+                            style: TextStyle(fontSize: 18.0),
                           ),
                         ),
                       ),
@@ -168,8 +167,8 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
                           Center(
                             child: Container(
                               color: Colors.deepOrange[50],
-                              height: 100.0.h,
-                              width: 159.0.w,
+                              height: 100,
+                              width: 159,
                               child: Padding(
                                 padding: const EdgeInsets.all(3.0),
                                 child: Column(
@@ -177,7 +176,7 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
                                     Text('วันที่เริ่ม'),
                                     Text(
                                       '${widgets2[index]["DateTimeStart"]}',
-                                      style: TextStyle(fontSize: 14.0.sp),
+                                      style: TextStyle(fontSize: 14.0),
                                     ),
                                   ],
                                 ),
@@ -187,8 +186,8 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
                           Center(
                             child: Container(
                               color: Colors.deepPurple[50],
-                              height: 100.0.h,
-                              width: 159.0.w,
+                              height: 100,
+                              width: 159,
                               child: Padding(
                                 padding: const EdgeInsets.all(3.0),
                                 child: Column(
@@ -196,7 +195,7 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
                                     Text('วันที่สิ้นสุด'),
                                     Text(
                                       '${widgets2[index]["DateTimeEnd"]}',
-                                      style: TextStyle(fontSize: 14.0.sp),
+                                      style: TextStyle(fontSize: 14.0),
                                     ),
                                   ],
                                 ),
@@ -221,7 +220,7 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
         },
         separatorBuilder: (BuildContext context, int index) {
           return Divider(
-            height: 20.0.h,
+            height: 20,
           );
         },
       ),
@@ -252,7 +251,7 @@ class _CalendarPageAcState extends State<CalendarPageAc> {
             child: widgets2.length == 0
                 ? Center(
                     child: Text('ไม่มีปฏิทินกิจกรรม',
-                        style: TextStyle(color: Colors.grey, fontSize: 22.0.sp)))
+                        style: TextStyle(color: Colors.grey, fontSize: 22)))
                 : RefreshIndicator(onRefresh: readAlldata3,
                   child: showListdata())),
       ),

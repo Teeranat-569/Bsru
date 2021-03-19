@@ -174,76 +174,138 @@ class _HomeState extends State<Home> {
           toolbarHeight: 0,
           backgroundColor: Colors.purple[50],
         ),
-          bottomNavigationBar: BottomAppBar(
-            color: Colors.purple.shade50,
-            child: 
-            
-            Container(
-              height: 30,
-              width: MediaQuery.of(context).size.width,
-              decoration: BoxDecoration(
+        bottomNavigationBar: BottomAppBar(
+          color: Colors.purple.shade50,
+          child: Container(
+            height: 70,
+            width: MediaQuery.of(context).size.width,
+            decoration: BoxDecoration(
                 // image: DecorationImage(
                 //   image: AssetImage('images/footer.png'),
                 //   fit: BoxFit.cover,
                 // ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(8),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
-                  children: [
-                    Image.asset(
-                      'images/address.png',
-                      height: 18,
-                    ),
-                    Text(
-                      '1061',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          letterSpacing: 1.0,
-                          fontFamily: 'Sarabun'),
-                    ),
-                    SizedBox(width: 5,),
-                    Text(
-                      'ซอยอิสรภาพ 15',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Sarabun'),
-                    ),
-                     SizedBox(width: 5,),
-                    Text(
-                      'ถนนอิสรภาพ',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Sarabun'),
-                    ),
-                     SizedBox(width: 5,),
-                    Text(
-                      'แขวงหิรัญรูจี',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Sarabun'),
-                    ),
-                     SizedBox(width: 5,),
-                    Text(
-                      'เขตธนบุรี กทม. 10600',
-                      style: TextStyle(
-                          fontSize: 9,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Sarabun'),
-                    ),
-                  ],
                 ),
+            child: Padding(
+              padding: const EdgeInsets.all(8),
+              child: Column(
+                children: [
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Image.asset(
+                        'images/address.png',
+                        height: 18,
+                      ),
+                      Text(
+                        '1061',
+                        style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            letterSpacing: 1.0,
+                            fontFamily: 'Sarabun'),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'ซอยอิสรภาพ 15',
+                        style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Sarabun'),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'ถนนอิสรภาพ',
+                        style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Sarabun'),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'แขวงหิรัญรูจี',
+                        style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Sarabun'),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      Text(
+                        'เขตธนบุรี กทม. 10600',
+                        style: TextStyle(
+                            fontSize: 9,
+                            fontWeight: FontWeight.bold,
+                            fontFamily: 'Sarabun'),
+                      ),
+                    ],
+                  ),
+                   SizedBox(
+                        height: 5,
+                      ),
+                   Padding(
+                  padding: const EdgeInsets.all(3.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 25,
+                        height: 25,
+                        pressedImage: Image.asset(
+                          'images/facebook.png',
+                        ),
+                        unpressedImage: Image.asset('images/facebook.png'),
+                        onTap: () {
+                          print('history');
+                          _launchURLFace();
+                        },
+                      ),
+                      // SizedBox(
+                      //   width: 5,
+                      // ),
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 25,
+                        height: 25,
+                        pressedImage: Image.asset(
+                          'images/domain.png',
+                        ),
+                        unpressedImage: Image.asset('images/domain.png'),
+                        onTap: () {
+                          print('history');
+
+                          _launchURLWeb();
+                        },
+                      ),
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 25,
+                        height: 25,
+                        pressedImage: Image.asset(
+                          'images/user.png',
+                        ),
+                        unpressedImage: Image.asset('images/user.png'),
+                        onTap: () {
+                          print('admin');
+                          route(Admin());
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                ],
               ),
             ),
           ),
-              body: SafeArea(
-        
-          
+        ),
+        body: SafeArea(
           child:
               // appBar: AppBar(toolbarHeight: 20,),
 
@@ -251,13 +313,13 @@ class _HomeState extends State<Home> {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.start,
               children: [
-              //    ClipPath(
-              // clipper: WaveClipperOne(),
-              // child: Container(
-              //   height: 120,
-              //   color: Color(0xfff6a5ec),
-              //   child: Center(child: Text("WaveClipperOne()")),
-              // ),),
+                //    ClipPath(
+                // clipper: WaveClipperOne(),
+                // child: Container(
+                //   height: 120,
+                //   color: Color(0xfff6a5ec),
+                //   child: Center(child: Text("WaveClipperOne()")),
+                // ),),
                 Container(
                   width: MediaQuery.of(context).size.width,
                   decoration: BoxDecoration(
@@ -306,57 +368,60 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                Padding(
-                  padding: const EdgeInsets.only(left: 8),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 25,
-                        height: 25,
-                        pressedImage: Image.asset(
-                          'images/facebook.png',
-                        ),
-                        unpressedImage: Image.asset('images/facebook.png'),
-                        onTap: () {
-                          print('history');
-                          _launchURLFace();
-                        },
+                 SizedBox(
+                        height: 5,
                       ),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 30,
-                        height: 30,
-                        pressedImage: Image.asset(
-                          'images/domain.png',
-                        ),
-                        unpressedImage: Image.asset('images/domain.png'),
-                        onTap: () {
-                          print('history');
+                // Padding(
+                //   padding: const EdgeInsets.only(left: 8),
+                //   child: Row(
+                //     mainAxisAlignment: MainAxisAlignment.start,
+                //     children: [
+                //       ImageButton(
+                //         children: <Widget>[],
+                //         width: 25,
+                //         height: 25,
+                //         pressedImage: Image.asset(
+                //           'images/facebook.png',
+                //         ),
+                //         unpressedImage: Image.asset('images/facebook.png'),
+                //         onTap: () {
+                //           print('history');
+                //           _launchURLFace();
+                //         },
+                //       ),
+                //       SizedBox(
+                //         width: 5,
+                //       ),
+                //       ImageButton(
+                //         children: <Widget>[],
+                //         width: 30,
+                //         height: 30,
+                //         pressedImage: Image.asset(
+                //           'images/domain.png',
+                //         ),
+                //         unpressedImage: Image.asset('images/domain.png'),
+                //         onTap: () {
+                //           print('history');
 
-                          _launchURLWeb();
-                        },
-                      ),
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 30,
-                        height: 30,
-                        pressedImage: Image.asset(
-                          'images/user.png',
-                        ),
-                        unpressedImage: Image.asset('images/user.png'),
-                        onTap: () {
-                          print('admin');
-                          route(Admin());
-                        },
-                      ),
-                    ],
-                  ),
-                ),
+                //           _launchURLWeb();
+                //         },
+                //       ),
+                //       ImageButton(
+                //         children: <Widget>[],
+                //         width: 30,
+                //         height: 30,
+                //         pressedImage: Image.asset(
+                //           'images/user.png',
+                //         ),
+                //         unpressedImage: Image.asset('images/user.png'),
+                //         onTap: () {
+                //           print('admin');
+                //           route(Admin());
+                //         },
+                //       ),
+                //     ],
+                //   ),
+                // ),
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
