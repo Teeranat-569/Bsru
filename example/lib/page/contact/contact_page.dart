@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+// import 'package:google_maps_flutter/google_maps_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:sizer/sizer.dart';
 
 class ContactPage extends StatefulWidget {
   @override
@@ -16,18 +17,17 @@ class _ContactPageState extends State<ContactPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return Scaffold(
         appBar: AppBar(
             toolbarHeight: 40,
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.purple[50],
             leading: IconButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back),
+              icon: Icon(Icons.arrow_back,color: Colors.purple,),
             ),
-            title: Text('ติดต่อ มบส.')),
+            title: Text('ติดต่อ มบส.',style: TextStyle(color: Colors.purple),)),
         body: Container(
           color: Colors.purple[50],
           child: Padding(
@@ -37,7 +37,7 @@ class _ContactPageState extends State<ContactPage> {
                 children: [
                   contact(),
                   contact2(),
-                  SizedBox(height: 20),
+                  SizedBox(height: 20.0.h),
                   // showMap()
                   showmapButton()
                 ],
@@ -45,7 +45,7 @@ class _ContactPageState extends State<ContactPage> {
             ),
           ),
         ),
-      ),
+      
     );
   }
 
@@ -66,7 +66,7 @@ class _ContactPageState extends State<ContactPage> {
       children: [
         Text(
           '0-2473-7000 ',
-          style: TextStyle(color: Colors.blue, fontSize: 22),
+          style: TextStyle(color: Colors.blue, fontSize: 22.0.sp),
         ),
         IconButton(
             icon: Icon(

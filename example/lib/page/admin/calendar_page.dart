@@ -5,6 +5,7 @@ import 'add_Academic.dart';
 import 'add_Activity.dart';
 import 'add_acade.dart';
 import 'add_eventAd.dart';
+import 'package:sizer/sizer.dart';
 
 class Calendar extends StatefulWidget {
   @override
@@ -44,10 +45,10 @@ class _CalendarState extends State<Calendar> {
                     children: [
                       Text('ปฏิทินกิจกรรม'),
                       SizedBox(
-                        width: 10,
+                        width: 10.0.w,
                       ),
                       Container(
-                        width: 30,
+                        width: 30.0.w,
                         child: RaisedButton(
                           padding: EdgeInsets.all(0),
                           color: Colors.deepOrangeAccent,
@@ -78,10 +79,10 @@ class _CalendarState extends State<Calendar> {
                     children: [
                       Text('ปฏิทินวิชาการ'),
                       SizedBox(
-                        width: 10,
+                        width: 10.0.w,
                       ),
                       Container(
-                        width: 30,
+                        width: 30.0.w,
                         child: RaisedButton(
                           padding: EdgeInsets.all(0),
                           color: Colors.cyan,
@@ -109,7 +110,7 @@ class _CalendarState extends State<Calendar> {
             ),
             title: Text(
               'ผู้ดูแลระบบ',
-              style: TextStyle(fontSize: 14),
+              style: TextStyle(fontSize: 14.0.sp),
             ),
           ),
           body: TabBarView(

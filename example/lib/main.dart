@@ -3,7 +3,6 @@
 // BSD-style license that can be found in the LICENSE file.
 
 import 'package:flutter/material.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_google_maps/flutter_google_maps.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:intl/intl.dart';
@@ -175,7 +174,12 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) => Scaffold(
         key: _scaffoldKey,
         appBar: AppBar(
-          title: Text('แผนที่ มบส.'),
+          toolbarHeight: 40,
+          backgroundColor: Colors.purple[50],
+          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.purple,), onPressed: (){
+            Navigator.of(context).pop();
+          }),
+          title: Text('แผนที่ มบส.',style: TextStyle(color: Colors.purple),),
         ),
         body: Stack(
           children: <Widget>[

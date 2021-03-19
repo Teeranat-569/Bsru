@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:sizer/sizer.dart';
 
 class PeoplePage extends StatefulWidget {
   @override
@@ -12,16 +13,22 @@ class _PeoplePageState extends State<PeoplePage> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 40,
+          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.purple,), onPressed:(){
+            Navigator.of(context).pop();
+          }),
+            toolbarHeight: 40,
             elevation: 0.0,
-            title: Text('บุคลากร'),
-            backgroundColor: Colors.purple),
+            title: Text(
+              'บุคลากร',
+              style: TextStyle(color: Colors.purple),
+            ),
+            backgroundColor: Colors.purple[50]),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [
             SafeArea(
               child: Padding(
-                padding: EdgeInsets.only(top: 10,left: 10,right: 10),
+                padding: EdgeInsets.only(top: 10, left: 10, right: 10),
                 child: Column(
                   children: <Widget>[
                     Expanded(
@@ -45,12 +52,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/key11.png',
-                                  height: 40,
+                                  height: 40.0.h,
                                 ),
                                 Text(
                                   'Login SuriyaNet',
                                   style: TextStyle(
-                                    fontSize: 16.0,
+                                    fontSize: 16.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -59,14 +66,14 @@ class _PeoplePageState extends State<PeoplePage> {
                                     Text(
                                       'เข้าระบบ',
                                       style: TextStyle(
-                                        fontSize: 12.0,
+                                        fontSize: 12.0.sp,
                                         color: Colors.purple[900],
                                       ),
                                     ),
                                     Text(
                                       'Authenticate',
                                       style: TextStyle(
-                                        fontSize: 12.0,
+                                        fontSize: 12.0.sp,
                                         color: Colors.purple[900],
                                       ),
                                     ),
@@ -89,12 +96,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/web11.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'ระบบ MIS',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -103,14 +110,14 @@ class _PeoplePageState extends State<PeoplePage> {
                                     Text(
                                       'ตารางสอน',
                                       style: TextStyle(
-                                        fontSize: 15.0,
+                                        fontSize: 15.0.sp,
                                         color: Colors.purple[900],
                                       ),
                                     ),
                                     Text(
                                       'บันทึกเกรด',
                                       style: TextStyle(
-                                        fontSize: 15.0,
+                                        fontSize: 15.0.sp,
                                         color: Colors.purple[900],
                                       ),
                                     ),
@@ -134,12 +141,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/diagram.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'ERP WEB',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -147,12 +154,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('ข้อมูลบุคลากร',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('ผ่านเว็บไซต์',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -175,21 +182,21 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/business.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Column(
                                   children: [
                                     Text(
                                       'VNCaller',
                                       style: TextStyle(
-                                        fontSize: 18.0,
+                                        fontSize: 18.0.sp,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       '(ERP|MIS)',
                                       style: TextStyle(
-                                        fontSize: 16.0,
+                                        fontSize: 16.0.sp,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -197,7 +204,7 @@ class _PeoplePageState extends State<PeoplePage> {
                                 ),
                                 Text('ระบบ Back Office',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 15.0.sp,
                                       color: Colors.purple[900],
                                     ))
                               ],
@@ -217,12 +224,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/document.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'e-Document',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -230,12 +237,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('สารบรรณ',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('อิเล็กทรอนิกส์',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -257,12 +264,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/pie-chart.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'Welfare',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -270,12 +277,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('เบิกจ่ายสวัสดิการ',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('พนักงาน',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -297,18 +304,18 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/world-grid.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'e-Learning',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text('สื่อการสอนออนไลน์',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 15.0.sp,
                                       color: Colors.purple[900],
                                     ))
                               ],
@@ -328,18 +335,18 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/seo.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'BRMS',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text('สืบค้นฐานข้อมูลวิจัย',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 15.0.sp,
                                       color: Colors.purple[900],
                                     ))
                               ],
@@ -359,12 +366,13 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/calendar.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'Room Booking',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
+                                    // height: 1.3,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -372,12 +380,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('ระบบจองห้องอบรม/',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('ประชุม',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -399,12 +407,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/steering-wheel.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'Car Booking',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -412,12 +420,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('ระบบขอใช้รถยนต์',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('ราชการ',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -439,12 +447,12 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/search.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'อักขราวิสุทธิ์',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -452,12 +460,12 @@ class _PeoplePageState extends State<PeoplePage> {
                                   children: [
                                     Text('ตรวจการลอกเลียน',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                     Text('วรรณกรรมวิชาการ',
                                         style: TextStyle(
-                                          fontSize: 15.0,
+                                          fontSize: 15.0.sp,
                                           color: Colors.purple[900],
                                         )),
                                   ],
@@ -479,23 +487,23 @@ class _PeoplePageState extends State<PeoplePage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/email.png',
-                                  height: 60,
+                                  height: 60.0.h,
                                 ),
                                 Text(
                                   'BSRU-Mail',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    fontSize: 18.0.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                                 Text('Google Education',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 15.0.sp,
                                       color: Colors.purple[900],
                                     )),
                                 Text('Office365',
                                     style: TextStyle(
-                                      fontSize: 15.0,
+                                      fontSize: 15.0.sp,
                                       color: Colors.purple[900],
                                     ))
                               ],

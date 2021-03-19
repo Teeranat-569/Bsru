@@ -12,10 +12,19 @@ class _Faculty1State extends State<Faculty1> {
     return SafeArea(
         child: Scaffold(
       backgroundColor: Colors.purple[50],
-      appBar: AppBar(
-        toolbarHeight: 40,
-        backgroundColor: Colors.purple,
-      ),
+      // appBar: AppBar(
+      //   toolbarHeight: 40,
+      //   backgroundColor: Colors.purple,
+      // ),
+       appBar: AppBar(
+          backgroundColor: Colors.purple[100],
+          // title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0.0),
         child: Column(

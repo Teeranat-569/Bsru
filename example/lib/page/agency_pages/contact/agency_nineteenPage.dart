@@ -9,18 +9,26 @@ class AgencyNineteen extends StatefulWidget {
 class _AgencyNineteenState extends State<AgencyNineteen> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-      appBar: AppBar(
-        toolbarHeight: 40,
-        backgroundColor: Colors.purple,
-        // title: Text('สำนักงานอธิการบดี'),
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back),
-            onPressed: () {
-              Navigator.of(context).pop();
-            }),
-      ),
+    return  Scaffold(
+      // appBar: AppBar(
+      //   toolbarHeight: 40,
+      //   backgroundColor: Colors.purple,
+      //   // title: Text(''),
+      //   leading: IconButton(
+      //       icon: Icon(Icons.arrow_back),
+      //       onPressed: () {
+      //         Navigator.of(context).pop();
+      //       }),
+      // )
+       appBar: AppBar(
+          backgroundColor: Colors.purple[100],
+          // title: Text("สำนักงานอธิการบดี",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
       body: Container(
         color: Colors.purple[100],
         height: MediaQuery.of(context).size.height,
@@ -38,7 +46,7 @@ class _AgencyNineteenState extends State<AgencyNineteen> {
           ],
         ),
       ),
-    ));
+    );
   }
 
   Widget showImage() {

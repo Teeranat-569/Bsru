@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:imagebutton/imagebutton.dart';
 
@@ -13,29 +12,31 @@ class StudentPage extends StatefulWidget {
 class _StudentPageState extends State<StudentPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-            toolbarHeight: 40,
-            backgroundColor: Colors.purple,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(Icons.arrow_back),
-            ),
-            title: Text('นักศึกษา')),
-        body: SingleChildScrollView(
-                  child: Container(
-            width: MediaQuery.of(context).size.width,
-             height: MediaQuery.of(context).size.height,
-            color: Colors.purple[100],
-            child: Column(
-              children: [
-                agencyButton(),
-                facultyButton(),
-              ],
-            ),
+    return Scaffold(
+      appBar: AppBar(
+          toolbarHeight: 40,
+          elevation: 0.0,
+          backgroundColor: Colors.purple[100],
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back,color: Colors.purple,),
+          ),
+          title: Text(
+            'นักศึกษา',
+            style: TextStyle(color: Colors.purple),
+          )),
+      body: SingleChildScrollView(
+        child: Container(
+          width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height,
+          color: Colors.purple[100],
+          child: Column(
+            children: [
+              agencyButton(),
+              facultyButton(),
+            ],
           ),
         ),
       ),
@@ -57,22 +58,24 @@ class _StudentPageState extends State<StudentPage> {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                   ImageButton(
-              children: <Widget>[],
-              width: 150,
-              height: 160,
-              pressedImage: Image.asset(
-                'images/employee.png',
-              ),   
-              unpressedImage: Image.asset('images/employeeii.png',),
-              onTap: () {
-                print('test');
-                route(Studentnew());
-              },
-            ),
+                  ImageButton(
+                    children: <Widget>[],
+                    width: 150,
+                    height: 160,
+                    pressedImage: Image.asset(
+                      'images/employee.png',
+                    ),
+                    unpressedImage: Image.asset(
+                      'images/employeeii.png',
+                    ),
+                    onTap: () {
+                      print('test');
+                      route(Studentnew());
+                    },
+                  ),
                   Text(
                     'นักศึกษาใหม่',
-                    style: TextStyle(fontSize: 20,color: Colors.white),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ],
               ),
@@ -99,21 +102,23 @@ class _StudentPageState extends State<StudentPage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   ImageButton(
-              children: <Widget>[],
-              width: 150,
-              height: 160,
-              pressedImage: Image.asset(
-                'images/employee.png',
-              ),
-              unpressedImage: Image.asset('images/employee.png',),
-              onTap: () {
-                print('test');
-                route(Studentold());
-              },
-            ),
+                    children: <Widget>[],
+                    width: 150,
+                    height: 160,
+                    pressedImage: Image.asset(
+                      'images/employee.png',
+                    ),
+                    unpressedImage: Image.asset(
+                      'images/employee.png',
+                    ),
+                    onTap: () {
+                      print('test');
+                      route(Studentold());
+                    },
+                  ),
                   Text(
                     'นักศึกษาปัจจุบัน',
-                    style: TextStyle(fontSize: 20,color: Colors.white),
+                    style: TextStyle(fontSize: 20, color: Colors.white),
                   ),
                 ],
               ),

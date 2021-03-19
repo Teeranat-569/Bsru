@@ -11,10 +11,18 @@ class _StudentnewState extends State<Studentnew> {
   Widget build(BuildContext context) {
     return Container(
       child: Scaffold(
-        appBar: AppBar(toolbarHeight: 40,
+        appBar: AppBar(
+           leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back,color: Colors.purple,),
+          ),
+            toolbarHeight: 40,
             elevation: 0.0,
-            title: Text('นักศึกษาใหม่'),
-            backgroundColor: Colors.purple),
+            title: Text('นักศึกษาใหม่', style: TextStyle(color: Colors.purple)),
+            backgroundColor: Colors.purple[50]
+            ),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [
@@ -36,7 +44,8 @@ class _StudentnewState extends State<Studentnew> {
                                 borderRadius: BorderRadius.circular(40)),
                             elevation: 16,
                             onPressed: () {
-                              website('http://202.29.54.207/dev3/admission/payment.php');
+                              website(
+                                  'http://202.29.54.207/dev3/admission/payment.php');
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -72,8 +81,7 @@ class _StudentnewState extends State<Studentnew> {
                                 borderRadius: BorderRadius.circular(40)),
                             elevation: 16,
                             onPressed: () {
-                              website(
-                                  'https://www.bsru.ac.th/vtr/');
+                              website('https://www.bsru.ac.th/vtr/');
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -126,15 +134,14 @@ class _StudentnewState extends State<Studentnew> {
                               ],
                             ),
                           ),
-                          
+
                           RaisedButton(
                             color: Colors.white,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
                             elevation: 16,
                             onPressed: () {
-                              website(
-                                  'https://www.bsru.ac.th/rules/');
+                              website('https://www.bsru.ac.th/rules/');
                             },
                             child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
@@ -148,12 +155,12 @@ class _StudentnewState extends State<Studentnew> {
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
                                     )),
-                                    Text('แต่งกาย',
+                                Text('แต่งกาย',
                                     style: TextStyle(
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
                                     )),
-                                    Text('ผ่อนผันทหาร',
+                                Text('ผ่อนผันทหาร',
                                     style: TextStyle(
                                       fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
@@ -183,7 +190,7 @@ class _StudentnewState extends State<Studentnew> {
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
-                                    Text('ประกันอุบัติเหตุ',
+                                Text('ประกันอุบัติเหตุ',
                                     style: TextStyle(
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
@@ -212,7 +219,7 @@ class _StudentnewState extends State<Studentnew> {
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
-                                    Text('สะดวก',
+                                Text('สะดวก',
                                     style: TextStyle(
                                       fontSize: 18.0,
                                       fontWeight: FontWeight.bold,

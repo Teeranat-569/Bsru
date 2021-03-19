@@ -10,16 +10,25 @@ class _HistoryPag5State extends State<HistoryPag5> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.purple[50],
+      // appBar: AppBar(
+      //     toolbarHeight: 40,
+      //     backgroundColor: Colors.purple,
+      //     leading: IconButton(
+      //       onPressed: () {
+      //         Navigator.of(context).pop();
+      //       },
+      //       icon: Icon(Icons.arrow_back),
+      //     ),
+      //     title: Text('')),
       appBar: AppBar(
+          backgroundColor: Colors.purple[50],
+          title: Text("ทำเนียบผู้บริหาร",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
           toolbarHeight: 40,
-          backgroundColor: Colors.purple,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-          title: Text('ทำเนียบผู้บริหาร')),
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
       body: ListView(children: <Widget>[
         ListTile(
           leading: Icon(Icons.people),

@@ -9,16 +9,25 @@ class _HistoryPag4State extends State<HistoryPag4> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   toolbarHeight: 40,
+      //     backgroundColor: Colors.purple,
+      //     leading: IconButton(
+      //       onPressed: () {
+      //         Navigator.of(context).pop();
+      //       },
+      //       icon: Icon(Icons.arrow_back),
+      //     ),
+      //     title: Text('')),
       appBar: AppBar(
-        toolbarHeight: 40,
-          backgroundColor: Colors.purple,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-          title: Text('วิสัยทัศน์ พันธกิจ')),
+          backgroundColor: Colors.purple[50],
+          title: Text("วิสัยทัศน์ พันธกิจ",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
       body: Container(
         child: Column(
           children: <Widget>[

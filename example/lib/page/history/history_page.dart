@@ -16,18 +16,18 @@ class HistoryPage extends StatefulWidget {
 class _HistoryPageState extends State<HistoryPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return Material(
+      type: MaterialType.canvas,
       child: Scaffold(
         appBar: AppBar(
-            backgroundColor: Colors.purple,
-            toolbarHeight: 40,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(Icons.arrow_back),
-            ),
-            title: Text('ประวัติบ้านสมเด็จ',)),
+          backgroundColor: Colors.purple[100],
+          title: Text("ประวัติบ้านสมเด็จ",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [
@@ -102,14 +102,18 @@ class _HistoryPageState extends State<HistoryPage> {
                                       child: Text(
                                         'ประวัติ',
                                         style: TextStyle(
-                                            fontSize: 14.0, color: Colors.white,),
+                                          fontSize: 14.0,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
                                     Center(
                                       child: Text(
                                         'สมเด็จเจ้าพระยาฯ',
                                         style: TextStyle(
-                                            fontSize: 14.0, color: Colors.white,),
+                                          fontSize: 14.0,
+                                          color: Colors.white,
+                                        ),
                                       ),
                                     ),
                                   ],

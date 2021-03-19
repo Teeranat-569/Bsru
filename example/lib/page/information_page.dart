@@ -13,9 +13,13 @@ class _InformationPageState extends State<InformationPage> {
       child: Scaffold(
         appBar: AppBar(
           toolbarHeight: 40,
-            elevation: 0.0,
-            title: Text('ระบบสารสนเทศ'),
-            backgroundColor: Colors.purple),
+          leading: IconButton(icon:Icon ( Icons.arrow_back),color: Colors.purple,
+          onPressed: (){
+            Navigator.of(context).pop();
+          },),
+            // elevation: 0.0,
+            title: Text('ระบบสารสนเทศ',style: TextStyle(color: Colors.purple),),
+            backgroundColor: Colors.purple[50]),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [

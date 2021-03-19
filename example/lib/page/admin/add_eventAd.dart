@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_google_maps_example/page/calendar/activityCal_model2Str.dart';
+import 'package:sizer/sizer.dart';
 
 class CalendarPage extends StatefulWidget {
   @override
@@ -141,12 +142,12 @@ class _CalendarPageState extends State<CalendarPage> {
                       decoration: BoxDecoration(
                           border: Border(
                               right: BorderSide(width: 4, color: Colors.grey))),
-                      width: 30,
-                      height: 60,
+                      width: 30.0.w,
+                      height: 60.0.h,
                       child: Center(
                         child: Text(
                           '$indexD',
-                          style: TextStyle(color: Colors.grey, fontSize: 20),
+                          style: TextStyle(color: Colors.grey, fontSize: 20.0.sp),
                         ),
                       )),
                 ),
@@ -158,11 +159,11 @@ class _CalendarPageState extends State<CalendarPage> {
                     children: [
                       Text(
                         widgets2[index]["Eventname"],
-                        style: TextStyle(fontSize: 14.0),
+                        style: TextStyle(fontSize: 14.0.sp),
                       ),
                       Text(
                         '${widgets2[index]["DateTime"]}',
-                        style: TextStyle(fontSize: 12.0),
+                        style: TextStyle(fontSize: 12.0.sp),
                       ),
                     ],
                   ),

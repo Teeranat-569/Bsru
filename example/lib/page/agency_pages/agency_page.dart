@@ -12,18 +12,27 @@ class AgencyPage extends StatefulWidget {
 class _AgencyPageState extends State<AgencyPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return 
+     Scaffold(
+        // appBar: AppBar(
+        //     toolbarHeight: 40,
+        //     backgroundColor: Colors.purple,
+        //     leading: IconButton(
+        //       onPressed: () {
+        //         Navigator.of(context).pop();
+        //       },
+        //       icon: Icon(Icons.arrow_back),
+        //     ),
+        //     title: Text('หน่วยงาน')),
         appBar: AppBar(
-            toolbarHeight: 40,
-            backgroundColor: Colors.purple,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(Icons.arrow_back),
-            ),
-            title: Text('หน่วยงาน')),
+          backgroundColor: Colors.purple[50],
+          // title: Text("ประวัติมหาวิทยาลัย",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 0,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
         body: Container(
           width: MediaQuery.of(context).size.width,
           color: Colors.purple[100],
@@ -34,7 +43,7 @@ class _AgencyPageState extends State<AgencyPage> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 

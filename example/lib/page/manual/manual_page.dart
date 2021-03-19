@@ -112,19 +112,20 @@ class _ManualPageState extends State<ManualPage> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return 
+     Scaffold(
         appBar: AppBar(
+          backgroundColor: Colors.purple[50],
           toolbarHeight: 40,
             leading: IconButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back),
+              icon: Icon(Icons.arrow_back,color: Colors.purple,),
             ),
-            title: Text('คู่มือนักศึกษา')),
-        body: showGrid(),
-      ),
+            title: Text('คู่มือนักศึกษา',style: TextStyle(color: Colors.purple),)),
+        body: Container(color: Colors.purple[50],child: showGrid()),
+      
     );
   }
 }

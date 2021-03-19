@@ -9,16 +9,25 @@ class _HistoryPag1State extends State<HistoryPag1> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      // appBar: AppBar(
+      //   toolbarHeight: 40,
+      //     backgroundColor: Colors.purple,
+      //     leading: IconButton(
+      //       onPressed: () {
+      //         Navigator.of(context).pop();
+      //       },
+      //       icon: Icon(Icons.arrow_back),
+      //     ),
+      //     title: Text('ประวัติมหาวิทยาลัย')),
       appBar: AppBar(
-        toolbarHeight: 40,
-          backgroundColor: Colors.purple,
-          leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back),
-          ),
-          title: Text('ประวัติมหาวิทยาลัย')),
+          backgroundColor: Colors.purple[50],
+          title: Text("ประวัติมหาวิทยาลัย",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
+        ),
       body: Container(
         child: Column(
           children: <Widget>[
@@ -38,11 +47,11 @@ class _HistoryPag1State extends State<HistoryPag1> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(
-                            'ประวัติมหาวิทยาลัย',
-                            style:
-                                TextStyle(fontSize: 22.0, color: Colors.purple),
-                          ),
+                          // Text(
+                          //   'ประวัติมหาวิทยาลัย',
+                          //   style:
+                          //       TextStyle(fontSize: 22.0, color: Colors.purple),
+                          // ),
                           SizedBox(height: 10),
                           Text(
                             '''\t\t\tสถาบันราชภัฏบ้านสมเด็จเจ้าพระยาเป็นสถานศึกษาที่ก่อตั้งมาครบ ๑๐๐ ปี ใน พ.ศ.๒๕๓๙ สถานศึกษาอันมีชื่อว่า “บ้านสมเด็จเจ้าพระยา” 

@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+// import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_google_maps_example/main.dart';
 import 'package:flutter_google_maps_example/page/news/web_view_container.dart';
 import 'package:imagebutton/imagebutton.dart';
@@ -168,236 +169,260 @@ class _HomeState extends State<Home> {
   Widget build(BuildContext context) {
     return Material(
       type: MaterialType.canvas,
-      child: SafeArea(
-        // bottomNavigationBar: BottomAppBar(
-        //   child: Container(
-        //     height: 85,
-        //     width: 700,
-        //     decoration: BoxDecoration(
-        //       image: DecorationImage(
-        //         image: AssetImage('images/footer.png'),
-        //         fit: BoxFit.cover,
-        //       ),
-        //     ),
-        //     child: Column(
-        //       crossAxisAlignment: CrossAxisAlignment.start,
-        //       children: [
-        //         Image.asset(
-        //           'images/address.png',
-        //           height: 18,
-        //         ),
-        //         Text(
-        //           '1061',
-        //           style: TextStyle(
-        //               fontSize: 9,
-        //               fontWeight: FontWeight.bold,
-        //               letterSpacing: 1.0,
-        //               fontFamily: 'Sarabun'),
-        //         ),
-        //         Text(
-        //           'ซอยอิสรภาพ 15',
-        //           style: TextStyle(
-        //               fontSize: 9,
-        //               fontWeight: FontWeight.bold,
-        //               fontFamily: 'Sarabun'),
-        //         ),
-        //         Text(
-        //           'ถนนอิสรภาพ',
-        //           style: TextStyle(
-        //               fontSize: 9,
-        //               fontWeight: FontWeight.bold,
-        //               fontFamily: 'Sarabun'),
-        //         ),
-        //         Text(
-        //           'แขวงหิรัญรูจี',
-        //           style: TextStyle(
-        //               fontSize: 9,
-        //               fontWeight: FontWeight.bold,
-        //               fontFamily: 'Sarabun'),
-        //         ),
-        //         Text(
-        //           'เขตธนบุรี กทม. 10600',
-        //           style: TextStyle(
-        //               fontSize: 9,
-        //               fontWeight: FontWeight.bold,
-        //               fontFamily: 'Sarabun'),
-        //         ),
-        //       ],
-        //     ),
-        //   ),
-        // ),,
-        
-        child:
-            // appBar: AppBar(toolbarHeight: 20,),
-
+      child: Scaffold(
+        appBar: AppBar(
+          toolbarHeight: 0,
+          backgroundColor: Colors.purple[50],
+        ),
+          bottomNavigationBar: BottomAppBar(
+            color: Colors.purple.shade50,
+            child: 
+            
             Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                  color: Color(0xfff6a5ec),
-                  borderRadius: BorderRadius.only(
-                    bottomLeft: Radius.circular(50.0),
-                    bottomRight: Radius.circular(200.0),
-                  ),
-                  // image: DecorationImage(
-                  //     image: AssetImage('images/Home.png'), fit: BoxFit.cover),
-                ),
+              height: 30,
+              width: MediaQuery.of(context).size.width,
+              decoration: BoxDecoration(
+                // image: DecorationImage(
+                //   image: AssetImage('images/footer.png'),
+                //   fit: BoxFit.cover,
+                // ),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(8),
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            left: 10,
-                          ),
-                          child: Center(
-                            child: Image.asset(
-                              'images/bsru-1.png',
-                              width: 200,
+                    Image.asset(
+                      'images/address.png',
+                      height: 18,
+                    ),
+                    Text(
+                      '1061',
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          letterSpacing: 1.0,
+                          fontFamily: 'Sarabun'),
+                    ),
+                    SizedBox(width: 5,),
+                    Text(
+                      'ซอยอิสรภาพ 15',
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Sarabun'),
+                    ),
+                     SizedBox(width: 5,),
+                    Text(
+                      'ถนนอิสรภาพ',
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Sarabun'),
+                    ),
+                     SizedBox(width: 5,),
+                    Text(
+                      'แขวงหิรัญรูจี',
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Sarabun'),
+                    ),
+                     SizedBox(width: 5,),
+                    Text(
+                      'เขตธนบุรี กทม. 10600',
+                      style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.bold,
+                          fontFamily: 'Sarabun'),
+                    ),
+                  ],
+                ),
+              ),
+            ),
+          ),
+              body: SafeArea(
+        
+          
+          child:
+              // appBar: AppBar(toolbarHeight: 20,),
+
+              Container(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              children: [
+              //    ClipPath(
+              // clipper: WaveClipperOne(),
+              // child: Container(
+              //   height: 120,
+              //   color: Color(0xfff6a5ec),
+              //   child: Center(child: Text("WaveClipperOne()")),
+              // ),),
+                Container(
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                    color: Color(0xfff6a5ec),
+                    borderRadius: BorderRadius.only(
+                      bottomLeft: Radius.circular(50.0),
+                      bottomRight: Radius.circular(200.0),
+                    ),
+                    // image: DecorationImage(
+                    //     image: AssetImage('images/Home.png'), fit: BoxFit.cover),
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(
+                              left: 10,
+                            ),
+                            child: Center(
+                              child: Image.asset(
+                                'images/bsru-1.png',
+                                width: 200,
+                              ),
                             ),
                           ),
-                        ),
 
-                        //
-                      ],
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.only(top: 10),
-                      child: Center(
-                          child: Container(
-                        decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(60.0),
-                            color: Color(0xfff6a5ec)),
-                        child: Image.asset(
-                          'images/Logo_BSRU.png',
-                          height: 108,
-                        ),
-                      )),
-                    ),
-                  ],
-                ),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(left: 8),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.start,
-                  children: [
-                    ImageButton(
-                      children: <Widget>[],
-                      width: 25,
-                      height: 25,
-                      pressedImage: Image.asset(
-                        'images/facebook.png',
-                      ),
-                      unpressedImage: Image.asset('images/facebook.png'),
-                      onTap: () {
-                        print('history');
-                        _launchURLFace();
-                      },
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    ImageButton(
-                      children: <Widget>[],
-                      width: 30,
-                      height: 30,
-                      pressedImage: Image.asset(
-                        'images/domain.png',
-                      ),
-                      unpressedImage: Image.asset('images/domain.png'),
-                      onTap: () {
-                        print('history');
-
-                        _launchURLWeb();
-                      },
-                    ),
-                    ImageButton(
-                      children: <Widget>[],
-                      width: 30,
-                      height: 30,
-                      pressedImage: Image.asset(
-                        'images/user.png',
-                      ),
-                      unpressedImage: Image.asset('images/user.png'),
-                      onTap: () {
-                        print('admin');
-                        route(Admin());
-                      },
-                    ),
-                  ],
-                ),
-              ),
-              Expanded(
-                child: SingleChildScrollView(
-                  child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20, right: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            historyButton(),
-                            newsButton(),
-                            agencyButton(),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
+                          //
+                        ],
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 20, right: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            peopleButton(),
-                            studentButton(),
-                            calendarButton(),
-                          ],
-                        ),
+                        padding: const EdgeInsets.only(top: 10),
+                        child: Center(
+                            child: Container(
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(60.0),
+                              color: Color(0xfff6a5ec)),
+                          child: Image.asset(
+                            'images/Logo_BSRU.png',
+                            height: 108,
+                          ),
+                        )),
                       ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20, right: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            courseButton(),
-                            informationButton(),
-                            moreButton(),
-                          ],
-                        ),
-                      ),
-                      SizedBox(
-                        height: 20,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 20, right: 20),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            downloadButton(),
-                            mapButton(),
-                            contactButton(),
-                          ],
-                        ),
-                      ),
-                      // RaisedButton(onPressed: () {
-                      //         route(AddEvent());
-                      //       }),
                     ],
                   ),
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.only(left: 8),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 25,
+                        height: 25,
+                        pressedImage: Image.asset(
+                          'images/facebook.png',
+                        ),
+                        unpressedImage: Image.asset('images/facebook.png'),
+                        onTap: () {
+                          print('history');
+                          _launchURLFace();
+                        },
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 30,
+                        height: 30,
+                        pressedImage: Image.asset(
+                          'images/domain.png',
+                        ),
+                        unpressedImage: Image.asset('images/domain.png'),
+                        onTap: () {
+                          print('history');
+
+                          _launchURLWeb();
+                        },
+                      ),
+                      ImageButton(
+                        children: <Widget>[],
+                        width: 30,
+                        height: 30,
+                        pressedImage: Image.asset(
+                          'images/user.png',
+                        ),
+                        unpressedImage: Image.asset('images/user.png'),
+                        onTap: () {
+                          print('admin');
+                          route(Admin());
+                        },
+                      ),
+                    ],
+                  ),
+                ),
+                Expanded(
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              historyButton(),
+                              newsButton(),
+                              agencyButton(),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              peopleButton(),
+                              studentButton(),
+                              calendarButton(),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              courseButton(),
+                              informationButton(),
+                              moreButton(),
+                            ],
+                          ),
+                        ),
+                        SizedBox(
+                          height: 20,
+                        ),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 20, right: 20),
+                          child: Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                            children: [
+                              downloadButton(),
+                              mapButton(),
+                              contactButton(),
+                            ],
+                          ),
+                        ),
+                        // RaisedButton(onPressed: () {
+                        //         route(AddEvent());
+                        //       }),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),

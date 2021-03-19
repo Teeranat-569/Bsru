@@ -12,10 +12,17 @@ class _StudentoldState extends State<Studentold> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-          toolbarHeight: 40,
+           leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(Icons.arrow_back,color: Colors.purple,),
+          ),
+            toolbarHeight: 40,
             elevation: 0.0,
-            title: Text('นักศึกษาปัจจุบัน'),
-            backgroundColor: Colors.purple),
+            title: Text('นักศึกษาปัจจุบัน',
+                style: TextStyle(color: Colors.purple)),
+            backgroundColor: Colors.purple[50]),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [

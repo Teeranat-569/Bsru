@@ -13,7 +13,7 @@ dependencies:
   cupertino_icons: ^1.0.1
   imagebutton: ^0.0.6
   url_launcher: ^5.7.10
-  shared_preferences: ^0.5.12+4
+  shared_preferences: ^2.0.5
   firebase_core: ^0.5.0+1
   cloud_firestore: ^0.14.1+3
   firebase_storage: ^4.0.1
@@ -24,14 +24,17 @@ dependencies:
   image_picker: 
   # flutter_pdfview: ^1.0.4
   pdf_viewer_plugin: ^1.1.1
-  path_provider: ^1.6.27
+  path_provider: 
   webview_flutter: ^2.0.2
   intl:
-  http: ^0.12.2
+  http: 
   dio: ^3.0.10
   provider:
   flutter_webview_plugin: ^0.3.11
   # flutter_inappwebview: ^5.1.0+4
+  flutter_custom_clippers: ^1.1.2
+  device_preview: 
+  sizer: ^1.1.8
 
 flutter:
   uses-material-design: true

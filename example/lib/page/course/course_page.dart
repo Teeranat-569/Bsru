@@ -9,18 +9,18 @@ class CoursePage extends StatefulWidget {
 class _CoursePageState extends State<CoursePage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
+    return 
+      Scaffold(
         appBar: AppBar(
           toolbarHeight: 40,
-            backgroundColor: Colors.purple,
+            backgroundColor: Colors.purple[50],
             leading: IconButton(
               onPressed: () {
                 Navigator.of(context).pop();
               },
-              icon: Icon(Icons.arrow_back),
+              icon: Icon(Icons.arrow_back,color: Colors.purple,),
             ),
-            title: Text('หลักสูตรที่เปิดสอน')),
+            title: Text('หลักสูตรที่เปิดสอน',style: TextStyle(color: Colors.purple),)),
         body: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 0.0),
           child: Column(
@@ -46,7 +46,7 @@ class _CoursePageState extends State<CoursePage> {
             ],
           ),
         ),
-      ),
+      
     );
   }
 

@@ -3,6 +3,7 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:sizer/sizer.dart';
 
 import 'activityCal_model2Str.dart';
 
@@ -51,7 +52,7 @@ class _CalendarPageState extends State<CalendarPage> {
               child: Text(
                 '${model3.datetime}',
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 18.0.sp,
                   color: Colors.white,
                   // fontWeight: FontWeight.bold,
                 ),
@@ -62,7 +63,7 @@ class _CalendarPageState extends State<CalendarPage> {
               child: Text(
                 model3.eventname,
                 style: TextStyle(
-                  fontSize: 18.0,
+                  fontSize: 18.0.sp,
                   color: Colors.black,
                   // fontWeight: FontWeight.bold,
                 ),

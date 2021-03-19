@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import 'contact/agency_eightPage.dart';
@@ -32,22 +31,29 @@ class AgencyPageContact extends StatefulWidget {
 class _AgencyPageContactState extends State<AgencyPageContact> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        appBar: AppBar(
-            toolbarHeight: 40,
-            backgroundColor: Colors.purple,
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(Icons.arrow_back),
-            ),
-            title: Text('หน่วยงาน')),
-        body: Container(
-          color: Colors.purple[100],
-          child: showGrid(),
+    return Scaffold(
+      // appBar: AppBar(
+      //     toolbarHeight: 40,
+      //     backgroundColor: Colors.purple,
+      //     leading: IconButton(
+      //       onPressed: () {
+      //         Navigator.of(context).pop();
+      //       },
+      //       icon: Icon(Icons.arrow_back),
+      //     ),
+      //     title: Text('หน่วยงาน'))
+      appBar: AppBar(
+          backgroundColor: Colors.purple[100],
+          title: Text("หน่วยงาน",style: TextStyle(color: Colors.black),),
+          titleSpacing: 00.0,
+          centerTitle: true,
+          toolbarHeight: 40,
+          elevation: 0.00,
+          automaticallyImplyLeading: false,
         ),
+      body: Container(
+        color: Colors.purple[100],
+        child: showGrid(),
       ),
     );
   }
@@ -119,11 +125,10 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
- 
   // ignore: deprecated_member_use
-  RaisedButton 
-   // ignore: non_constant_identifier_names
-  agency_two() {
+  RaisedButton
+      // ignore: non_constant_identifier_names
+      agency_two() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -146,11 +151,10 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
-  
   // ignore: deprecated_member_use
-  RaisedButton 
-  // ignore: non_constant_identifier_names
-  agency_three() {
+  RaisedButton
+      // ignore: non_constant_identifier_names
+      agency_three() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -173,11 +177,10 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
-  
   // ignore: deprecated_member_use
-  RaisedButton 
-  // ignore: non_constant_identifier_names
-  agency_four() {
+  RaisedButton
+      // ignore: non_constant_identifier_names
+      agency_four() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -200,11 +203,10 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
-  
   // ignore: deprecated_member_use
-  RaisedButton 
-  // ignore: non_constant_identifier_names
-  agency_five() {
+  RaisedButton
+      // ignore: non_constant_identifier_names
+      agency_five() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -227,12 +229,11 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
-  
   // ignore: deprecated_member_use
-  RaisedButton 
-  
-  // ignore: non_constant_identifier_names
-  agency_six() {
+  RaisedButton
+
+      // ignore: non_constant_identifier_names
+      agency_six() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -255,12 +256,11 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
-  
   // ignore: deprecated_member_use
-  RaisedButton 
-  
-  // ignore: non_constant_identifier_names
-  agency_seven() {
+  RaisedButton
+
+      // ignore: non_constant_identifier_names
+      agency_seven() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
@@ -283,11 +283,10 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             borderRadius: new BorderRadius.circular(10.0)));
   }
 
- 
   // ignore: deprecated_member_use
-  RaisedButton 
-   // ignore: non_constant_identifier_names
-  agency_eight() {
+  RaisedButton
+      // ignore: non_constant_identifier_names
+      agency_eight() {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {

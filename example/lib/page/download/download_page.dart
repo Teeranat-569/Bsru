@@ -15,18 +15,17 @@ class DownloadPage extends StatefulWidget {
 class _DownloadPageState extends State<DownloadPage> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return  Scaffold(
       appBar: AppBar(
           toolbarHeight: 40,
-          backgroundColor: Colors.purple,
+          backgroundColor: Colors.purple[50],
           leading: IconButton(
             onPressed: () {
               Navigator.of(context).pop();
             },
-            icon: Icon(Icons.arrow_back),
+            icon: Icon(Icons.arrow_back,color: Colors.purple,),
           ),
-          title: Text('ดาวน์โหลดเอกสาร')),
+          title: Text('ดาวน์โหลดเอกสาร',style: TextStyle(color: Colors.purple),)),
       body: Container(
         decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(0), color: Colors.purple[100]),
@@ -91,7 +90,7 @@ class _DownloadPageState extends State<DownloadPage> {
           ],
         ),
       ),
-    ));
+    );
   }
 
   Widget t1(String name, String url) {
