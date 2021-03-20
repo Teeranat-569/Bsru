@@ -38,7 +38,7 @@ class _StudentnewState extends State<Studentnew> {
                         mainAxisSpacing: 15,
                         crossAxisSpacing: 5,
                         crossAxisCount: 1,
-                        childAspectRatio: 16 / 4,
+                        childAspectRatio: 16 / 3,
                         primary: false,
                         children: <Widget>[
                           RaisedButton(
@@ -65,14 +65,14 @@ class _StudentnewState extends State<Studentnew> {
                                     Text(
                                       'ตรวจสอบการ',
                                       style: TextStyle(
-                                        fontSize: 18.0,
+                                        // fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       'สมัคร',
                                       style: TextStyle(
-                                        fontSize: 18.0,
+                                        // fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -101,7 +101,7 @@ class _StudentnewState extends State<Studentnew> {
                                 ),
                                 Text('VTR แนะนำ',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     ))
                               ],
@@ -130,14 +130,14 @@ class _StudentnewState extends State<Studentnew> {
                                     Text(
                                       'ค้นหา',
                                       style: TextStyle(
-                                        fontSize: 18.0,
+                                        // fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
                                     Text(
                                       'หอพักนักศึกษา',
                                       style: TextStyle(
-                                        fontSize: 18.0,
+                                        // fontSize: 18.0,
                                         fontWeight: FontWeight.bold,
                                       ),
                                     ),
@@ -148,33 +148,42 @@ class _StudentnewState extends State<Studentnew> {
                           ),
 
                           RaisedButton(
-                            color: Colors.grey,
+                            color: Colors.grey[300],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website('https://www.bsru.ac.th/rules/');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/certificate.png',
-                                  height: 80,
+                                  height: 75,
+                                ),
+                                SizedBox(
+                                  width: 25,
                                 ),
                                 Text('กฎระเบียบ',
                                     style: TextStyle(
-                                      fontSize: 14.0,
+                                      // fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
                                     )),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Text('แต่งกาย',
                                     style: TextStyle(
-                                      fontSize: 14.0,
+                                      // fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
                                     )),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Text('ผ่อนผันทหาร',
                                     style: TextStyle(
-                                      fontSize: 14.0,
+                                      // fontSize: 14.0,
                                       fontWeight: FontWeight.bold,
                                     )),
                               ],
@@ -182,29 +191,35 @@ class _StudentnewState extends State<Studentnew> {
                           ),
                           // ignore: deprecated_member_use
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.tealAccent[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website(
                                   'https://dsad.bsru.ac.th/newdsad/nurse-and-accident.html');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/nurse.png',
                                   height: 80,
                                 ),
+                                SizedBox(
+                                  width: 20,
+                                ),
                                 Text('งานพยาบาล',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
+                                SizedBox(
+                                  width: 5,
+                                ),
                                 Text('ประกันอุบัติเหตุ',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
                               ],
@@ -212,28 +227,31 @@ class _StudentnewState extends State<Studentnew> {
                           ),
                           // ignore: deprecated_member_use
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.deepOrange[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website('https://www.bsru.ac.th/facility/');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/sofa.png',
                                   height: 80,
                                 ),
+                                SizedBox(
+                                  width: 20,
+                                ),
                                 Text('สิ่งอำนวยความ',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
                                 Text('สะดวก',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     )),
                               ],

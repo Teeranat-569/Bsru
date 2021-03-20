@@ -12,12 +12,15 @@ class _StudentoldState extends State<Studentold> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-           leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back,color: Colors.purple,),
-          ),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.purple,
+              ),
+            ),
             toolbarHeight: 40,
             elevation: 0.0,
             title: Text('นักศึกษาปัจจุบัน',
@@ -29,35 +32,39 @@ class _StudentoldState extends State<Studentold> {
             SafeArea(
               child: Padding(
                 padding: EdgeInsets.all(8.0),
-                child: Column(
+                child: Row(
                   children: <Widget>[
                     Expanded(
                       child: GridView.count(
                         mainAxisSpacing: 15,
                         crossAxisSpacing: 5,
-                        crossAxisCount: 2,
+                        crossAxisCount: 1,
+                        childAspectRatio: 16 / 3,
                         primary: false,
                         children: <Widget>[
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.pink[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website(
                                   'http://202.29.54.207/dev3/admission/payment.php');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/web11.png',
-                                  height: 80,
+                                  height: 60,
+                                ),
+                                SizedBox(
+                                  width: 20,
                                 ),
                                 Text(
                                   'ระบบ MIS',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    // fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -65,23 +72,26 @@ class _StudentoldState extends State<Studentold> {
                             ),
                           ),
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.blue[50],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website('https://www.bsru.ac.th/elearning/');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/world-grid.png',
-                                  height: 80,
+                                  height: 60,
+                                ),
+                                SizedBox(
+                                  width: 20,
                                 ),
                                 Text('e-Learning',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     ))
                               ],
@@ -89,25 +99,28 @@ class _StudentoldState extends State<Studentold> {
                           ),
                           // ignore: deprecated_member_use
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.yellow[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website(
                                   'https://dsad.bsru.ac.th/newdsad/scholarship.html');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/scholarship.png',
-                                  height: 80,
+                                  height: 60,
+                                ),
+                                 SizedBox(
+                                  width: 20,
                                 ),
                                 Text(
                                   'ทุนการศึกษา',
                                   style: TextStyle(
-                                    fontSize: 18.0,
+                                    // fontSize: 18.0,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
@@ -116,24 +129,27 @@ class _StudentoldState extends State<Studentold> {
                           ),
                           // ignore: deprecated_member_use
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.brown[50],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website(
                                   'https://dsad.bsru.ac.th/newdsad/studentloan.html');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/briefcase.png',
-                                  height: 80,
+                                  height: 60,
+                                ),
+                                 SizedBox(
+                                  width: 20,
                                 ),
                                 Text('กยศ.',
                                     style: TextStyle(
-                                      fontSize: 18.0,
+                                      // fontSize: 18.0,
                                       fontWeight: FontWeight.bold,
                                     ))
                               ],

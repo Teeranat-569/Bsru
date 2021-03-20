@@ -9,19 +9,26 @@ class CoursePage extends StatefulWidget {
 class _CoursePageState extends State<CoursePage> {
   @override
   Widget build(BuildContext context) {
-    return 
-      Scaffold(
-        appBar: AppBar(
+    return Scaffold(
+      appBar: AppBar(
           toolbarHeight: 40,
-            backgroundColor: Colors.purple[50],
-            leading: IconButton(
-              onPressed: () {
-                Navigator.of(context).pop();
-              },
-              icon: Icon(Icons.arrow_back,color: Colors.purple,),
+          backgroundColor: Colors.purple[50],
+          leading: IconButton(
+            onPressed: () {
+              Navigator.of(context).pop();
+            },
+            icon: Icon(
+              Icons.arrow_back,
+              color: Colors.purple,
             ),
-            title: Text('หลักสูตรที่เปิดสอน',style: TextStyle(color: Colors.purple),)),
-        body: Padding(
+          ),
+          title: Text(
+            'หลักสูตรที่เปิดสอน',
+            style: TextStyle(color: Colors.purple),
+          )),
+      body: Container(
+        color: Colors.purple[100],
+        child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 0.0),
           child: Column(
             children: <Widget>[
@@ -46,7 +53,7 @@ class _CoursePageState extends State<CoursePage> {
             ],
           ),
         ),
-      
+      ),
     );
   }
 
@@ -57,7 +64,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "คณะวิทยาศาสตร์และเทคโนโลยี",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -68,13 +75,13 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
             title: Text(
               "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             children: [
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาเกษตรศาสตร์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -90,12 +97,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาเคมี (วท.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B8%AF-161816417244708/',
+                        'https://www.facebook.com/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B8%AF-161616417244708/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -106,7 +113,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาชีววิทยา (วท.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -121,7 +128,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาวิทยาการคอมพิวเตอร์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -137,7 +144,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาวิทยาศาสตร์ความปลอดภัย",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -153,7 +160,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาวิทยาศาสตร์และเทคโนโลยีการอาหาร",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -168,7 +175,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาวิชาวิทยาศาสตร์สิ่งแวดล้อม",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -183,7 +190,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการแพทย์แผนไทย",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -198,7 +205,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาคณิตศาสตร์ (วท.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -214,12 +221,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขานวัตกรรมและเทคโนโลยีพอลิเมอร์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-BSRU-180869215354854/',
+                        'https://www.facebook.com/%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-BSRU-160869215354854/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -230,7 +237,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาจุลชีววิทยา",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -245,7 +252,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาเทคนิคการแพทย์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -260,7 +267,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาเทคโนโลยีคอมพิวเตอร์อิเล็กทรอนิกส์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -276,7 +283,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาเทคโนโลยีสารสนเทศและการสื่อสาร",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -291,12 +298,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาฟิสิกส์ (วท.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-118597458858557/',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-116597458858557/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -307,7 +314,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาสาธารณสุขศาสตร์",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -322,7 +329,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาแอนิเมชั่นและดิจิทัลมีเดีย",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -338,7 +345,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขานวัตกรรมการจัดการเกษตรและซัพลายเชน",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -355,13 +362,13 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
             title: Text(
               "ระดับการศึกษา : ปริญญาตรี (5 ปี) ภาคปกติ",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             children: [
               ExpansionTile(
                 title: Text(
                   "คณิตศาสตร์ (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -376,7 +383,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "คณิตศาสตร์ (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -391,7 +398,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "คอมพิวเตอร์ศึกษา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -406,7 +413,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "ฟิสิกส์ (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -422,12 +429,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "ชีววิทยา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/Biology-Teacher-BSRU-157493158257614/',
+                        'https://www.facebook.com/Biology-Teacher-BSRU-157493158257616/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -449,7 +456,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "คณะครุศาสตร์",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -460,14 +467,14 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
               title: Text(
                 "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
               ),
               children: [
                 ExpansionTile(
                   title: Text(
                     "สาขาการวัดประเมินและวิจัยทางการศึกษา (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -479,7 +486,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาจิตวิทยาและการแนะแนว (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -491,7 +498,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาเทคโนโลยีดิจิทัลเพื่อการศึกษา (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -507,7 +514,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาการประถมศึกษา (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -519,7 +526,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาการศึกษาปฐมวัย (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -531,7 +538,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาวิทยาศาสตร์ทั่วไป (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -543,7 +550,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาศิลปศึกษา (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -560,7 +567,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาพลศึกษา (ค.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -581,7 +588,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "คณะวิทยาการจัดการ",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -592,13 +599,13 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
             title: Text(
               "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             children: [
               ExpansionTile(
                 title: Text(
                   "สาขาการโฆษณาและธุรกิจบันเทิง (นศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -614,7 +621,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการจัดการธุรกิจระหว่างประเทศ (หลักสูตรนานาชาติ) (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -630,7 +637,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการจัดการโลจิสติกส์ (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -646,12 +653,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการตลาด (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/MKBSRU2019', 'Facebook'),
+                        'https://www.facebook.com/MKBSRU1619', 'Facebook'),
                   ),
                   ListTile(
                     title: website('http://site.bsru.ac.th/marketing'),
@@ -661,12 +668,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการท่องเที่ยว (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/groups/302021116501264',
+                        'https://www.facebook.com/groups/301621116501264',
                         'Facebook'),
                   ),
                   ListTile(
@@ -677,7 +684,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการบริหารทรัพยากรมนุษย์ (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -693,12 +700,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการบัญชี (บช.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%BABSRU-%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B5-121027618606172/',
+                        'https://www.facebook.com/%E0%B8%BABSRU-%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B5-121027616606172/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -709,7 +716,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการประกอบการธุรกิจ (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -725,7 +732,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการประชาสัมพันธ์และการสื่อสารองค์การ (นศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -740,7 +747,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาการสื่อสารมวลชน (นศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -756,7 +763,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาคอมพิวเตอร์ธุรกิจ (บธ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -771,7 +778,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาพยนตร์และดิจิทัลมีเดีย (นศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -786,7 +793,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาเศรษฐศาสตร์ (ศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -812,7 +819,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "คณะมนุษยศาสตร์และสังคมศาสตร์",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -823,13 +830,13 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
             title: Text(
               "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             children: [
               ExpansionTile(
                 title: Text(
                   "สาขานาฏยศิลป์ (ศป.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -844,7 +851,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขานิติศาสตร์ (น.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -859,7 +866,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาจีน (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -870,7 +877,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาไทย (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -885,7 +892,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาและวัฒนธรรมเอเชียตะวันออก (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -901,7 +908,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาอังกฤษ (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -916,12 +923,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขารัฐประศาสนศาสตร์ (รป.บ)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%99%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-214659068590306/',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%A3%E0%B8%B1%E0%B8%90%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%99%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-216659068590306/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -932,12 +939,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาสังคมศาสตร์เพื่อการพัฒนา (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-1417008055086239/',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%AA%E0%B8%B1%E0%B8%87%E0%B8%84%E0%B8%A1%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%E0%B9%80%E0%B8%9E%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9E%E0%B8%B1%E0%B8%92%E0%B8%99%E0%B8%B2-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-1617008055086239/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -948,7 +955,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาออกแบบกราฟิกและอินโฟร์ (ศป.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -963,7 +970,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาบรรณารักษศาสตร์และสารสนเทศศาสตร์ (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -975,7 +982,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาอาเซียนศึกษา (ศศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -986,7 +993,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขานาฏยศิลป์ศึกษา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -997,12 +1004,12 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาไทย (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A25%E0%B8%9B%E0%B8%B5-357042164743520/',
+                        'https://www.facebook.com/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A25%E0%B8%9B%E0%B8%B5-357042164743516/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -1013,7 +1020,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาภาษาอังกฤษ (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1029,7 +1036,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาสังคมศึกษา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1051,7 +1058,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "วิทยาลัยการดนตรี",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -1062,13 +1069,13 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
             title: Text(
               "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-              style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+              style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
             ),
             children: [
               ExpansionTile(
                 title: Text(
                   "สาขาดนตรีตะวันตก (ดศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1083,7 +1090,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาดนตรีไทย (ดศ.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1099,7 +1106,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาดนตรีตะวันตกศึกษา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1115,7 +1122,7 @@ class _CoursePageState extends State<CoursePage> {
               ExpansionTile(
                 title: Text(
                   "สาขาดนตรีไทยศึกษา (ค.บ.)",
-                  style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                  style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                 ),
                 children: [
                   ListTile(
@@ -1142,7 +1149,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -1153,14 +1160,14 @@ class _CoursePageState extends State<CoursePage> {
           ExpansionTile(
               title: Text(
                 "ระดับการศึกษา : ปริญญาตรี (4 ปี) ภาคปกติ",
-                style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
               ),
               children: [
                 ExpansionTile(
                   title: Text(
                     "สาขาเทคโนโลยีโลจิสติกส์ (วท.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1177,7 +1184,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาเทคโนโลยีอุตสาหกรรม (ทล.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1194,7 +1201,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาการจัดการวิศวกรรมการผลิตและโลจิสติกส์ (อส.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1207,12 +1214,12 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาวิศวกรรมไฟฟ้าเครื่องกลการผลิต (วศ.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
                       title: facebook(
-                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-186245221551718/',
+                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-166245221551716/',
                           'Facebook'),
                     ),
                     ListTile(
@@ -1224,7 +1231,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาออกแบบผลิตภัณฑ์อุตสาหกรรม (วท.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1240,12 +1247,12 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาวิศวกรรมการผลิตและออกแบบแม่พิมพ์ (วศ.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
                       title: facebook(
-                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C-%E0%B8%A1%E0%B8%9A%E0%B8%AA-1133771359981412',
+                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B9%81%E0%B8%A1%E0%B9%88%E0%B8%9E%E0%B8%B4%E0%B8%A1%E0%B8%9E%E0%B9%8C-%E0%B8%A1%E0%B8%9A%E0%B8%AA-1133771359981612',
                           'Facebook'),
                     ),
                     ListTile(
@@ -1257,12 +1264,12 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาวิศวกรรมพลังงาน (วศ.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
                       title: facebook(
-                          'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99-%E0%B8%A1%E0%B8%9A%E0%B8%AA-157285855114738/',
+                          'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B8%9E%E0%B8%A5%E0%B8%B1%E0%B8%87%E0%B8%87%E0%B8%B2%E0%B8%99-%E0%B8%A1%E0%B8%9A%E0%B8%AA-157285855116738/',
                           'Facebook'),
                     ),
                     ListTile(
@@ -1274,7 +1281,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาผู้ประกอบการอาหาร (บธ.บ.)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1291,7 +1298,7 @@ class _CoursePageState extends State<CoursePage> {
                   title: Text(
                     "สาขาเทคโนโลยีการจัดการอุตสาหกรรม (ทล.บ.) (หลักสูตรต่อเนื่อง)",
                     style:
-                        TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+                        TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
                   ),
                   children: [
                     ListTile(
@@ -1314,7 +1321,7 @@ class _CoursePageState extends State<CoursePage> {
         backgroundColor: Colors.pink[50],
         title: Text(
           "บัณฑิตวิทยาลัย",
-          style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontSize: 16.0, fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -1323,7 +1330,7 @@ class _CoursePageState extends State<CoursePage> {
             child: Image.asset('images/gradbanner.gif'),
           ),
           ListTile(
-            title: website('http://grad.bsru.ac.th/grad2019/\nindex.php'),
+            title: website('http://grad.bsru.ac.th/grad1619/\nindex.php'),
           ),
           ListTile(
             title: facebook('https://www.facebook.com/graduateschoolbsru',

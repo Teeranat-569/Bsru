@@ -98,7 +98,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                         Container(
                           padding: EdgeInsets.all(10),
                           // height: 60,
-                          color: Colors.cyan,
+                          color: Colors.black,
                           // decoration: BoxDecoration(
                           //   color: Colors.green[100],
                           //   borderRadius: BorderRadius.circular(40),
@@ -107,7 +107,8 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             child: Text(
                               '${widgets2[index].eventname}',
                               style: TextStyle(
-                                  fontSize: 16.0, color: Colors.white),
+                                  // fontSize: 16.0,
+                                  color: Colors.cyan),
                             ),
                           ),
                         ),
@@ -129,7 +130,9 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             children: [
                               Text(
                                 "วันที่เริ่ม",
-                                style: TextStyle(fontSize: 16.0),
+                                style: TextStyle(
+                                    // fontSize: 16.0
+                                    ),
                               )
                             ],
                           ),
@@ -170,7 +173,9 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                             children: [
                               Text(
                                 "วันที่สิ้นสุด",
-                                style: TextStyle(fontSize: 16.0),
+                                style: TextStyle(
+                                    // fontSize: 16.0
+                                    ),
                               )
                             ],
                           ),
@@ -190,7 +195,8 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
                               if (widgets2[index].datetimeEnd != null)
                                 Text(
                                   '${widgets2[index].datetimeEnd}',
-                                  style: TextStyle(fontSize: 14.0,color: Colors.cyan),
+                                  style: TextStyle(
+                                      fontSize: 14.0, color: Colors.cyan),
                                 )
                             ],
                           )
@@ -270,7 +276,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
         },
         separatorBuilder: (BuildContext context, int index) {
           return Divider(
-            color: Colors.black,
+            color: Colors.white,
             height: 1,
           );
         },
