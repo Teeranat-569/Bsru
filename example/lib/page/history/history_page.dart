@@ -21,7 +21,10 @@ class _HistoryPageState extends State<HistoryPage> {
       child: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.purple[100],
-          title: Text("ประวัติบ้านสมเด็จ",style: TextStyle(color: Colors.black),),
+          title: Text(
+            "ประวัติบ้านสมเด็จ",
+            style: TextStyle(color: Colors.black),
+          ),
           titleSpacing: 00.0,
           centerTitle: true,
           toolbarHeight: 40,
@@ -69,10 +72,12 @@ class _HistoryPageState extends State<HistoryPage> {
                                   height: 60,
                                   // width: 100,
                                 ),
+                                SizedBox(
+                                  height: 5,
+                                ),
                                 Text(
                                   'ประวัติมหาวิทยาลัย',
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),
@@ -96,13 +101,15 @@ class _HistoryPageState extends State<HistoryPage> {
                                   'images/parchment.png',
                                   height: 60,
                                 ),
+                                SizedBox(
+                                  height: 5,
+                                ),
                                 Column(
                                   children: [
                                     Center(
                                       child: Text(
                                         'ประวัติ',
                                         style: TextStyle(
-                                          fontSize: 14.0,
                                           color: Colors.white,
                                         ),
                                       ),
@@ -111,7 +118,6 @@ class _HistoryPageState extends State<HistoryPage> {
                                       child: Text(
                                         'สมเด็จเจ้าพระยาฯ',
                                         style: TextStyle(
-                                          fontSize: 14.0,
                                           color: Colors.white,
                                         ),
                                       ),
@@ -140,10 +146,12 @@ class _HistoryPageState extends State<HistoryPage> {
                                   'images/BSRUhis.png',
                                   height: 100,
                                 ),
+                                SizedBox(
+                                  height: 5,
+                                ),
                                 Text(
                                   'ตราสัญลักษณ์',
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),
@@ -167,10 +175,12 @@ class _HistoryPageState extends State<HistoryPage> {
                                   'images/knowledge.png',
                                   height: 80,
                                 ),
+                                SizedBox(
+                                  height: 5,
+                                ),
                                 Text(
                                   'วิสัยทัศน์ พันธกิจ',
-                                  style: TextStyle(
-                                      fontSize: 14.0, color: Colors.white),
+                                  style: TextStyle(color: Colors.white),
                                 ),
                               ],
                             ),
@@ -192,7 +202,10 @@ class _HistoryPageState extends State<HistoryPage> {
                               children: <Widget>[
                                 Image.asset(
                                   'images/executive.png',
-                                  height: 100,
+                                  height: 80,
+                                ),
+                                SizedBox(
+                                  height: 5,
                                 ),
                                 Text(
                                   'ทำเนียบผู้บริหาร',

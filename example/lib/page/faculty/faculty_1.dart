@@ -9,22 +9,24 @@ class Faculty1 extends StatefulWidget {
 class _Faculty1State extends State<Faculty1> {
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
+    return  Scaffold(
       backgroundColor: Colors.purple[50],
       // appBar: AppBar(
       //   toolbarHeight: 40,
       //   backgroundColor: Colors.purple,
       // ),
-       appBar: AppBar(
-          backgroundColor: Colors.purple[100],
-          // title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
-          titleSpacing: 00.0,
-          centerTitle: true,
-          toolbarHeight: 40,
-          elevation: 0.00,
-          automaticallyImplyLeading: false,
+      appBar: AppBar(
+        backgroundColor: Colors.purple[100],
+        title: Text(
+          "คณะ",
+          style: TextStyle(color: Colors.black),
         ),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 40,
+        elevation: 0.00,
+        automaticallyImplyLeading: false,
+      ),
       body: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 0.0),
         child: Column(
@@ -50,7 +52,7 @@ class _Faculty1State extends State<Faculty1> {
           ],
         ),
       ),
-    ));
+    );
   }
 
   Container ft1() {
@@ -60,7 +62,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "คณะวิทยาศาสตร์และเทคโนโลยี",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -72,8 +74,8 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://sci.bsru.ac.th/sciweb/'),
           ),
           ListTile(
-            title: facebook('https://www.facebook.com/BSRU.science',
-                '@BSRU.science'),
+            title: facebook(
+                'https://www.facebook.com/BSRU.science', '@BSRU.science'),
           )
         ],
       ),
@@ -87,7 +89,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "คณะครุศาสตร์",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -114,7 +116,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "คณะวิทยาการจัดการ",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -140,7 +142,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "คณะมนุษยศาสตร์และสังคมศาสตร์",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -167,7 +169,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "วิทยาลัยการดนตรี",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -179,8 +181,8 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://music.bsru.ac.th/'),
           ),
           ListTile(
-            title: facebook('https://www.facebook.com/bsrumusic2558',
-                '@bsrumusic2558'),
+            title: facebook(
+                'https://www.facebook.com/bsrumusic2558', '@bsrumusic2558'),
           )
         ],
       ),
@@ -194,7 +196,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(
@@ -222,7 +224,7 @@ class _Faculty1State extends State<Faculty1> {
         // backgroundColor: Colors.yellow[50],
         title: Text(
           "บัณฑิตวิทยาลัย",
-          style: TextStyle(fontSize: 18.0, fontWeight: FontWeight.bold),
+          style: TextStyle(fontWeight: FontWeight.bold),
         ),
         children: <Widget>[
           Container(

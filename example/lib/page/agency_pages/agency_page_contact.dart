@@ -43,14 +43,17 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
       //     ),
       //     title: Text('หน่วยงาน'))
       appBar: AppBar(
-          backgroundColor: Colors.purple[100],
-          title: Text("หน่วยงาน",style: TextStyle(color: Colors.black),),
-          titleSpacing: 00.0,
-          centerTitle: true,
-          toolbarHeight: 40,
-          elevation: 0.00,
-          automaticallyImplyLeading: false,
+        backgroundColor: Colors.purple[100],
+        title: Text(
+          "หน่วยงาน",
+          style: TextStyle(color: Colors.black),
         ),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 40,
+        elevation: 0.00,
+        automaticallyImplyLeading: false,
+      ),
       body: Container(
         color: Colors.purple[100],
         child: showGrid(),
@@ -65,7 +68,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
       crossAxisCount: 1,
-      childAspectRatio: 16 / 3,
+      childAspectRatio: 16 / 2,
       children: <Widget>[
         agency_one(),
         agency_two(),
@@ -115,7 +118,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักงานอธิการบดี',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -141,7 +144,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'กองบริหารงานบุคคล',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -167,7 +170,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'กองกลาง',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -193,7 +196,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'กองอาคารสถานที่และสิ่งแวดล้อม',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -219,7 +222,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'กองนโยบายและแผน',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -246,7 +249,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'งานประกันคุณภาพการศึกษา',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -273,7 +276,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'กองคลัง',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -299,7 +302,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'งานพ้สดุ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -322,7 +325,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักส่งเสริมวิชาการและงานทะเบียน',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -345,7 +348,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักกิจการนักศึกษา',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -368,7 +371,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักประชาสัมพันธ์และสารสนเทศ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -391,7 +394,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักคอมพิวเตอร์',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -414,7 +417,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักวิเทศสัมพันธ์และเครือข่ายอาเซียน',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -437,7 +440,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักวิทยบริการและเทคโนโลยีสารสนเทศ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -460,7 +463,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักศิลปะและวัฒนธรรม',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -483,7 +486,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สำนักงานสภามหาวิทยาลัย',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -506,7 +509,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สถาบันวิจัยและพัฒนา (สวพ.)',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -529,7 +532,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สถาบันขงจื๊อ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -552,7 +555,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'หน่วยตรวจสอบภายใน',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -575,7 +578,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สภาวิชาการ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -598,7 +601,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
             children: [
               Text(
                 'สภาคณาจารย์และข้าราชการ',
-                style: TextStyle(fontSize: 18),
+                // style: TextStyle(fontSize: 18),
               ),
             ],
           ),
@@ -624,11 +627,11 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
                 children: [
                   Text(
                     'Academic Collaboration on Thai',
-                    style: TextStyle(fontSize: 12),
+                    // style: TextStyle(fontSize: 12),
                   ),
                   Text(
                     'Language and Culture for Foreign Students',
-                    style: TextStyle(fontSize: 12),
+                    // style: TextStyle(fontSize: 12),
                   ),
                 ],
               ),

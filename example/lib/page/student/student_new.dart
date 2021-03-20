@@ -12,17 +12,19 @@ class _StudentnewState extends State<Studentnew> {
     return Container(
       child: Scaffold(
         appBar: AppBar(
-           leading: IconButton(
-            onPressed: () {
-              Navigator.of(context).pop();
-            },
-            icon: Icon(Icons.arrow_back,color: Colors.purple,),
-          ),
+            leading: IconButton(
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.purple,
+              ),
+            ),
             toolbarHeight: 40,
             elevation: 0.0,
             title: Text('นักศึกษาใหม่', style: TextStyle(color: Colors.purple)),
-            backgroundColor: Colors.purple[50]
-            ),
+            backgroundColor: Colors.purple[50]),
         backgroundColor: Colors.purple[50],
         body: Stack(
           children: [
@@ -35,26 +37,30 @@ class _StudentnewState extends State<Studentnew> {
                       child: GridView.count(
                         mainAxisSpacing: 15,
                         crossAxisSpacing: 5,
-                        crossAxisCount: 2,
+                        crossAxisCount: 1,
+                        childAspectRatio: 16 / 4,
                         primary: false,
                         children: <Widget>[
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.yellow[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website(
                                   'http://202.29.54.207/dev3/admission/payment.php');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/studentNew.png',
                                   height: 80,
                                 ),
-                                Column(
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Row(
                                   children: [
                                     Text(
                                       'ตรวจสอบการ',
@@ -76,19 +82,22 @@ class _StudentnewState extends State<Studentnew> {
                             ),
                           ),
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.red[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website('https://www.bsru.ac.th/vtr/');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/multimedia.png',
-                                  height: 80,
+                                  height: 75,
+                                ),
+                                SizedBox(
+                                  width: 25,
                                 ),
                                 Text('VTR แนะนำ',
                                     style: TextStyle(
@@ -99,21 +108,24 @@ class _StudentnewState extends State<Studentnew> {
                             ),
                           ),
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.amber[100],
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
-                            elevation: 16,
+                            // elevation: 16,
                             onPressed: () {
                               website('https://www.bsru.ac.th/apartment/');
                             },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
                               children: <Widget>[
                                 Image.asset(
                                   'images/flat.png',
-                                  height: 80,
+                                  height: 75,
                                 ),
-                                Column(
+                                SizedBox(
+                                  width: 25,
+                                ),
+                                Row(
                                   children: [
                                     Text(
                                       'ค้นหา',
@@ -136,7 +148,7 @@ class _StudentnewState extends State<Studentnew> {
                           ),
 
                           RaisedButton(
-                            color: Colors.white,
+                            color: Colors.grey,
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(40)),
                             elevation: 16,
