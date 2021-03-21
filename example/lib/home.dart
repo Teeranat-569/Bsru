@@ -813,7 +813,7 @@ class _HomeState extends State<Home> {
               //   route(NewsPage());
               // },
               onTap: () async {
-                const url = 'https://bsru.ac.th/nesws';
+                const url = 'https://bsru.ac.th/news';
                 if (await canLaunch(url)) {
                   await launch(url);
                 } else {
