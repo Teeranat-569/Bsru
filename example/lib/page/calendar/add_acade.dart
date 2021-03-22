@@ -88,31 +88,30 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
             Positioned(
               child: Container(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 15),
-                height: MediaQuery.of(context).size.height - 450,
+                height: MediaQuery.of(context).size.height - 440,
                 width: MediaQuery.of(context).size.width,
 
                 child: Column(
                   children: [
-                    Row(
-                      children: [
-                        Container(
-                          padding: EdgeInsets.all(10),
-                          // height: 60,
-                          color: Colors.black,
-                          // decoration: BoxDecoration(
-                          //   color: Colors.green[100],
-                          //   borderRadius: BorderRadius.circular(40),
-                          // ),
-                          child: Center(
-                            child: Text(
-                              '${widgets2[index].eventname}',
-                              style: TextStyle(
-                                  // fontSize: 16.0,
-                                  color: Colors.cyan),
-                            ),
-                          ),
+                    Container(
+                      padding: EdgeInsets.all(10),
+                      // height: 60,
+                      color: Colors.black,
+                      // decoration: BoxDecoration(
+                      //   color: Colors.green[100],
+                      //   borderRadius: BorderRadius.circular(40),
+                      // ),
+                      child: Center(
+                        child: Text(
+                          '${widgets2[index].eventname}',
+                          maxLines: 3,
+                          overflow: TextOverflow.ellipsis,
+                          softWrap: false,
+                          style: TextStyle(
+                              // fontSize: 16.0,
+                              color: Colors.cyan),
                         ),
-                      ],
+                      ),
                     ),
                     Container(
                       padding: EdgeInsets.all(10),

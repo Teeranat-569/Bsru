@@ -75,7 +75,7 @@ class _StudentPageState extends State<StudentPage> {
                   ),
                   Text(
                     'นักศึกษาใหม่',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),
@@ -118,7 +118,7 @@ class _StudentPageState extends State<StudentPage> {
                   ),
                   Text(
                     'นักศึกษาปัจจุบัน',
-                    style: TextStyle(fontSize: 20, color: Colors.white),
+                    style: TextStyle(color: Colors.white),
                   ),
                 ],
               ),

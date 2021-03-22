@@ -50,6 +50,8 @@ class _AcademicState extends State<Academic> {
 
   Widget nameform() {
     return TextField(
+      cursorHeight: 5.0,
+        maxLines: 3,
         onChanged: (value) => nameForm = value.trim(),
         controller: textEditController,
         decoration: InputDecoration(
