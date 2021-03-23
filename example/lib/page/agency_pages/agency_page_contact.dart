@@ -68,7 +68,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
       crossAxisSpacing: 10,
       mainAxisSpacing: 10,
       crossAxisCount: 1,
-      childAspectRatio: 16 / 2,
+      childAspectRatio: 16 / 3.5,
       children: <Widget>[
         agency_one(),
         agency_two(),
@@ -620,23 +620,24 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
         padding: const EdgeInsets.all(5),
         child: Padding(
           padding: const EdgeInsets.all(5.0),
-          child: Row(
-            children: [
+         child:
               Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
-                    'Academic Collaboration on Thai',
+                    'Academic Collaboration on Thai Language and Culture for Foreign Students',
+                    overflow: TextOverflow.ellipsis,
+                       maxLines: 3,
+                       softWrap: false,
                     // style: TextStyle(fontSize: 12),
                   ),
-                  Text(
-                    'Language and Culture for Foreign Students',
-                    // style: TextStyle(fontSize: 12),
-                  ),
+                  // Text(
+                  //   '',
+                  //   // style: TextStyle(fontSize: 12),
+                  // ),
                 ],
               ),
-            ],
-          ),
+         
         ),
         color: Colors.white,
         shape: new RoundedRectangleBorder(
