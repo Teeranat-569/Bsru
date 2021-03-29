@@ -196,7 +196,7 @@ class GoogleMapState extends gmap.GoogleMapStateBase {
       // pohh,
       position.toLatLng(),
       // icon: icon == null
-      icon: BitmapDescriptor.defaultMarkerWithHue(21),
+      icon: BitmapDescriptor.defaultMarkerWithHue(285),
           // : 
           // // BitmapDescriptor.defaultMarkerWithHue(21),
           // await _getBmpDesc('${fixAssetPath(icon)}$icon'),

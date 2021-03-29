@@ -253,11 +253,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 mapType: MapType.roadmap,
                 mapStyle: _mapStyle,
                 interactive: true,
-                onTap: (coord) =>
-                    _scaffoldKey.currentState.showSnackBar(SnackBar(
-                  content: Text(coord?.toString()),
-                  duration: const Duration(seconds: 2),
-                )),
+                // onTap: (coord) =>
+                //     _scaffoldKey.currentState.showSnackBar(SnackBar(
+                //   content: Text(coord?.toString()),
+                //   duration: const Duration(seconds: 2),
+                // )),
                 mobilePreferences: const MobileMapPreferences(
                   trafficEnabled: true,
                   zoomControlsEnabled: false,
