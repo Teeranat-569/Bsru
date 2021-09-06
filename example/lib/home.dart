@@ -50,9 +50,10 @@ class _HomeState extends State<Home> {
         builder: (BuildContext context) {
           // return object of type Dialog
           return AlertDialog(
-            // backgroundColor: Color(0xff762A76),
-            backgroundColor: Colors.white,
+            backgroundColor: Color(0xff762A76),
+            // backgroundColor: Colors.white,
             content: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 // Text('รับสมัคร',
                 //     style: TextStyle(fontSize: 30, color: Colors.white)),
@@ -61,7 +62,14 @@ class _HomeState extends State<Home> {
                 // SizedBox(
                 //   height: 20,
                 // ),
-                Image.asset('images/page_gif.gif'),
+                Image.asset(
+                  'images/bsru_purple.png',
+                  fit: BoxFit.cover,
+                ),
+                Image.asset(
+                  'images/page_gif.gif',
+                  fit: BoxFit.cover,
+                ),
                 // Image.network('$pic'),
                 SizedBox(
                   height: 20,
@@ -70,7 +78,7 @@ class _HomeState extends State<Home> {
                 RaisedButton(
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(30.0)),
-                  color: Color(0xff762A76),
+                  color: Color(0xff520140),
                   onPressed: () async {
                     const url =
                         'http://202.29.54.207/dev3/admission/index.php?fbclid=IwAR0v2FiZKU0IvXeC6aYZqnjgKpcp6OYg6ydZsDN_mq2J17lvf-5nPp4c5vs';
@@ -81,7 +89,7 @@ class _HomeState extends State<Home> {
                     }
                   },
                   child: Text(
-                    'กดสมัครเลย!!',
+                    'สมัครเลย!!',
                     style: TextStyle(fontSize: 30, color: Colors.white),
                   ),
                 ),
@@ -91,6 +99,9 @@ class _HomeState extends State<Home> {
               // usually buttons at the bottom of the dialog
               // ignore: deprecated_member_use
               FlatButton(
+                color: Colors.white,
+                shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(30.0)),
                 child: Text(
                   "Close X",
                   style: TextStyle(color: Colors.deepPurple),

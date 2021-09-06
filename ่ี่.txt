@@ -1,0 +1,3 @@
+C:\Users\pc\AppData\Local\Android\Sdk
+ANDROID
+C:\Users\pc\AppData\Local\Android\Sdk\platform
