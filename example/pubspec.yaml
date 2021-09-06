@@ -131,6 +131,7 @@ flutter:
     - images/user.png
     - images/maps.png
     - images/ff.jpg
+    - images/page_gif.gif
   fonts:
     - family: Pridi
       fonts:

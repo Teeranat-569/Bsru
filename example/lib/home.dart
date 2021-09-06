@@ -45,30 +45,31 @@ class _HomeState extends State<Home> {
     SharedPreferences prefs = await SharedPreferences.getInstance();
     bool isFirstLoaded = prefs.getBool(keyIsFirstLoaded);
     if (isFirstLoaded != null || isFirstLoaded == null) {
-      showDialog(
+      await showDialog(
         context: context,
         builder: (BuildContext context) {
           // return object of type Dialog
           return AlertDialog(
-            backgroundColor: Color(0xff762A76),
+            // backgroundColor: Color(0xff762A76),
+            backgroundColor: Colors.white,
             content: Column(
               children: [
-                Text('รับสมัคร',
-                    style: TextStyle(fontSize: 30, color: Colors.white)),
-                Text('นักศึกษาใหม่',
-                    style: TextStyle(fontSize: 30, color: Colors.white)),
-                SizedBox(
-                  height: 20,
-                ),
-                Image.asset('images/page.jpg'),
+                // Text('รับสมัคร',
+                //     style: TextStyle(fontSize: 30, color: Colors.white)),
+                // Text('นักศึกษาใหม่',
+                //     style: TextStyle(fontSize: 30, color: Colors.white)),
+                // SizedBox(
+                //   height: 20,
+                // ),
+                Image.asset('images/page_gif.gif'),
                 // Image.network('$pic'),
                 SizedBox(
                   height: 20,
                 ),
                 // ignore: deprecated_member_use
                 RaisedButton(
-                  shape: new RoundedRectangleBorder(
-                      borderRadius: new BorderRadius.circular(30.0)),
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30.0)),
                   color: Color(0xff762A76),
                   onPressed: () async {
                     const url =
@@ -89,10 +90,10 @@ class _HomeState extends State<Home> {
             actions: <Widget>[
               // usually buttons at the bottom of the dialog
               // ignore: deprecated_member_use
-              new FlatButton(
-                child: new Text(
+              FlatButton(
+                child: Text(
                   "Close X",
-                  style: TextStyle(color: Colors.yellow),
+                  style: TextStyle(color: Colors.deepPurple),
                 ),
                 onPressed: () {
                   // Close the dialog
@@ -246,60 +247,60 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                   SizedBox(
-                        height: 5,
-                      ),
-                   Padding(
-                  padding: const EdgeInsets.all(3.0),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 25,
-                        height: 25,
-                        pressedImage: Image.asset(
-                          'images/facebook.png',
-                        ),
-                        unpressedImage: Image.asset('images/facebook.png'),
-                        onTap: () {
-                          print('history');
-                          _launchURLFace();
-                        },
-                      ),
-                      // SizedBox(
-                      //   width: 5,
-                      // ),
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 25,
-                        height: 25,
-                        pressedImage: Image.asset(
-                          'images/domain.png',
-                        ),
-                        unpressedImage: Image.asset('images/domain.png'),
-                        onTap: () {
-                          print('history');
-
-                          _launchURLWeb();
-                        },
-                      ),
-                      ImageButton(
-                        children: <Widget>[],
-                        width: 25,
-                        height: 25,
-                        pressedImage: Image.asset(
-                          'images/user.png',
-                        ),
-                        unpressedImage: Image.asset('images/user.png'),
-                        onTap: () {
-                          print('admin');
-                          route(Admin());
-                        },
-                      ),
-                    ],
+                  SizedBox(
+                    height: 5,
                   ),
-                ),
+                  Padding(
+                    padding: const EdgeInsets.all(3.0),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        ImageButton(
+                          children: <Widget>[],
+                          width: 25,
+                          height: 25,
+                          pressedImage: Image.asset(
+                            'images/facebook.png',
+                          ),
+                          unpressedImage: Image.asset('images/facebook.png'),
+                          onTap: () {
+                            print('history');
+                            _launchURLFace();
+                          },
+                        ),
+                        // SizedBox(
+                        //   width: 5,
+                        // ),
+                        ImageButton(
+                          children: <Widget>[],
+                          width: 25,
+                          height: 25,
+                          pressedImage: Image.asset(
+                            'images/domain.png',
+                          ),
+                          unpressedImage: Image.asset('images/domain.png'),
+                          onTap: () {
+                            print('history');
+
+                            _launchURLWeb();
+                          },
+                        ),
+                        ImageButton(
+                          children: <Widget>[],
+                          width: 25,
+                          height: 25,
+                          pressedImage: Image.asset(
+                            'images/user.png',
+                          ),
+                          unpressedImage: Image.asset('images/user.png'),
+                          onTap: () {
+                            print('admin');
+                            route(Admin());
+                          },
+                        ),
+                      ],
+                    ),
+                  ),
                 ],
               ),
             ),
@@ -368,9 +369,9 @@ class _HomeState extends State<Home> {
                     ],
                   ),
                 ),
-                 SizedBox(
-                        height: 5,
-                      ),
+                SizedBox(
+                  height: 5,
+                ),
                 // Padding(
                 //   padding: const EdgeInsets.only(left: 8),
                 //   child: Row(
