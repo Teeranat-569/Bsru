@@ -2,7 +2,9 @@ import 'dart:async';
 import 'dart:ui';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_example/page/admin/activityCal_model2Str.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
@@ -21,9 +23,17 @@ class _ActivityState extends State<Activity> {
   var kk;
   CollectionReference _fireStore =
       FirebaseFirestore.instance.collection('ActivityCal');
-  String time;
+  var collection = FirebaseFirestore.instance.collection('ActivityCal');
+
+  String time, link1;
+  List<dynamic> widgets2 = [];
 
   int index;
+  @override
+  void initState() {
+    super.initState();
+    readAlldata3();
+  }
 
   Future<void> insertData() async {
     FirebaseFirestore firestore = FirebaseFirestore.instance;
@@ -31,10 +41,37 @@ class _ActivityState extends State<Activity> {
     map['Eventname'] = nameForm;
     map['DateTime'] = time;
 
-    setState(() {});
+    setState(() {
+      // readAlldata3();
+    });
 
     await firestore.collection('ActivityCal').doc().set(map).then((value) {
       print('insert Success*******');
+    });
+  }
+
+  Future<void> readAlldata3() async {
+    await Firebase.initializeApp().then((value) async {
+      print('success');
+      // ignore: await_only_futures
+      await FirebaseFirestore.instance
+          .collection('ActivityCal')
+          .snapshots()
+          .listen((event) {
+        print('snapshot = ${event.docs}');
+        for (var snapshots in event.docs) {
+          Map<String, dynamic> map = snapshots.data();
+          print('Map == $map');
+          ActivityModel model2 = ActivityModel.fromMap(map);
+
+          setState(() {
+            widgets2.add(model2);
+            link1 = model2.link1;
+            print(
+                '//////////////////////////////////////////////////////$link1');
+          });
+        }
+      });
     });
   }
 
@@ -61,13 +98,19 @@ class _ActivityState extends State<Activity> {
               Radius.circular(10.0),
             ),
           ),
-          labelText: 'ระบุกิจกรรม',
+          labelText: 'ระบุ link ปฏิทินวิชาการ',
           labelStyle: TextStyle(
             fontSize: 16.0,
             color: Colors.black,
             fontWeight: FontWeight.bold,
           ),
         ));
+  }
+
+  Widget link() {
+    return Column(
+      children: [Text('Link ที่ถูกใช้ปัจจุบัน'), Text('$link1')],
+    );
   }
 
   var format = DateFormat.yMMMMEEEEd();
@@ -114,13 +157,19 @@ class _ActivityState extends State<Activity> {
           FloatingActionButton(
             onPressed: () {
               // insertData();
-              addUser();
-              route(Add());
+              // addUser();
+              collection
+                  .doc(
+                      '15bfjhVepH732Wn0Jesn') // <-- Doc ID where data should be updated.
+                  .update({
+                'link1': nameForm,
+              });
+              // route(Add());
               Fluttertoast.showToast(
-                msg: "เพิ่มกิจกรรมสำเร็จ",
+                msg: "แก้ไขสำเร็จ",
                 toastLength: Toast.LENGTH_SHORT,
                 gravity: ToastGravity.CENTER,
-                backgroundColor: Colors.purple[100],
+                backgroundColor: Colors.orange[100],
                 textColor: Colors.black,
               );
             },
@@ -144,6 +193,7 @@ class _ActivityState extends State<Activity> {
           child: Form(
               key: textFill,
               child: ListView(children: <Widget>[
+                link(),
                 SizedBox(
                   height: 10.0,
                 ),
@@ -151,10 +201,10 @@ class _ActivityState extends State<Activity> {
                 SizedBox(
                   height: 10.0,
                 ),
-                timeForm(),
-                SizedBox(
-                  height: 15.0,
-                ),
+                // timeForm(),
+                // SizedBox(
+                //   height: 15.0,
+                // ),
               ])),
         )),
       ),

@@ -1,6 +1,5 @@
-
-
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_example/page/admin/Calendar.dart';
 import 'package:flutter_google_maps_example/page/admin/calendar_page.dart';
 
 import '../../home.dart';
@@ -22,7 +21,6 @@ class _AddState extends State<Add> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-     
         title: Text(
           'ผู้ดูแลระบบ',
           style: TextStyle(fontSize: 14),
@@ -58,7 +56,7 @@ class _AddState extends State<Add> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     onPressed: () {
-                      route(Calendar());
+                      route(Calendar_Admin());
                     },
                     child: Row(
                       children: [
@@ -66,7 +64,9 @@ class _AddState extends State<Add> {
                           Icons.calendar_today,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 5,),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
                           'ปฏิทินกิจกรรม ปฏิทินวิชาการ',
                           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -99,7 +99,9 @@ class _AddState extends State<Add> {
                           Icons.image,
                           color: Colors.white,
                         ),
-                        SizedBox(width: 5,),
+                        SizedBox(
+                          width: 5,
+                        ),
                         Text(
                           'แก้ไขรูปภาพข่าวรับสมัคร',
                           style: TextStyle(fontSize: 20, color: Colors.white),

@@ -15,7 +15,7 @@ class _CalendarState extends State<Calendar> {
   Future<Null> route(Widget routeName) async {
     MaterialPageRoute materialPageRoute =
         MaterialPageRoute(builder: (BuildContext context) => routeName);
-    Navigator.of(context).push(materialPageRoute);
+    await Navigator.of(context).push(materialPageRoute);
   }
 
   @override
