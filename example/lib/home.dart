@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 // import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_google_maps_example/main.dart';
 import 'package:flutter_google_maps_example/page/calendar/manual_page2.dart';
-import 'package:flutter_google_maps_example/page/news/web_view_container.dart';
+import 'package:flutter_google_maps_example/page/admin/web_view_container.dart';
 import 'package:imagebutton/imagebutton.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
