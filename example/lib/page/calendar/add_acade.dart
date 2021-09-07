@@ -319,7 +319,7 @@ class _CalendarPageAcaState extends State<CalendarPageAca> {
               ],
             ),
           ),
-          child: widgets2.length == 0
+          child: widgets2.isEmpty
               ? Center(
                   child: Text('ไม่มีปฏิทินวิชาการ',
                       style: TextStyle(color: Colors.grey, fontSize: 22)))

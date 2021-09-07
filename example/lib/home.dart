@@ -3,6 +3,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 // import 'package:flutter_custom_clippers/flutter_custom_clippers.dart';
 import 'package:flutter_google_maps_example/main.dart';
+import 'package:flutter_google_maps_example/page/calendar/manual_page2.dart';
 import 'package:flutter_google_maps_example/page/news/web_view_container.dart';
 import 'package:imagebutton/imagebutton.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -872,7 +873,7 @@ class _HomeState extends State<Home> {
               unpressedImage: Image.asset('images/schedule.png'),
               onTap: () {
                 print('test');
-                route(Calendar());
+                route(ManualPage2());
               },
             ),
           ),

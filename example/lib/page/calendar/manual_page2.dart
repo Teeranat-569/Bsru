@@ -1,18 +1,17 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar2.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar3.dart';
+import 'package:flutter_google_maps_example/page/manual/link_model.dart';
 
-import 'fdf.dart';
-import 'form.dart';
-import 'form2.dart';
-import 'link_model.dart';
-
-class ManualPage extends StatefulWidget {
+class ManualPage2 extends StatefulWidget {
   @override
-  _ManualPageState createState() => _ManualPageState();
+  _ManualPage2State createState() => _ManualPage2State();
 }
 
-class _ManualPageState extends State<ManualPage> {
+class _ManualPage2State extends State<ManualPage2> {
   String link;
 
   Future<void> readAlldata3() async {
@@ -47,6 +46,7 @@ class _ManualPageState extends State<ManualPage> {
       children: <Widget>[
         button1(),
         button2(),
+        button3(),
       ],
     );
   }
@@ -59,7 +59,7 @@ class _ManualPageState extends State<ManualPage> {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
-          route(MyApp3());
+          route(Calendar1());
         },
         padding: const EdgeInsets.all(5),
         child: Padding(
@@ -67,7 +67,7 @@ class _ManualPageState extends State<ManualPage> {
           child: Row(
             children: [
               Text(
-                'คู่มือเส้นทางสู่บัณฑิต 2560 - 2561',
+                'ปฏิทินวิชาการ',
                 style: TextStyle(fontSize: 18),
               ),
             ],
@@ -84,7 +84,7 @@ class _ManualPageState extends State<ManualPage> {
     // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
-          route(MyApp());
+          route(Calendar2());
         },
         padding: const EdgeInsets.all(5),
         child: Padding(
@@ -92,7 +92,32 @@ class _ManualPageState extends State<ManualPage> {
           child: Row(
             children: [
               Text(
-                'คู่มือเส้นทางสู่บัณฑิต 2562 - 2563',
+                'กำหนดการลงทะเบียนเรียน ภาคปกติ',
+                style: TextStyle(fontSize: 18),
+              ),
+            ],
+          ),
+        ),
+        color: Colors.white,
+        shape:
+            RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)));
+  }
+
+   RaisedButton
+      // ignore: non_constant_identifier_names
+      button3() {
+    // ignore: deprecated_member_use
+    return RaisedButton(
+        onPressed: () {
+          route(Calendar3());
+        },
+        padding: const EdgeInsets.all(5),
+        child: Padding(
+          padding: const EdgeInsets.all(5.0),
+          child: Row(
+            children: [
+              Text(
+                'กำหนดการลงทะเบียนเรียน ภาคพิเศษ',
                 style: TextStyle(fontSize: 18),
               ),
             ],
