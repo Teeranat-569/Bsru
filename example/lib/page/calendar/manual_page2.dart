@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_google_maps_example/page/calendar/fdf_calendar.dart';
-import 'package:flutter_google_maps_example/page/calendar/fdf_calendar2.dart';
-import 'package:flutter_google_maps_example/page/calendar/fdf_calendar3.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar%20copy.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar2%20copy.dart';
+import 'package:flutter_google_maps_example/page/calendar/fdf_calendar3%20copy.dart';
+
 import 'package:flutter_google_maps_example/page/manual/link_model.dart';
 
 class ManualPage2 extends StatefulWidget {

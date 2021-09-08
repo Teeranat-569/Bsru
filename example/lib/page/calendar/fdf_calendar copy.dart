@@ -14,14 +14,14 @@ import 'package:http/http.dart' as http;
 // import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-void main() => runApp(Calendar1_Admin());
+void main() => runApp(Calendar1());
 
-class Calendar1_Admin extends StatefulWidget {
+class Calendar1 extends StatefulWidget {
   @override
-  _Calendar1_AdminState createState() => _Calendar1_AdminState();
+  _Calendar1State createState() => _Calendar1State();
 }
 
-class _Calendar1_AdminState extends State<Calendar1_Admin> {
+class _Calendar1State extends State<Calendar1> {
   String path;
   dynamic link;
   var kk;
@@ -117,36 +117,7 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // insertData();
-            // addUser();
-            route(Activity());
-            // collection.doc('15bfjhVepH732Wn0Jesn').get(link);
-
-            // Fluttertoast.showToast(
-            //   msg: "เพิ่มกิจกรรมสำเร็จ",
-            //   toastLength: Toast.LENGTH_SHORT,
-            //   gravity: ToastGravity.CENTER,
-            //   backgroundColor: Colors.purple[100],
-            //   textColor: Colors.black,
-            // );
-          },
-          child: Column(
-            children: [
-              Icon(
-                Icons.edit,
-                size: 30.0,
-              ),
-              Text(
-                'แก้ไข',
-                style: TextStyle(fontFamily: 'Sarabun'),
-              )
-            ],
-          ),
-          backgroundColor: Colors.orange[900],
-          tooltip: 'บันทึกกิจกรรม',
-        ),
+       
         appBar: AppBar(
           toolbarHeight: 0,
           backgroundColor: Colors.white,

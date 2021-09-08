@@ -10,31 +10,32 @@ dependencies:
 
   flutter_google_maps:
     path: ../
-  cupertino_icons: ^1.0.1
-  imagebutton: ^0.0.6
-  url_launcher: ^5.7.10
-  shared_preferences: ^2.0.5
-  firebase_core: ^0.5.0+1
-  cloud_firestore: ^0.14.1+3
-  firebase_storage: ^4.0.1
-  datetime_picker_formfield: ^1.0.0
-  buddhist_datetime_dateformat: ^1.0.6
-  fluttertoast: ^7.1.8
-  firebase_auth: 0.18.1+2
+  cupertino_icons: 
+  imagebutton:
+  url_launcher: 
+  shared_preferences:
+  firebase_core: 
+  cloud_firestore: 
+  firebase_storage: 
+  datetime_picker_formfield: 
+  buddhist_datetime_dateformat: 
+  fluttertoast: 
+  firebase_auth: 
   image_picker: 
-  # flutter_pdfview: ^1.0.4
-  pdf_viewer_plugin: ^1.1.1
+  # flutter_pdfview: ^1.0.
+  pdf_viewer_plugin: 
   path_provider: 
-  webview_flutter: ^2.0.2
+  webview_flutter: 
   intl:
   http: 
-  dio: ^3.0.10
+  dio: 
   provider:
-  flutter_webview_plugin: ^0.3.11
+  flutter_webview_plugin: 
   # flutter_inappwebview: ^5.1.0+4
-  flutter_custom_clippers: ^1.1.2
+  flutter_custom_clippers: 
   device_preview: 
-  sizer: ^1.1.8
+  sizer: 
+  syncfusion_flutter_pdfviewer: 
 
 flutter:
   uses-material-design: true

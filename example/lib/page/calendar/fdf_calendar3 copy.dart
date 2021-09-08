@@ -5,47 +5,30 @@ import 'dart:typed_data';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_google_maps_example/page/admin/activityCal_model2Str.dart';
-import 'package:flutter_google_maps_example/page/admin/add_Activity.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+import 'package:flutter_google_maps_example/page/admin/acadeCalspe_model2Str.dart';
 import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
-// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
-void main() => runApp(Calendar1_Admin());
+// import 'acadeCalspe_model2Str.dart';
 
-class Calendar1_Admin extends StatefulWidget {
+void main() => runApp(Calendar3());
+
+class Calendar3 extends StatefulWidget {
   @override
-  _Calendar1_AdminState createState() => _Calendar1_AdminState();
+  _Calendar3State createState() => _Calendar3State();
 }
 
-class _Calendar1_AdminState extends State<Calendar1_Admin> {
-  String path;
-  dynamic link;
-  var kk;
+class _Calendar3State extends State<Calendar3> {
+  String path, link3;
   List<dynamic> widgets2 = [];
-  var collection = FirebaseFirestore.instance.collection('ActivityCal');
-  Stream<DocumentSnapshot> snapshot = Firestore.instance
-      .collection("ActivityCal")
-      .document('15bfjhVepH732Wn0Jesn')
-      .snapshots();
-  Uri uri;
-  // Stream<DocumentSnapshot> snapshot2 = Firestore.instance
-  //     .collection("listofprods")
-  //     .document('ac1')
-  //     .snapshots()
-  //     .get();
-
-  // dynamic url = Uri.parse(snapshot['link1']);
 
   @override
   initState() {
     super.initState();
     // loadPdf();
     readAlldata3();
-    // print('UUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUUU${Uri.parse(link1)}');
   }
 
   Future<String> get _localPath async {
@@ -70,10 +53,7 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
     final response = await http.get(
         // 'https://expoforest.com.br/wp-content/uploads/2017/05/exemplo.pdf');
         // 'https://firebasestorage.googleapis.com/v0/b/bsru-app.appspot.com/o/manual%2F%E0%B8%84%E0%B8%B9%E0%B9%88%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B9%80%E0%B8%AA%E0%B9%89%E0%B8%99%E0%B8%97%E0%B8%B2%E0%B8%87%E0%B8%AA%E0%B8%B9%E0%B9%88%E0%B8%9A%E0%B8%B1%E0%B8%93%E0%B8%91%E0%B8%B4%E0%B8%95%20%E0%B8%9B%E0%B8%B5%202563--Finish.pdf?alt=media&token=87ab6a34-85a7-4b24-93c7-e2a679e4ff30');
-        '${Uri.parse(link)}'
-        // '$uri'
-        );
-
+        'https://mis4.bsru.ac.th/registrar/Download/file_download/register2564-1sp.pdf');
     final responseJson = response.bodyBytes;
 
     return responseJson;
@@ -93,20 +73,20 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
       print('success');
       // ignore: await_only_futures
       await FirebaseFirestore.instance
-          .collection('ActivityCal')
+          .collection('AcadeCalspecial')
           .snapshots()
           .listen((event) {
         print('snapshot = ${event.docs}');
         for (var snapshots in event.docs) {
           Map<String, dynamic> map = snapshots.data();
           print('Map == $map');
-          ActivityModel model2 = ActivityModel.fromMap(map);
+          AcadeCalspecial model2 = AcadeCalspecial.fromMap(map);
 
           setState(() {
             widgets2.add(model2);
-            link = model2.link1;
-            uri = Uri.parse('$link');
-            print('0000000000000000000000000000000000000$uri');
+            link3 = model2.link3;
+            print(
+                '//////////////////////////////////////////////////////$link3');
           });
         }
       });
@@ -117,48 +97,15 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            // insertData();
-            // addUser();
-            route(Activity());
-            // collection.doc('15bfjhVepH732Wn0Jesn').get(link);
-
-            // Fluttertoast.showToast(
-            //   msg: "เพิ่มกิจกรรมสำเร็จ",
-            //   toastLength: Toast.LENGTH_SHORT,
-            //   gravity: ToastGravity.CENTER,
-            //   backgroundColor: Colors.purple[100],
-            //   textColor: Colors.black,
-            // );
-          },
-          child: Column(
-            children: [
-              Icon(
-                Icons.edit,
-                size: 30.0,
-              ),
-              Text(
-                'แก้ไข',
-                style: TextStyle(fontFamily: 'Sarabun'),
-              )
-            ],
-          ),
-          backgroundColor: Colors.orange[900],
-          tooltip: 'บันทึกกิจกรรม',
-        ),
         appBar: AppBar(
           toolbarHeight: 0,
           backgroundColor: Colors.white,
         ),
         body: Column(
-          mainAxisSize: MainAxisSize.max,
+          // mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Text('$link'),
-
-            // Text(snapshot.data['link1']),
-            if (link != null)
+            if (link3 != null)
               // Container(
               //   height: MediaQuery.of(context).size.height,
               //   child: PdfView(
@@ -170,7 +117,7 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
                   child: Container(
                       height: MediaQuery.of(context).size.height,
                       color: Colors.deepOrange,
-                      child: SfPdfViewer.network('$link')),
+                      child: SfPdfViewer.network('$link3')),
                 ),
               )
             else
@@ -206,11 +153,5 @@ class _Calendar1_AdminState extends State<Calendar1_Admin> {
         ),
       ),
     );
-  }
-
-  Future<Null> route(Widget routeName) async {
-    MaterialPageRoute materialPageRoute =
-        MaterialPageRoute(builder: (BuildContext context) => routeName);
-    Navigator.of(context).pushReplacement(materialPageRoute);
   }
 }

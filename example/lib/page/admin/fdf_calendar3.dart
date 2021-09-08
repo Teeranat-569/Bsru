@@ -2,10 +2,16 @@ import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_example/page/admin/add_Activity3.dart';
 import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:http/http.dart' as http;
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
+
+import 'acadeCalspe_model2Str.dart';
 
 void main() => runApp(Calendar3_Admin());
 
@@ -15,12 +21,14 @@ class Calendar3_Admin extends StatefulWidget {
 }
 
 class _Calendar3_AdminState extends State<Calendar3_Admin> {
-  String path;
+  String path, link3;
+  List<dynamic> widgets2 = [];
 
   @override
   initState() {
     super.initState();
-    loadPdf();
+    // loadPdf();
+    readAlldata3();
   }
 
   Future<String> get _localPath async {
@@ -60,23 +68,86 @@ class _Calendar3_AdminState extends State<Calendar3_Admin> {
     setState(() {});
   }
 
+  Future<void> readAlldata3() async {
+    await Firebase.initializeApp().then((value) async {
+      print('success');
+      // ignore: await_only_futures
+      await FirebaseFirestore.instance
+          .collection('AcadeCalspecial')
+          .snapshots()
+          .listen((event) {
+        print('snapshot = ${event.docs}');
+        for (var snapshots in event.docs) {
+          Map<String, dynamic> map = snapshots.data();
+          print('Map == $map');
+          AcadeCalspecial model2 = AcadeCalspecial.fromMap(map);
+
+          setState(() {
+            widgets2.add(model2);
+            link3 = model2.link3;
+            print(
+                '//////////////////////////////////////////////////////$link3');
+          });
+        }
+      });
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        // appBar: AppBar(
-        //   toolbarHeight: 40,
-        //   title: Text('Plugin example app'),
-        // ),
+           floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            // insertData();
+            // addUser();
+            route(Activity3());
+            // collection.doc('15bfjhVepH732Wn0Jesn').get(link);
+
+            // Fluttertoast.showToast(
+            //   msg: "เพิ่มกิจกรรมสำเร็จ",
+            //   toastLength: Toast.LENGTH_SHORT,
+            //   gravity: ToastGravity.CENTER,
+            //   backgroundColor: Colors.purple[100],
+            //   textColor: Colors.black,
+            // );
+          },
+          child: Column(
+            children: [
+              Icon(
+                Icons.edit,
+                size: 30.0,
+              ),
+              Text(
+                'แก้ไข',
+                style: TextStyle(fontFamily: 'Sarabun'),
+              )
+            ],
+          ),
+          backgroundColor: Colors.orange[900],
+          tooltip: 'บันทึกกิจกรรม',
+        ),
+        appBar: AppBar(
+          toolbarHeight: 0,
+          backgroundColor: Colors.white,
+        ),
         body: Column(
           // mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            if (path != null)
-              Container(
-                height: MediaQuery.of(context).size.height,
-                child: PdfView(
-                  path: path,
+            if (link3 != null)
+              // Container(
+              //   height: MediaQuery.of(context).size.height,
+              //   child: PdfView(
+              //     path: path,
+              //   ),
+              // )
+              Expanded(
+                child: SingleChildScrollView(
+                  child: Container(
+                      height: MediaQuery.of(context).size.height,
+                      color: Colors.deepOrange,
+                      child: SfPdfViewer.network('$link3')),
                 ),
               )
             else
@@ -112,5 +183,10 @@ class _Calendar3_AdminState extends State<Calendar3_Admin> {
         ),
       ),
     );
+  }
+   Future<Null> route(Widget routeName) async {
+    MaterialPageRoute materialPageRoute =
+        MaterialPageRoute(builder: (BuildContext context) => routeName);
+    await Navigator.of(context).pushReplacement(materialPageRoute);
   }
 }
