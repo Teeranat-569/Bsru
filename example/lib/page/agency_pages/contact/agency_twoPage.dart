@@ -9,7 +9,7 @@ class AgencyTwo extends StatefulWidget {
 class _AgencyTwoState extends State<AgencyTwo> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 40,
       //   backgroundColor: Colors.purple,
@@ -20,15 +20,15 @@ class _AgencyTwoState extends State<AgencyTwo> {
       //         Navigator.of(context).pop();
       //       }),
       // ),
-       appBar: AppBar(
-          backgroundColor: Colors.purple[100],
-          // title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
-          titleSpacing: 00.0,
-          centerTitle: true,
-          toolbarHeight: 40,
-          elevation: 0.00,
-          automaticallyImplyLeading: false,
-        ),
+      appBar: AppBar(
+        backgroundColor: Colors.purple[100],
+        // title: Text("งานพัสดุ",style: TextStyle(color: Colors.black),),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 40,
+        elevation: 0.00,
+        automaticallyImplyLeading: false,
+      ),
       body: Container(
         color: Colors.purple[100],
         height: MediaQuery.of(context).size.height,
@@ -110,13 +110,14 @@ class _AgencyTwoState extends State<AgencyTwo> {
                 Icons.smartphone,
                 size: 40,
               ),
-              Column(crossAxisAlignment: CrossAxisAlignment.start,
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Row(
                     children: [
                       Text(
                         '0-2473-7000 ',
-                        style: TextStyle(color: Colors.blue,fontSize: 22),
+                        style: TextStyle(color: Colors.blue, fontSize: 22),
                       ),
                       IconButton(
                           icon: Icon(
@@ -159,7 +160,7 @@ class _AgencyTwoState extends State<AgencyTwo> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
-                Icons.thumb_up_alt,
+                Icons.facebook,
                 size: 40,
               ),
               TextButton(

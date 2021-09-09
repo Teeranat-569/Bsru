@@ -159,7 +159,7 @@ class _AgencyFiveState extends State<AgencyFive> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
-                Icons.thumb_up_alt,
+                Icons.facebook,
                 size: 40,
               ),
               TextButton(

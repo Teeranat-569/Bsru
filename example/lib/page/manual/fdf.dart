@@ -20,7 +20,7 @@ class _MyApp3State extends State<MyApp3> {
   @override
   initState() {
     super.initState();
-    loadPdf();
+    // loadPdf();
   }
 
   Future<String> get _localPath async {

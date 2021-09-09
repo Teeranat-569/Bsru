@@ -44,49 +44,49 @@ class _PeoplePageState extends State<PeoplePage> {
                         primary: false,
                         children: <Widget>[
                           // ignore: deprecated_member_use
-                          FlatButton(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            // elevation: 16,
-                            onPressed: () {
-                              website('http://logon.bsru.ac.th/');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/key11.png',
-                                  height: 30,
-                                ),
-                                Text(
-                                  'Login SuriyaNet',
-                                  style: TextStyle(
-                                    // fontSize: 12.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                // Column(
-                                //   children: [
-                                //     Text(
-                                //       'เข้าระบบ',
-                                //       style: TextStyle(
-                                //         fontSize: 12.0,
-                                //         color: Colors.purple[900],
-                                //       ),
-                                //     ),
-                                //     Text(
-                                //       'Authenticate',
-                                //       style: TextStyle(
-                                //         fontSize: 12.0,
-                                //         color: Colors.purple[900],
-                                //       ),
-                                //     ),
-                                //   ],
-                                // )
-                              ],
-                            ),
-                          ),
+                          // FlatButton(
+                          //   color: Colors.white,
+                          //   shape: RoundedRectangleBorder(
+                          //       borderRadius: BorderRadius.circular(40)),
+                          //   // elevation: 16,
+                          //   onPressed: () {
+                          //     website('http://logon.bsru.ac.th/');
+                          //   },
+                          //   child: Column(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Image.asset(
+                          //         'images/key11.png',
+                          //         height: 30,
+                          //       ),
+                          //       Text(
+                          //         'Login SuriyaNet',
+                          //         style: TextStyle(
+                          //           // fontSize: 12.0,
+                          //           fontWeight: FontWeight.bold,
+                          //         ),
+                          //       ),
+                          //       // Column(
+                          //       //   children: [
+                          //       //     Text(
+                          //       //       'เข้าระบบ',
+                          //       //       style: TextStyle(
+                          //       //         fontSize: 12.0,
+                          //       //         color: Colors.purple[900],
+                          //       //       ),
+                          //       //     ),
+                          //       //     Text(
+                          //       //       'Authenticate',
+                          //       //       style: TextStyle(
+                          //       //         fontSize: 12.0,
+                          //       //         color: Colors.purple[900],
+                          //       //       ),
+                          //       //     ),
+                          //       //   ],
+                          //       // )
+                          //     ],
+                          //   ),
+                          // ),
                           // ignore: deprecated_member_use
                           FlatButton(
                             color: Colors.white,

@@ -9,7 +9,7 @@ class Faculty1 extends StatefulWidget {
 class _Faculty1State extends State<Faculty1> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: Colors.purple[50],
       // appBar: AppBar(
       //   toolbarHeight: 40,
@@ -74,8 +74,8 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://sci.bsru.ac.th/sciweb/'),
           ),
           ListTile(
-            title: facebook(
-                'https://www.facebook.com/BSRU.science', '@BSRU.science'),
+            title: facebook('https://www.facebook.com/BSRU.science',
+                'คณะวิทยาศาสตร์และเทคโนโลยี มบส.'),
           )
         ],
       ),
@@ -102,7 +102,7 @@ class _Faculty1State extends State<Faculty1> {
           ),
           ListTile(
             title: facebook('https://www.facebook.com/BSRUFacultyOfEducation/',
-                '@BSRUFacultyOfEducation'),
+                'คณะครุศาสตร์ มหาวิทยาลัยราชภัฏบ้านสมเด็จ'),
           )
         ],
       ),
@@ -128,7 +128,7 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://ms.bsru.ac.th/new/'),
           ),
           ListTile(
-            title: facebook('https://www.facebook.com/MsBSRU/', '@MsBSRU'),
+            title: facebook('https://www.facebook.com/MsBSRU/', 'MS BSRU'),
           )
         ],
       ),
@@ -181,8 +181,8 @@ class _Faculty1State extends State<Faculty1> {
             title: website('http://music.bsru.ac.th/'),
           ),
           ListTile(
-            title: facebook(
-                'https://www.facebook.com/bsrumusic2558', '@bsrumusic2558'),
+            title: facebook('https://www.facebook.com/bsrumusic2558',
+                'College of Music BSRU'),
           )
         ],
       ),
@@ -291,7 +291,7 @@ class _Faculty1State extends State<Faculty1> {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Icon(
-            Icons.thumb_up_alt,
+            Icons.facebook,
             size: 30,
           ),
           TextButton(

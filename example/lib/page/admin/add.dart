@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_google_maps_example/page/admin/Calendar.dart';
+import 'package:flutter_google_maps_example/page/admin/add_Manual.dart';
 import 'package:flutter_google_maps_example/page/admin/calendar_page.dart';
 
 import '../../home.dart';
@@ -91,7 +92,7 @@ class _AddState extends State<Add> {
                       borderRadius: BorderRadius.circular(30.0),
                     ),
                     onPressed: () {
-                      route(UpPic());
+                      route(AddManual());
                     },
                     child: Row(
                       children: [
@@ -103,7 +104,7 @@ class _AddState extends State<Add> {
                           width: 5,
                         ),
                         Text(
-                          'แก้ไขรูปภาพข่าวรับสมัคร',
+                          'เพิ่มคู่มือนักศึกษา',
                           style: TextStyle(fontSize: 20, color: Colors.white),
                         ),
                       ],

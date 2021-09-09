@@ -9,7 +9,7 @@ class AgencyFourteen extends StatefulWidget {
 class _AgencyFourteenState extends State<AgencyFourteen> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       // appBar: AppBar(
       //   toolbarHeight: 40,
       //   backgroundColor: Colors.purple,
@@ -20,15 +20,15 @@ class _AgencyFourteenState extends State<AgencyFourteen> {
       //         Navigator.of(context).pop();
       //       }),
       // ),
-       appBar: AppBar(
-          backgroundColor: Colors.purple[100],
-          // title: Text("สำนักงานวิทยบริการและเทคโนโลยีสารสนเทศ",style: TextStyle(color: Colors.black),),
-          titleSpacing: 00.0,
-          centerTitle: true,
-          toolbarHeight: 40,
-          elevation: 0.00,
-          automaticallyImplyLeading: false,
-        ),
+      appBar: AppBar(
+        backgroundColor: Colors.purple[100],
+        // title: Text("สำนักงานวิทยบริการและเทคโนโลยีสารสนเทศ",style: TextStyle(color: Colors.black),),
+        titleSpacing: 00.0,
+        centerTitle: true,
+        toolbarHeight: 40,
+        elevation: 0.00,
+        automaticallyImplyLeading: false,
+      ),
       body: Container(
         color: Colors.purple[100],
         height: MediaQuery.of(context).size.height,
@@ -92,14 +92,17 @@ class _AgencyFourteenState extends State<AgencyFourteen> {
               // Text('เว็บไซต์'),
               TextButton(
                   onPressed: () async {
-                    const url = 'http://library.bsru.ac.th/w2014/index.php';
+                    const url = 'http://arcbs.bsru.ac.th/web2009/index.html';
                     if (await canLaunch(url)) {
                       await launch(url);
                     } else {
                       throw 'Couid not launch $url';
                     }
                   },
-                  child: Text('http://library.bsru.ac.th/\nw2014/index.php'))
+                  child: Text(
+                    'http://arcbs.bsru.ac.th/web2009/index.html',
+                    style: TextStyle(fontSize: 12),
+                  ))
             ],
           ),
         ));
@@ -159,7 +162,7 @@ class _AgencyFourteenState extends State<AgencyFourteen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
-                Icons.thumb_up_alt,
+                Icons.facebook,
                 size: 40,
               ),
               TextButton(

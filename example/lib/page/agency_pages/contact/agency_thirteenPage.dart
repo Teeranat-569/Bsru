@@ -159,7 +159,7 @@ class _AgencyThirteenState extends State<AgencyThirteen> {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Icon(
-                Icons.thumb_up_alt,
+                Icons.facebook,
                 size: 40,
               ),
               TextButton(

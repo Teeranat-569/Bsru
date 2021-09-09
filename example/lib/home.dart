@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_google_maps_example/main.dart';
 import 'package:flutter_google_maps_example/page/calendar/manual_page2.dart';
 import 'package:flutter_google_maps_example/page/admin/web_view_container.dart';
+import 'package:flutter_google_maps_example/page/student/student_new.dart';
 import 'package:imagebutton/imagebutton.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -957,7 +958,7 @@ class _HomeState extends State<Home> {
               unpressedImage: Image.asset('images/employee.png'),
               onTap: () {
                 print('test');
-                route(StudentPage());
+                route(Studentnew());
               },
             ),
           ),

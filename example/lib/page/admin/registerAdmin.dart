@@ -137,8 +137,9 @@ class _AdminState extends State<Admin> {
     // ignore: deprecated_member_use
     return RaisedButton(
       padding: EdgeInsets.only(left: 30.0, right: 30.0),
+      // ignore: unnecessary_new
       shape: new RoundedRectangleBorder(
-          borderRadius: new BorderRadius.circular(20.0)),
+          borderRadius: BorderRadius.circular(20.0)),
       color: Colors.deepOrange[900],
       child: Text(
         'เข้าสู่ระบบ',

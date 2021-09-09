@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 
-import 'add_Academic.dart';
+import 'add_Manual.dart';
 import 'add_Activity.dart';
 import 'add_acade.dart';
 import 'add_eventAd.dart';
@@ -89,7 +89,7 @@ class _CalendarState extends State<Calendar> {
                             borderRadius: BorderRadius.circular(10.0),
                           ),
                           onPressed: () {
-                            route(Academic());
+                            // route(Academic());
                           },
                           child: Icon(
                             Icons.add,

@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'contact/agency_eightPage.dart';
-import 'contact/agency_eightteenPage.dart';
+// import 'contact/agency_eightteenPage.dart';
 import 'contact/agency_elevenPage.dart';
 import 'contact/agency_fifteenPage.dart';
 import 'contact/agency_fivePage.dart';
@@ -87,7 +87,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
         agency_fifteen(),
         agency_sixteen(),
         agency_sixteen(),
-        agency_eightteen(),
+        // agency_eightteen(),
         agency_nineteen(),
         agency_twenty(),
         agency_twentyone(),
@@ -99,7 +99,7 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
   Future<Null> route(Widget routeName) async {
     MaterialPageRoute materialPageRoute =
         MaterialPageRoute(builder: (BuildContext context) => routeName);
-    Navigator.of(context).push(materialPageRoute);
+    await Navigator.of(context).push(materialPageRoute);
   }
 
   // ignore: deprecated_member_use
@@ -124,8 +124,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -150,8 +150,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -176,8 +176,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -202,8 +202,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -228,8 +228,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -255,8 +255,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -282,8 +282,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: deprecated_member_use
@@ -308,12 +308,14 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
+  // ignore: deprecated_member_use
   RaisedButton agency_nine() {
+    // ignore: deprecated_member_use
     return RaisedButton(
         onPressed: () {
           route(AgencyNine());
@@ -331,11 +333,12 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
+  // ignore: deprecated_member_use
   RaisedButton agency_ten() {
     return RaisedButton(
         onPressed: () {
@@ -354,8 +357,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -377,8 +380,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -400,8 +403,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -423,8 +426,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -446,8 +449,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -469,8 +472,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -492,8 +495,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -515,32 +518,32 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
-  RaisedButton agency_eightteen() {
-    return RaisedButton(
-        onPressed: () {
-          route(AgencyEightteen());
-        },
-        padding: const EdgeInsets.all(5),
-        child: Padding(
-          padding: const EdgeInsets.all(5.0),
-          child: Row(
-            children: [
-              Text(
-                'สถาบันขงจื๊อ',
-                // style: TextStyle(fontSize: 18),
-              ),
-            ],
-          ),
-        ),
-        color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
-  }
+  // RaisedButton agency_eightteen() {
+  //   return RaisedButton(
+  //       onPressed: () {
+  //         route(AgencyEightteen());
+  //       },
+  //       padding: const EdgeInsets.all(5),
+  //       child: Padding(
+  //         padding: const EdgeInsets.all(5.0),
+  //         child: Row(
+  //           children: [
+  //             Text(
+  //               'สถาบันขงจื๊อ',
+  //               // style: TextStyle(fontSize: 18),
+  //             ),
+  //           ],
+  //         ),
+  //       ),
+  //       color: Colors.white,
+  //       shape: new RoundedRectangleBorder(
+  //           borderRadius: new BorderRadius.circular(10.0)));
+  // }
 
   // ignore: non_constant_identifier_names
   RaisedButton agency_nineteen() {
@@ -561,8 +564,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -584,8 +587,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -607,8 +610,8 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
           ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 
   // ignore: non_constant_identifier_names
@@ -620,27 +623,25 @@ class _AgencyPageContactState extends State<AgencyPageContact> {
         padding: const EdgeInsets.all(5),
         child: Padding(
           padding: const EdgeInsets.all(5.0),
-         child:
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Text(
-                    'Academic Collaboration on Thai Language and Culture for Foreign Students',
-                    overflow: TextOverflow.ellipsis,
-                       maxLines: 3,
-                       softWrap: false,
-                    // style: TextStyle(fontSize: 12),
-                  ),
-                  // Text(
-                  //   '',
-                  //   // style: TextStyle(fontSize: 12),
-                  // ),
-                ],
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              Text(
+                'Academic Collaboration on Thai Language and Culture for Foreign Students',
+                overflow: TextOverflow.ellipsis,
+                maxLines: 3,
+                softWrap: false,
+                // style: TextStyle(fontSize: 12),
               ),
-         
+              // Text(
+              //   '',
+              //   // style: TextStyle(fontSize: 12),
+              // ),
+            ],
+          ),
         ),
         color: Colors.white,
-        shape: new RoundedRectangleBorder(
-            borderRadius: new BorderRadius.circular(10.0)));
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(10.0)));
   }
 }
