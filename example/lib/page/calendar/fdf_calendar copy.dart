@@ -105,6 +105,7 @@ class _Calendar1State extends State<Calendar1> {
           setState(() {
             widgets2.add(model2);
             link = model2.link1;
+
             uri = Uri.parse('$link');
             print('0000000000000000000000000000000000000$uri');
           });
@@ -117,7 +118,6 @@ class _Calendar1State extends State<Calendar1> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-       
         appBar: AppBar(
           toolbarHeight: 0,
           backgroundColor: Colors.white,
@@ -126,8 +126,13 @@ class _Calendar1State extends State<Calendar1> {
           mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            // Text('$link'),
-
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'ปฏิทินวิชาการ',
+                style: TextStyle(fontFamily: 'Pridi', fontSize: 17),
+              ),
+            ),
             // Text(snapshot.data['link1']),
             if (link != null)
               // Container(

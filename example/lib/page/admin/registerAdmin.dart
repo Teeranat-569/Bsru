@@ -1,4 +1,3 @@
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -30,22 +29,25 @@ class _AdminState extends State<Admin> {
   }
 
   Widget content() {
-    return Center(
-      child: Form(
-        key: textFill,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            usernameText(),
-            SizedBox(
-              height: 10.0,
-            ),
-            passwordText(),
-            SizedBox(
-              height: 20.0,
-            ),
-            loginButton(),
-          ],
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Center(
+        child: Form(
+          key: textFill,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: <Widget>[
+              usernameText(),
+              SizedBox(
+                height: 10.0,
+              ),
+              passwordText(),
+              SizedBox(
+                height: 20.0,
+              ),
+              loginButton(),
+            ],
+          ),
         ),
       ),
     );
@@ -53,19 +55,23 @@ class _AdminState extends State<Admin> {
 
   Widget usernameText() {
     return Container(
-      width: 250.0,
+      // width: 250.0,
       child: TextField(
         onChanged: (value) => username = value.trim(),
         controller: userCon,
         keyboardType: TextInputType.emailAddress,
         decoration: InputDecoration(
+          prefixIcon: Icon(Icons.mail),
           filled: true,
-          fillColor: Colors.white70,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(30.0),
-            ),
-          ),
+          fillColor: Colors.white,
+          border: InputBorder.none,
+
+          // border: OutlineInputBorder(
+          //   // gapPadding: 1,
+          //   borderRadius: BorderRadius.all(
+          //     Radius.circular(20.0),
+          //   ),
+          // ),
           labelText: 'E-mail',
           labelStyle: TextStyle(
             color: Colors.black,
@@ -77,19 +83,21 @@ class _AdminState extends State<Admin> {
 
   Widget passwordText() {
     return Container(
-      width: 250.0,
+      // width: 250.0,
       child: TextField(
         onChanged: (value) => password = value.trim(),
         controller: passwordCon,
         obscureText: true,
         decoration: InputDecoration(
+          prefixIcon: Icon(Icons.password),
           filled: true,
-          fillColor: Colors.white70,
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.all(
-              Radius.circular(30.0),
-            ),
-          ),
+          fillColor: Colors.white,
+          border: InputBorder.none,
+          // border: OutlineInputBorder(
+          //   borderRadius: BorderRadius.all(
+          //     Radius.circular(30.0),
+          //   ),
+          // ),
           labelText: 'Password',
           labelStyle: TextStyle(
             color: Colors.black,
@@ -135,28 +143,30 @@ class _AdminState extends State<Admin> {
 
   Widget loginButton() {
     // ignore: deprecated_member_use
-    return RaisedButton(
-      padding: EdgeInsets.only(left: 30.0, right: 30.0),
-      // ignore: unnecessary_new
-      shape: new RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20.0)),
-      color: Colors.deepOrange[900],
-      child: Text(
-        'เข้าสู่ระบบ',
-        style: TextStyle(fontSize: 18.0, color: Colors.white),
+    return Container(
+      child: RaisedButton(
+        padding: EdgeInsets.only(left: 30.0, right: 30.0),
+        // ignore: unnecessary_new
+        shape: new RoundedRectangleBorder(
+            borderRadius: BorderRadius.circular(20.0)),
+        color: Colors.purple[900],
+        child: Text(
+          'เข้าสู่ระบบ',
+          style: TextStyle(fontSize: 18.0, color: Colors.white),
+        ),
+        onPressed: () {
+          textFill.currentState.save();
+          checkAuthen();
+          print('Login');
+          Fluttertoast.showToast(
+            msg: "เข้าสู่ระบบสำเร็จ",
+            toastLength: Toast.LENGTH_SHORT,
+            gravity: ToastGravity.CENTER,
+            backgroundColor: Colors.purple[100],
+            textColor: Colors.black,
+          );
+        },
       ),
-      onPressed: () {
-        textFill.currentState.save();
-        checkAuthen();
-        print('Login');
-        Fluttertoast.showToast(
-          msg: "เข้าสู่ระบบสำเร็จ",
-          toastLength: Toast.LENGTH_SHORT,
-          gravity: ToastGravity.CENTER,
-          backgroundColor: Colors.purple[100],
-          textColor: Colors.black,
-        );
-      },
     );
   }
 
@@ -165,17 +175,20 @@ class _AdminState extends State<Admin> {
     return Scaffold(
       appBar: AppBar(
         title: Text('ผู้ดูแลระบบ'),
-        leading: IconButton(
-            icon: Icon(Icons.arrow_back_ios),
-            onPressed: () {
-              Navigator.of(context).pop();
-            }),
         toolbarHeight: 40,
       ),
       body: SafeArea(
         child: Container(
+          color: Colors.purple[200],
           child: ListView(
             children: <Widget>[
+              SizedBox(
+                height: 20,
+              ),
+              Image.asset(
+                'images/admin.png',
+                height: 200,
+              ),
               SizedBox(
                 height: 40,
               ),

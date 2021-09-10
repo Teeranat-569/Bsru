@@ -63,11 +63,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.yellow[50],
-        title: Text(
-          "คณะวิทยาศาสตร์และเทคโนโลยี",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.yellow[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "คณะวิทยาศาสตร์และเทคโนโลยี",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -509,11 +521,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.orange[50],
-        title: Text(
-          "คณะครุศาสตร์",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.orange[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "คณะครุศาสตร์",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -653,11 +677,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.blue[50],
-        title: Text(
-          "คณะวิทยาการจัดการ",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.blue[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "คณะวิทยาการจัดการ",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -914,11 +950,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.green[50],
-        title: Text(
-          "คณะมนุษยศาสตร์และสังคมศาสตร์",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.green[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "คณะมนุษยศาสตร์และสังคมศาสตร์",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -1187,11 +1235,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.indigo[50],
-        title: Text(
-          "วิทยาลัยการดนตรี",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.indigo[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "วิทยาลัยการดนตรี",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -1290,11 +1350,25 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.brown[50],
-        title: Text(
-          "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.brown[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "คณะวิศวกรรมศาสตร์และ\nเทคโนโลยีอุตสาหกรรม",
+              // overflow: TextOverflow.ellipsis,
+              // maxLines: 2,
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(
@@ -1475,11 +1549,23 @@ class _CoursePageState extends State<CoursePage> {
       color: Colors.white,
       child: ExpansionTile(
         backgroundColor: Colors.lime[50],
-        title: Text(
-          "บัณฑิตวิทยาลัย",
-          style: TextStyle(
-            fontSize: 14.0,
-          ),
+        title: Row(
+          children: [
+            Icon(
+              Icons.bookmark,
+              size: 30,
+              color: Colors.pink[600],
+            ),
+            SizedBox(
+              width: 5,
+            ),
+            Text(
+              "บัณฑิตวิทยาลัย",
+              style: TextStyle(
+                fontSize: 14.0,
+              ),
+            ),
+          ],
         ),
         children: <Widget>[
           Container(

@@ -67,6 +67,13 @@ class _ManualPage2State extends State<ManualPage2> {
           padding: const EdgeInsets.all(5.0),
           child: Row(
             children: [
+              Icon(
+                Icons.event_note,
+                size: 40,
+              ),
+              SizedBox(
+                width: 5,
+              ),
               Text(
                 'ปฏิทินวิชาการ',
                 style: TextStyle(fontSize: 18),
@@ -92,6 +99,13 @@ class _ManualPage2State extends State<ManualPage2> {
           padding: const EdgeInsets.all(5.0),
           child: Row(
             children: [
+              Icon(
+                Icons.schedule,
+                size: 40,
+              ),
+              SizedBox(
+                width: 5,
+              ),
               Text(
                 'กำหนดการลงทะเบียนเรียน ภาคปกติ',
                 style: TextStyle(fontSize: 18),
@@ -104,7 +118,7 @@ class _ManualPage2State extends State<ManualPage2> {
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)));
   }
 
-   RaisedButton
+  RaisedButton
       // ignore: non_constant_identifier_names
       button3() {
     // ignore: deprecated_member_use
@@ -117,6 +131,13 @@ class _ManualPage2State extends State<ManualPage2> {
           padding: const EdgeInsets.all(5.0),
           child: Row(
             children: [
+              Icon(
+                Icons.schedule,
+                size: 40,
+              ),
+              SizedBox(
+                width: 5,
+              ),
               Text(
                 'กำหนดการลงทะเบียนเรียน ภาคพิเศษ',
                 style: TextStyle(fontSize: 18),

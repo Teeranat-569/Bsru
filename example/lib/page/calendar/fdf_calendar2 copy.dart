@@ -64,6 +64,14 @@ class _Calendar2State extends State<Calendar2> {
         body: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+
+             Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'กำหนดการลงทะเบียนเรียน ภาคปกติ',
+                style: TextStyle(fontFamily: 'Pridi', fontSize: 17),
+              ),
+            ),
             if (link2 != null)
               Expanded(
                 child: SingleChildScrollView(

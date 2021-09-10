@@ -105,6 +105,13 @@ class _Calendar3State extends State<Calendar3> {
           // mainAxisSize: MainAxisSize.max,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(
+                'กำหนดการลงทะเบียนเรียน ภาคพิเศษ',
+                style: TextStyle(fontFamily: 'Pridi', fontSize: 17),
+              ),
+            ),
             if (link3 != null)
               // Container(
               //   height: MediaQuery.of(context).size.height,

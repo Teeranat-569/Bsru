@@ -11,7 +11,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'page/admin/registerAdmin.dart';
 import 'page/agency_pages/agency_page.dart';
-import 'page/calendar/calendar_page.dart';
+// import 'page/calendar/calendar_page.dart';
 import 'page/contact/contact_page.dart';
 import 'page/course/course_page.dart';
 import 'page/download/download_page.dart';
@@ -191,7 +191,7 @@ class _HomeState extends State<Home> {
         bottomNavigationBar: BottomAppBar(
           color: Colors.purple.shade50,
           child: Container(
-            height: 70,
+            height: 82,
             width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 // image: DecorationImage(
@@ -260,59 +260,81 @@ class _HomeState extends State<Home> {
                       ),
                     ],
                   ),
-                  SizedBox(
-                    height: 5,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(3.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        ImageButton(
-                          children: <Widget>[],
-                          width: 25,
-                          height: 25,
-                          pressedImage: Image.asset(
-                            'images/facebook.png',
-                          ),
-                          unpressedImage: Image.asset('images/facebook.png'),
-                          onTap: () {
-                            print('history');
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      // ImageButton(
+                      //   children: <Widget>[],
+                      //   width: 25,
+                      //   height: 25,
+                      //   pressedImage: Image.asset(
+                      //     'images/facebook.png',
+                      //   ),
+                      //   unpressedImage: Image.asset('images/facebook.png'),
+                      //   onTap: () {
+                      //     print('history');
+                      //     _launchURLFace();
+                      //   },
+                      // ),
+                      IconButton(
+                          onPressed: () {
+                            print('facebook');
                             _launchURLFace();
                           },
-                        ),
-                        // SizedBox(
-                        //   width: 5,
-                        // ),
-                        ImageButton(
-                          children: <Widget>[],
-                          width: 25,
-                          height: 25,
-                          pressedImage: Image.asset(
-                            'images/domain.png',
-                          ),
-                          unpressedImage: Image.asset('images/domain.png'),
-                          onTap: () {
-                            print('history');
+                          icon: Icon(
+                            Icons.facebook,
+                            size: 25,
+                          )),
+                      // SizedBox(
+                      //   width: 5,
+                      // ),
+                      // ImageButton(
+                      //   children: <Widget>[],
+                      //   width: 25,
+                      //   height: 25,
+                      //   pressedImage: Image.asset(
+                      //     'images/domain.png',
+                      //   ),
+                      //   unpressedImage: Image.asset('images/domain.png'),
+                      //   onTap: () {
+                      //     print('history');
 
+                      //     _launchURLWeb();
+                      //   },
+                      // ),
+                      IconButton(
+                          onPressed: () {
+                            print('web');
                             _launchURLWeb();
                           },
-                        ),
-                        ImageButton(
-                          children: <Widget>[],
-                          width: 25,
-                          height: 25,
-                          pressedImage: Image.asset(
-                            'images/user.png',
-                          ),
-                          unpressedImage: Image.asset('images/user.png'),
-                          onTap: () {
+                          icon: Icon(
+                            Icons.public,
+                            size: 25,
+                          )),
+                      // ImageButton(
+                      //   children: <Widget>[],
+                      //   width: 25,
+                      //   height: 25,
+                      //   pressedImage: Image.asset(
+                      //     'images/user.png',
+                      //   ),
+                      //   unpressedImage: Image.asset('images/user.png'),
+                      //   onTap: () {
+                      //     print('admin');
+                      //     route(Admin());
+                      //   },
+                      // ),
+                      IconButton(
+                          onPressed: () {
+                            print('admin');
                             print('admin');
                             route(Admin());
                           },
-                        ),
-                      ],
-                    ),
+                          icon: Icon(
+                            Icons.account_box,
+                            size: 25,
+                          )),
+                    ],
                   ),
                 ],
               ),
