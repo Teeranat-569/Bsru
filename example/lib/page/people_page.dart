@@ -173,48 +173,48 @@ class _PeoplePageState extends State<PeoplePage> {
                             ),
                           ),
                           // ignore: deprecated_member_use
-                          FlatButton(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            // elevation: 16,
-                            onPressed: () {
-                              website(
-                                  'http://erpmis.bsru.ac.th/VNCaller/login.aspx?redirect=applications.aspx');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/business.png',
-                                  height: 40,
-                                ),
-                                Column(
-                                  children: [
-                                    Text(
-                                      'VNCaller',
-                                      style: TextStyle(
-                                        // fontSize: 18.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    // Text(
-                                    //   '(ERP|MIS)',
-                                    //   style: TextStyle(
-                                    //     // fontSize: 16.0,
-                                    //     fontWeight: FontWeight.bold,
-                                    //   ),
-                                    // ),
-                                  ],
-                                ),
-                                // Text('ระบบ Back Office',
-                                //     style: TextStyle(
-                                //       fontSize: 15.0,
-                                //       color: Colors.purple[900],
-                                //     ))
-                              ],
-                            ),
-                          ),
+                          // FlatButton(
+                          //   color: Colors.white,
+                          //   shape: RoundedRectangleBorder(
+                          //       borderRadius: BorderRadius.circular(40)),
+                          //   // elevation: 16,
+                          //   onPressed: () {
+                          //     website(
+                          //         'http://erpmis.bsru.ac.th/VNCaller/login.aspx?redirect=applications.aspx');
+                          //   },
+                          //   child: Column(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Image.asset(
+                          //         'images/business.png',
+                          //         height: 40,
+                          //       ),
+                          //       Column(
+                          //         children: [
+                          //           Text(
+                          //             'VNCaller',
+                          //             style: TextStyle(
+                          //               // fontSize: 18.0,
+                          //               fontWeight: FontWeight.bold,
+                          //             ),
+                          //           ),
+                          //           // Text(
+                          //           //   '(ERP|MIS)',
+                          //           //   style: TextStyle(
+                          //           //     // fontSize: 16.0,
+                          //           //     fontWeight: FontWeight.bold,
+                          //           //   ),
+                          //           // ),
+                          //         ],
+                          //       ),
+                          //       // Text('ระบบ Back Office',
+                          //       //     style: TextStyle(
+                          //       //       fontSize: 15.0,
+                          //       //       color: Colors.purple[900],
+                          //       //     ))
+                          //     ],
+                          //   ),
+                          // ),
                           // ignore: deprecated_member_use
                           FlatButton(
                             color: Colors.white,

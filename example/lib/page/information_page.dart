@@ -146,35 +146,35 @@ class _InformationPageState extends State<InformationPage> {
                             ),
                           ),
                           // ignore: deprecated_member_use
-                          RaisedButton(
-                            color: Colors.white,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30)),
-                            elevation: 16,
-                            onPressed: () {
-                              website(
-                                  'http://www2.bsru.ac.th/gwe-live/gwe-live.php');
-                            },
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/television.png',
-                                  height: 50,
-                                ),
-                                Text('สถานีโทรทัศน์',
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                                Text('IPTV (GWE)',
-                                    style: TextStyle(
-                                      fontSize: 12.0,
-                                      fontWeight: FontWeight.bold,
-                                    )),
-                              ],
-                            ),
-                          ),
+                          // RaisedButton(
+                          //   color: Colors.white,
+                          //   shape: RoundedRectangleBorder(
+                          //       borderRadius: BorderRadius.circular(30)),
+                          //   elevation: 16,
+                          //   onPressed: () {
+                          //     website(
+                          //         'http://www2.bsru.ac.th/gwe-live/gwe-live.php');
+                          //   },
+                          //   child: Column(
+                          //     mainAxisAlignment: MainAxisAlignment.center,
+                          //     children: <Widget>[
+                          //       Image.asset(
+                          //         'images/television.png',
+                          //         height: 50,
+                          //       ),
+                          //       Text('สถานีโทรทัศน์',
+                          //           style: TextStyle(
+                          //             fontSize: 12.0,
+                          //             fontWeight: FontWeight.bold,
+                          //           )),
+                          //       Text('IPTV (GWE)',
+                          //           style: TextStyle(
+                          //             fontSize: 12.0,
+                          //             fontWeight: FontWeight.bold,
+                          //           )),
+                          //     ],
+                          //   ),
+                          // ),
                           // ignore: deprecated_member_use
                           RaisedButton(
                             color: Colors.white,

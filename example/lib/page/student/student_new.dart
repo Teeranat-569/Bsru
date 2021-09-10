@@ -23,7 +23,7 @@ class _StudentnewState extends State<Studentnew> {
             ),
             toolbarHeight: 40,
             elevation: 0.0,
-            title: Text('นักศึกษาใหม่', style: TextStyle(color: Colors.purple)),
+            title: Text('นักศึกษา', style: TextStyle(color: Colors.purple)),
             backgroundColor: Colors.purple[50]),
         backgroundColor: Colors.purple[50],
         body: Stack(
@@ -48,7 +48,7 @@ class _StudentnewState extends State<Studentnew> {
                             // elevation: 16,
                             onPressed: () {
                               website(
-                                  'http://202.29.54.207/dev3/admission/payment.php');
+                                  'http://mis.bsru.ac.th/');
                             },
                             child: Row(
                               mainAxisAlignment: MainAxisAlignment.start,

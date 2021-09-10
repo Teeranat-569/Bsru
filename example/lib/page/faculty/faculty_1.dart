@@ -125,7 +125,7 @@ class _Faculty1State extends State<Faculty1> {
             child: Image.asset('images/manage.png'),
           ),
           ListTile(
-            title: website('http://ms.bsru.ac.th/new/'),
+            title: website('http://management.bsru.ac.th/'),
           ),
           ListTile(
             title: facebook('https://www.facebook.com/MsBSRU/', 'MS BSRU'),
