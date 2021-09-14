@@ -689,14 +689,14 @@ class _HomeState extends State<Home> {
         ),
         Center(
             child: Text(
-          'หน่วยงาน',
+          'ตณะ',
           style: TextStyle(fontSize: 12),
         )),
         Center(
             child: Text(
-          '',
+          'หน่วยงาน',
           style: TextStyle(fontSize: 12),
-        ))
+        )),
       ],
     );
   }

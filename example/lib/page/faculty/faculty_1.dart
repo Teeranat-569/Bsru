@@ -71,6 +71,9 @@ class _Faculty1State extends State<Faculty1> {
             child: Image.asset('images/sci.png'),
           ),
           ListTile(
+            title: address('9'),
+          ),
+          ListTile(
             title: website('http://sci.bsru.ac.th/sciweb/'),
           ),
           ListTile(
@@ -96,6 +99,9 @@ class _Faculty1State extends State<Faculty1> {
             width: MediaQuery.of(context).size.width,
             height: 100,
             child: Image.asset('images/teah.png'),
+          ),
+          ListTile(
+            title: address('30'),
           ),
           ListTile(
             title: website('http://edu.bsru.ac.th/index.php/th/'),
@@ -125,6 +131,9 @@ class _Faculty1State extends State<Faculty1> {
             child: Image.asset('images/manage.png'),
           ),
           ListTile(
+            title: address('7'),
+          ),
+          ListTile(
             title: website('http://management.bsru.ac.th/'),
           ),
           ListTile(
@@ -149,6 +158,9 @@ class _Faculty1State extends State<Faculty1> {
             width: MediaQuery.of(context).size.width,
             height: 100,
             child: Image.asset('images/human.png'),
+          ),
+          ListTile(
+            title: address('27'),
           ),
           ListTile(
             title: website('http://husoc.bsru.ac.th/'),
@@ -178,6 +190,9 @@ class _Faculty1State extends State<Faculty1> {
             child: Image.asset('images/song.jpg'),
           ),
           ListTile(
+            title: address('27'),
+          ),
+          ListTile(
             title: website('http://music.bsru.ac.th/'),
           ),
           ListTile(
@@ -203,6 +218,9 @@ class _Faculty1State extends State<Faculty1> {
             width: MediaQuery.of(context).size.width,
             height: 100,
             child: Image.asset('images/elec.jpg'),
+          ),
+          ListTile(
+            title: address('24 ชั้น M '),
           ),
           ListTile(
             title: website('http://eit.bsru.ac.th/index.php'),
@@ -231,6 +249,9 @@ class _Faculty1State extends State<Faculty1> {
             width: MediaQuery.of(context).size.width,
             height: 100,
             child: Image.asset('images/gradbanner.gif'),
+          ),
+          ListTile(
+            title: address('11'),
           ),
           ListTile(
             title: website('http://grad.bsru.ac.th/grad2019/\nindex.php'),
@@ -305,6 +326,42 @@ class _Faculty1State extends State<Faculty1> {
               },
               child:
                   Text(nameFace, style: TextStyle(color: Colors.orange[700])))
+        ],
+      ),
+    );
+  }
+
+  Widget address(String numBuilding) {
+    return Container(
+      // margin: EdgeInsets.all(8),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(30),
+        color: Colors.white,
+      ),
+      //
+
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Icon(
+            Icons.place,
+            size: 30,
+          ),
+
+          Text('อาคาร' + '' + numBuilding),
+          // TextButton(
+          //     onPressed: () async {
+          //       // const url = 'http://aar.bsru.ac.th/';
+          //       if (await canLaunch(url)) {
+          //         await launch(url);
+          //       } else {
+          //         throw 'Couid not launch $url';
+          //       }
+          //     },
+          //     child: Text(
+          //       url,
+          //       style: TextStyle(color: Colors.orange[700]),
+          //     ))
         ],
       ),
     );

@@ -11,7 +11,6 @@ import 'package:pdf_viewer_plugin/pdf_viewer_plugin.dart';
 import 'home.dart';
 import 'splash_screen.dart';
 
-
 void main() {
   Intl.defaultLocale = "th";
   initializeDateFormatting();
@@ -176,10 +175,18 @@ class _MyHomePageState extends State<MyHomePage> {
         appBar: AppBar(
           toolbarHeight: 40,
           backgroundColor: Colors.purple[50],
-          leading: IconButton(icon: Icon(Icons.arrow_back,color: Colors.purple,), onPressed: (){
-            Navigator.of(context).pop();
-          }),
-          title: Text('แผนที่ มบส.',style: TextStyle(color: Colors.purple),),
+          leading: IconButton(
+              icon: Icon(
+                Icons.arrow_back,
+                color: Colors.purple,
+              ),
+              onPressed: () {
+                Navigator.of(context).pop();
+              }),
+          title: Text(
+            'แผนที่ มบส.',
+            style: TextStyle(color: Colors.purple),
+          ),
         ),
         body: Stack(
           children: <Widget>[
@@ -196,6 +203,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       13.731498139213253,
                       100.49099313835245,
                     ),
+                    // icon: 'images/pin.png',
                     info: 'สำนักงานอธิการบดี', infoSnippet: 'อาคาร 6 ชั้นที่ 6',
                     // icon: BitmapDescriptor.defaultMarker
                   ),

@@ -21,7 +21,8 @@ class _MapPageState extends State<MapPage> {
   void initState() {
     // TODO: implement initState
     super.initState();
-    getMarkerData();
+    // getMarkerData();
+    showMap();
   }
 
 //   Future _addFavorite() async {
@@ -32,7 +33,7 @@ class _MapPageState extends State<MapPage> {
 //           title: "Choose a favorite",
 //           initialCameraPosition: new CameraPosition(new Location(45.512287, -122.645913), 18.0)),
 //       toolbarActions: <ToolbarAction>[new ToolbarAction("Close", 1)]);
-  
+
 //   //2. Listen for the onMapReady
 //   var sub = MapView.onMapReady.listen((_) => _updateRestaurantsAroundUser());
 //   compositeSubscription.add(sub);
@@ -107,55 +108,49 @@ class _MapPageState extends State<MapPage> {
 
   getMarkerData() async {
     // ignore: deprecated_member_use
-    Firestore.instance.collection('showmap').getDocuments().then((myMockDoc) {
+    await Firestore.instance
+        .collection('showmap')
+        .getDocuments()
+        .then((myMockDoc) {
       // ignore: deprecated_member_use
       if (myMockDoc.documents.isNotEmpty) {
         // ignore: deprecated_member_use
         for (int i = 0; i < myMockDoc.documents.length; i++) {
           // ignore: deprecated_member_use
           if (i == 0) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 300);
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 300);
           } else if (i == 1) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 52);
-          }else if (i == 2) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 29);
-          }else if (i == 3) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 200);
-          }else if (i == 4) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 201);
-          }else if (i == 5) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 289);
-          }else if (i == 6) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 129);
-          }else if (i == 7) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 68);
-          }else if (i == 8) {
-            initMarker(
-                myMockDoc.docs[i], myMockDoc.docs[i].documentID, 69);
-          }else if (i == 9) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 52);
+          } else if (i == 2) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 29);
+          } else if (i == 3) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 200);
+          } else if (i == 4) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 201);
+          } else if (i == 5) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 289);
+          } else if (i == 6) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 129);
+          } else if (i == 7) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 68);
+          } else if (i == 8) {
+            initMarker(myMockDoc.docs[i], myMockDoc.docs[i].documentID, 69);
+          } else if (i == 9) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 48);
-          }else if (i == 10) {
+          } else if (i == 10) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 72);
-          }else if (i == 11) {
+          } else if (i == 11) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 31);
-          }else if (i == 12) {
+          } else if (i == 12) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 325);
-          }else if (i == 13) {
+          } else if (i == 13) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 278);
-          }else if (i == 14) {
+          } else if (i == 14) {
             initMarker(
                 myMockDoc.documents[i], myMockDoc.documents[i].documentID, 189);
           }
@@ -187,6 +182,13 @@ class _MapPageState extends State<MapPage> {
     LatLng latlng15 = LatLng(13.732562997781594, 100.49047256027704);
     LatLng latlng16 = LatLng(13.731340638423305, 100.49116214169406);
     LatLng latlng17 = LatLng(13.731462758012922, 100.4908707181216);
+
+    LatLng sci = LatLng(13.73260711989596, 100.49038988914585);
+    LatLng edu = LatLng(13.732246752806391, 100.48742362602128);
+    LatLng manage = LatLng(13.731145409294014, 100.49123272956987);
+    LatLng human = LatLng(13.73167383161388, 100.48785268977943);
+    LatLng music = LatLng(13.731908267902522, 100.48799929466742);
+    LatLng eng = LatLng(13.731395575154007, 100.48825641708635);
 
     CameraPosition cameraPosition = CameraPosition(
       target: latlng,
@@ -372,6 +374,66 @@ class _MapPageState extends State<MapPage> {
               title: "กองนโยบายและแผน", snippet: 'อาคาร 6 ชั้นที่ 7'));
     }
 
+    Marker lo19() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(297),
+          markerId: MarkerId("19"),
+          position: sci,
+          onTap: () {},
+          infoWindow: InfoWindow(
+              title: "คณะวิทยาศาสตร์และเทคโนโลยี", snippet: 'อาคาร 9'));
+    }
+
+    Marker lo20() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(297),
+          markerId: MarkerId("20"),
+          position: edu,
+          onTap: () {},
+          infoWindow: InfoWindow(title: "คณะครุศาสตร์", snippet: 'อาคาร 30'));
+    }
+
+    Marker lo21() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(297),
+          markerId: MarkerId("21"),
+          position: manage,
+          onTap: () {},
+          infoWindow:
+              InfoWindow(title: "คณะวิทยาการจัดการ", snippet: 'อาคาร 7'));
+    }
+
+    Marker lo22() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(297),
+          markerId: MarkerId("22"),
+          position: human,
+          onTap: () {},
+          infoWindow: InfoWindow(
+              title: "คณะมนุษยศาสตร์และสังคมศาสตร์", snippet: 'อาคาร 27'));
+    }
+
+    Marker lo23() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(297),
+          markerId: MarkerId("23"),
+          position: music,
+          onTap: () {},
+          infoWindow:
+              InfoWindow(title: "วิทยาลัยการดนตรี", snippet: 'อาคาร 27'));
+    }
+
+    Marker lo24() {
+      return Marker(
+          icon: BitmapDescriptor.defaultMarkerWithHue(29),
+          markerId: MarkerId("24"),
+          position: eng,
+          onTap: () {},
+          infoWindow: InfoWindow(
+              title: "คณะวิศวกรรมศาสตร์และเทคโนโลยีอุตสาหกรรม",
+              snippet: 'อาคาร 24 ชั้นที่ M'));
+    }
+
     Set<Marker> myset() {
       return <Marker>[
         lo1(),
@@ -391,7 +453,13 @@ class _MapPageState extends State<MapPage> {
         lo15(),
         lo16(),
         lo17(),
-        lo18()
+        lo18(),
+        lo19(),
+        lo20(),
+        lo21(),
+        lo22(),
+        lo23(),
+        lo24(),
       ].toSet();
     }
 
