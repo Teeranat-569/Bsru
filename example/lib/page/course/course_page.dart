@@ -97,19 +97,24 @@ class _CoursePageState extends State<CoursePage> {
             children: [
               ExpansionTile(
                 title: Text(
-                  "สาขาวิชาเกษตรศาสตร์",
+                  "สาขาวิชาเกษตรและเทคโนโลยีการเกษตร (วท.บ.)",
                   style: TextStyle(
                     fontSize: 14.0,
                   ),
                 ),
                 children: [
                   ListTile(
-                    title: Text(
-                      "สาขาวิชาเกษตรและเทคโนโลยีการเกษตร",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                      ),
-                    ),
+                    title: facebook(
+                        'https://www.facebook.com/%E0%B9%80%E0%B8%81%E0%B8%A9%E0%B8%95%E0%B8%A3%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88-301670866879120',
+                        'Facebook'),
+                  ),
+                  ListTile(
+                    // title: Text(
+                    //   "สาขาวิชาเกษตรและเทคโนโลยีการเกษตร",
+                    //   style: TextStyle(
+                    //     fontSize: 14.0,
+                    //   ),
+                    // ),
                     subtitle: website('http://site.bsru.ac.th/aat/'),
                   ),
                 ],
@@ -124,7 +129,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B8%AF-141414417244708/',
+                        'https://www.facebook.com/%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B8%AF-161816417244708/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -169,19 +174,24 @@ class _CoursePageState extends State<CoursePage> {
               ),
               ExpansionTile(
                 title: Text(
-                  "สาขาวิชาวิทยาศาสตร์ความปลอดภัย",
+                  "สาขาวิชาอาชีวอนามัยและความปลอดภัย (วท.บ.)",
                   style: TextStyle(
                     fontSize: 14.0,
                   ),
                 ),
                 children: [
                   ListTile(
-                    title: Text(
-                      "สาขาวิชาอาชีวอนามัยและความปลอดภัย",
-                      style: TextStyle(
-                        fontSize: 14.0,
-                      ),
-                    ),
+                    title: facebook(
+                        'https://www.facebook.com/safetybsru/', 'Facebook'),
+                  ),
+                  ListTile(
+                    // title:
+                    // Text(
+                    //   "สาขาวิชาอาชีวอนามัยและความปลอดภัย",
+                    //   style: TextStyle(
+                    //     fontSize: 14.0,
+                    //   ),
+                    // ),
                     subtitle: website('http://site.bsru.ac.th/ohs/'),
                   ),
                 ],
@@ -216,7 +226,7 @@ class _CoursePageState extends State<CoursePage> {
                         'https://www.facebook.com/EnviBSRU/', 'Facebook'),
                   ),
                   ListTile(
-                    title: website('http://sci.bsru.ac.th/dept/env/'),
+                    title: website('http://site.bsru.ac.th/envsci/'),
                   )
                 ],
               ),
@@ -247,7 +257,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/profile.php?id=100022710410811',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%84%E0%B8%93%E0%B8%B4%E0%B8%95%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B8%AA%E0%B8%96%E0%B8%B4%E0%B8%95%E0%B8%B4%E0%B8%9B%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B8%E0%B8%81%E0%B8%95%E0%B9%8C-BSRU-832707650103046',
                         'Facebook'),
                   ),
                   ListTile(
@@ -265,7 +275,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-BSRU-140869215354854/',
+                        'https://www.facebook.com/%E0%B8%99%E0%B8%A7%E0%B8%B1%E0%B8%95%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%81%E0%B8%A5%E0%B8%B0%E0%B9%80%E0%B8%97%E0%B8%84%E0%B9%82%E0%B8%99%E0%B9%82%E0%B8%A5%E0%B8%A2%E0%B8%B5%E0%B8%9E%E0%B8%AD%E0%B8%A5%E0%B8%B4%E0%B9%80%E0%B8%A1%E0%B8%AD%E0%B8%A3%E0%B9%8C-%E0%B9%80%E0%B8%84%E0%B8%A1%E0%B8%B5%E0%B8%AD%E0%B8%B8%E0%B8%95%E0%B8%AA%E0%B8%B2%E0%B8%AB%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1-BSRU-180869215354854/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -352,7 +362,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-114597458858557/',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-118597458858557/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -439,23 +449,23 @@ class _CoursePageState extends State<CoursePage> {
                   )
                 ],
               ),
-              ExpansionTile(
-                title: Text(
-                  "คณิตศาสตร์ (ค.บ.)",
-                  style: TextStyle(
-                    fontSize: 14.0,
-                  ),
-                ),
-                children: [
-                  ListTile(
-                    title: facebook(
-                        'https://www.facebook.com/matheduBSRU/', 'Facebook'),
-                  ),
-                  ListTile(
-                    title: website('http://site.bsru.ac.th/mathed/'),
-                  )
-                ],
-              ),
+              // ExpansionTile(
+              //   title: Text(
+              //     "คณิตศาสตร์ (ค.บ.)",
+              //     style: TextStyle(
+              //       fontSize: 14.0,
+              //     ),
+              //   ),
+              //   children: [
+              //     ListTile(
+              //       title: facebook(
+              //           'https://www.facebook.com/matheduBSRU/', 'Facebook'),
+              //     ),
+              //     ListTile(
+              //       title: website('http://site.bsru.ac.th/mathed/'),
+              //     )
+              //   ],
+              // ),
               ExpansionTile(
                 title: Text(
                   "คอมพิวเตอร์ศึกษา (ค.บ.)",
@@ -483,7 +493,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%84%E0%B8%9A%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88-BSRU-214717958865862/',
+                        'https://www.facebook.com/%E0%B8%84%E0%B8%9A%E0%B8%9F%E0%B8%B4%E0%B8%AA%E0%B8%B4%E0%B8%81%E0%B8%AA%E0%B9%8C-%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88-BSRU-216717958865862/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -773,7 +783,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/MKBSRU1419', 'Facebook'),
+                        'https://www.facebook.com/MKBSRU2019', 'Facebook'),
                   ),
                   ListTile(
                     title: website('http://site.bsru.ac.th/marketing'),
@@ -826,7 +836,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%BABSRU-%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9A%E0%B8%B1%E0%B8%8D%E0%B8%8A%E0%B8%B5-121027614606172/',
+                        'https://www.facebook.com/accounting.bsru.1',
                         'Facebook'),
                   ),
                   ListTile(
@@ -930,8 +940,8 @@ class _CoursePageState extends State<CoursePage> {
                 ),
                 children: [
                   ListTile(
-                    title: facebook('https://www.facebook.com/econbsruofficial',
-                        'Facebook'),
+                    title: facebook(
+                        'https://www.facebook.com/EconBSRU/', 'Facebook'),
                   ),
                   ListTile(
                     title: website('http://site.bsru.ac.th/econ/'),
@@ -1024,6 +1034,10 @@ class _CoursePageState extends State<CoursePage> {
                   ),
                 ),
                 children: [
+                  ListTile(
+                    title: facebook(
+                        'https://www.facebook.com/Chinesehubsru', 'Facebook'),
+                  ),
                   ListTile(
                     title: website('http://chinese.bsru.ac.th/'),
                   )
@@ -1146,6 +1160,9 @@ class _CoursePageState extends State<CoursePage> {
                     title: facebook(
                         'https://www.facebook.com/librarybsru/', 'Facebook'),
                   ),
+                  ListTile(
+                    title: website('http://site.bsru.ac.th/lis/'),
+                  )
                 ],
               ),
               ExpansionTile(
@@ -1156,6 +1173,10 @@ class _CoursePageState extends State<CoursePage> {
                   ),
                 ),
                 children: [
+                  ListTile(
+                    title: facebook('https://www.facebook.com/aseanstudiesbsru',
+                        'Facebook'),
+                  ),
                   ListTile(
                     title: website('http://site.bsru.ac.th/asean/'),
                   ),
@@ -1184,7 +1205,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A25%E0%B8%9B%E0%B8%B5-357042144743514/',
+                        'https://www.facebook.com/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%84%E0%B8%97%E0%B8%A25%E0%B8%9B%E0%B8%B5-357042164743520/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -1312,7 +1333,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%94%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%84%E0%B8%A3%E0%B8%B8%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-882414198502897/',
+                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%94%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%84%E0%B8%A3%E0%B8%B8%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-882416198502897/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -1330,7 +1351,7 @@ class _CoursePageState extends State<CoursePage> {
                 children: [
                   ListTile(
                     title: facebook(
-                        'https://www.facebook.com/%E0%B8%AA%E0%B8%B2%E0%B8%82%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%8A%E0%B8%B2%E0%B8%94%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B8%A8%E0%B8%B6%E0%B8%81%E0%B8%A9%E0%B8%B2-%E0%B8%84%E0%B8%93%E0%B8%B0%E0%B8%84%E0%B8%A3%E0%B8%B8%E0%B8%A8%E0%B8%B2%E0%B8%AA%E0%B8%95%E0%B8%A3%E0%B9%8C-%E0%B8%A1%E0%B8%AB%E0%B8%B2%E0%B8%A7%E0%B8%B4%E0%B8%97%E0%B8%A2%E0%B8%B2%E0%B8%A5%E0%B8%B1%E0%B8%A2%E0%B8%A3%E0%B8%B2%E0%B8%8A%E0%B8%A0%E0%B8%B1%E0%B8%8F%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-882414198502897/',
+                        'https://www.facebook.com/%E0%B8%94%E0%B8%99%E0%B8%95%E0%B8%A3%E0%B8%B5%E0%B9%84%E0%B8%97%E0%B8%A2-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-152989838780007/',
                         'Facebook'),
                   ),
                   ListTile(
@@ -1444,7 +1465,7 @@ class _CoursePageState extends State<CoursePage> {
                   children: [
                     ListTile(
                       title: facebook(
-                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-146245221551714/',
+                          'https://www.facebook.com/%E0%B8%A7%E0%B8%B4%E0%B8%A8%E0%B8%A7%E0%B8%81%E0%B8%A3%E0%B8%A3%E0%B8%A1%E0%B9%84%E0%B8%9F%E0%B8%9F%E0%B9%89%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87%E0%B8%81%E0%B8%A5%E0%B8%81%E0%B8%B2%E0%B8%A3%E0%B8%9C%E0%B8%A5%E0%B8%B4%E0%B8%95-%E0%B8%A1%E0%B8%A3%E0%B8%A0%E0%B8%9A%E0%B9%89%E0%B8%B2%E0%B8%99%E0%B8%AA%E0%B8%A1%E0%B9%80%E0%B8%94%E0%B9%87%E0%B8%88%E0%B9%80%E0%B8%88%E0%B9%89%E0%B8%B2%E0%B8%9E%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%B2-186245221551718/',
                           'Facebook'),
                     ),
                     ListTile(

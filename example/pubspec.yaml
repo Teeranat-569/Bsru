@@ -58,7 +58,7 @@ flutter:
     - images/contact.png
     - images/buttonBG.png
     - images/facebook.png
-    - images/domain.png
+    # - images/domain.png
     - images/footer.png
     - images/address.png
     - images/agencyOne.jpg
@@ -101,8 +101,8 @@ flutter:
     - images/human.png
     - images/manage.png
     - images/teah.png
-    - images/PopUp.png
-    - images/page.jpg
+    # - images/PopUp.png
+    # - images/page.jpg
     - images/hhoo.jpg
     - images/key11.png
     - images/web11.png
@@ -129,7 +129,7 @@ flutter:
     - images/briefcase.png
     - images/scholarship.png
     - images/employeeii.png
-    - images/user.png
+    # - images/user.png
     - images/maps.png
     - images/ff.jpg
     - images/page_gif.gif
