@@ -44,49 +44,49 @@ class _PeoplePageState extends State<PeoplePage> {
                         primary: false,
                         children: <Widget>[
                           // ignore: deprecated_member_use
-                          // FlatButton(
-                          //   color: Colors.white,
-                          //   shape: RoundedRectangleBorder(
-                          //       borderRadius: BorderRadius.circular(40)),
-                          //   // elevation: 16,
-                          //   onPressed: () {
-                          //     website('http://logon.bsru.ac.th/');
-                          //   },
-                          //   child: Column(
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     children: <Widget>[
-                          //       Image.asset(
-                          //         'images/key11.png',
-                          //         height: 30,
-                          //       ),
-                          //       Text(
-                          //         'Login SuriyaNet',
-                          //         style: TextStyle(
-                          //           // fontSize: 12.0,
-                          //           fontWeight: FontWeight.bold,
-                          //         ),
-                          //       ),
-                          //       // Column(
-                          //       //   children: [
-                          //       //     Text(
-                          //       //       'เข้าระบบ',
-                          //       //       style: TextStyle(
-                          //       //         fontSize: 12.0,
-                          //       //         color: Colors.purple[900],
-                          //       //       ),
-                          //       //     ),
-                          //       //     Text(
-                          //       //       'Authenticate',
-                          //       //       style: TextStyle(
-                          //       //         fontSize: 12.0,
-                          //       //         color: Colors.purple[900],
-                          //       //       ),
-                          //       //     ),
-                          //       //   ],
-                          //       // )
-                          //     ],
-                          //   ),
-                          // ),
+                          FlatButton(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            // elevation: 16,
+                            onPressed: () {
+                              website('http://logon.bsru.ac.th/');
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/key11.png',
+                                  height: 30,
+                                ),
+                                Text(
+                                  'Login SuriyaNet',
+                                  style: TextStyle(
+                                    // fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                // Column(
+                                //   children: [
+                                //     Text(
+                                //       'เข้าระบบ',
+                                //       style: TextStyle(
+                                //         fontSize: 12.0,
+                                //         color: Colors.purple[900],
+                                //       ),
+                                //     ),
+                                //     Text(
+                                //       'Authenticate',
+                                //       style: TextStyle(
+                                //         fontSize: 12.0,
+                                //         color: Colors.purple[900],
+                                //       ),
+                                //     ),
+                                //   ],
+                                // )
+                              ],
+                            ),
+                          ),
                           // ignore: deprecated_member_use
                           FlatButton(
                             color: Colors.white,
@@ -105,6 +105,49 @@ class _PeoplePageState extends State<PeoplePage> {
                                 ),
                                 Text(
                                   'ระบบ MIS',
+                                  style: TextStyle(
+                                    // fontSize: 12.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                // Column(
+                                //   children: [
+                                //     Text(
+                                //       'ตารางสอน',
+                                //       style: TextStyle(
+                                //         fontSize: 15.0,
+                                //         color: Colors.purple[900],
+                                //       ),
+                                //     ),
+                                //     Text(
+                                //       'บันทึกเกรด',
+                                //       style: TextStyle(
+                                //         fontSize: 15.0,
+                                //         color: Colors.purple[900],
+                                //       ),
+                                //     ),
+                                //   ],
+                                // )
+                              ],
+                            ),
+                          ),
+                          FlatButton(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            // elevation: 16,
+                            onPressed: () {
+                              website('https://bsru.net/');
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/cer.png',
+                                  height: 30,
+                                ),
+                                Text(
+                                  'ผลงานบุคลากร',
                                   style: TextStyle(
                                     // fontSize: 12.0,
                                     fontWeight: FontWeight.bold,
@@ -491,11 +534,47 @@ class _PeoplePageState extends State<PeoplePage> {
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: <Widget>[
                                 Image.asset(
-                                  'images/email.png',
+                                  'images/o365.png',
                                   height: 40,
                                 ),
                                 Text(
-                                  'BSRU-Mail',
+                                  'Office 365',
+                                  style: TextStyle(
+                                    // fontSize: 18.0,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                                // Text('Google Education',
+                                //     style: TextStyle(
+                                //       fontSize: 15.0,
+                                //       color: Colors.purple[900],
+                                //     )),
+                                // Text('Office365',
+                                //     style: TextStyle(
+                                //       fontSize: 15.0,
+                                //       color: Colors.purple[900],
+                                //     ))
+                              ],
+                            ),
+                          ),
+                          // ignore: deprecated_member_use
+                          FlatButton(
+                            color: Colors.white,
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            // elevation: 16,
+                            onPressed: () {
+                              website('https://mail.google.com/');
+                            },
+                            child: Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/googleEdu.png',
+                                  height: 40,
+                                ),
+                                Text(
+                                  'Google Education',
                                   style: TextStyle(
                                     // fontSize: 18.0,
                                     fontWeight: FontWeight.bold,

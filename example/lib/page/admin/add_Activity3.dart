@@ -111,7 +111,13 @@ class _Activity3State extends State<Activity3> {
 
   Widget link() {
     return Column(
-      children: [Text('Link ที่ถูกใช้ปัจจุบัน'), Text('$link3')],
+      children: [
+        Text('Link ที่ถูกใช้ปัจจุบัน'),
+        Text(
+          '$link3',
+          style: TextStyle(color: Colors.grey),
+        )
+      ],
     );
   }
 
@@ -147,7 +153,7 @@ class _Activity3State extends State<Activity3> {
   Future<Null> route(Widget routeName) async {
     MaterialPageRoute materialPageRoute =
         MaterialPageRoute(builder: (BuildContext context) => routeName);
-    Navigator.of(context).pushReplacement(materialPageRoute);
+    await Navigator.of(context).pushReplacement(materialPageRoute);
   }
 
   @override

@@ -109,7 +109,13 @@ class _ActivityState extends State<Activity> {
 
   Widget link() {
     return Column(
-      children: [Text('Link ที่ถูกใช้ปัจจุบัน'), Text('$link1')],
+      children: [
+        Text('Link ที่ถูกใช้ปัจจุบัน'),
+        Text(
+          '$link1',
+          style: TextStyle(color: Colors.grey),
+        )
+      ],
     );
   }
 
@@ -183,7 +189,7 @@ class _ActivityState extends State<Activity> {
         ],
       ),
       appBar: AppBar(
-        title: Text('เพิ่มปฏิทินกิจกรรม'),
+        title: Text('แก้ไขปฏิทินวิชาการ'),
         toolbarHeight: 40,
       ),
       body: Container(

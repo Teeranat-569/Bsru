@@ -110,7 +110,13 @@ class _Activity2State extends State<Activity2> {
 
   Widget link() {
     return Column(
-      children: [Text('Link ที่ถูกใช้ปัจจุบัน'), Text('$link2')],
+      children: [
+        Text('Link ที่ถูกใช้ปัจจุบัน'),
+        Text(
+          '$link2',
+          style: TextStyle(color: Colors.grey),
+        )
+      ],
     );
   }
 

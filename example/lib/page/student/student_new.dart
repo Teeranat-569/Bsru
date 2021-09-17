@@ -70,6 +70,46 @@ class _StudentnewState extends State<Studentnew> {
                               ],
                             ),
                           ),
+                           RaisedButton(
+                            color: Colors.yellow[100],
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(40)),
+                            // elevation: 16,
+                            onPressed: () {
+                              website(
+                                  'http://202.29.54.207/dev3/admission/payment.php');
+                            },
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: <Widget>[
+                                Image.asset(
+                                  'images/studentNew.png',
+                                  height: 80,
+                                ),
+                                SizedBox(
+                                  width: 20,
+                                ),
+                                Row(
+                                  children: [
+                                    Text(
+                                      'ตรวจสอบการ',
+                                      style: TextStyle(
+                                        // fontSize: 18.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                    Text(
+                                      'สมัคร',
+                                      style: TextStyle(
+                                        // fontSize: 18.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  ],
+                                ),
+                              ],
+                            ),
+                          ),
                           RaisedButton(
                             color: Colors.blue[50],
                             shape: RoundedRectangleBorder(
@@ -152,46 +192,7 @@ class _StudentnewState extends State<Studentnew> {
                               ],
                             ),
                           ),
-                          RaisedButton(
-                            color: Colors.yellow[100],
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(40)),
-                            // elevation: 16,
-                            onPressed: () {
-                              website(
-                                  'http://202.29.54.207/dev3/admission/payment.php');
-                            },
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: <Widget>[
-                                Image.asset(
-                                  'images/studentNew.png',
-                                  height: 80,
-                                ),
-                                SizedBox(
-                                  width: 20,
-                                ),
-                                Row(
-                                  children: [
-                                    Text(
-                                      'ตรวจสอบการ',
-                                      style: TextStyle(
-                                        // fontSize: 18.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                    Text(
-                                      'สมัคร',
-                                      style: TextStyle(
-                                        // fontSize: 18.0,
-                                        fontWeight: FontWeight.bold,
-                                      ),
-                                    ),
-                                  ],
-                                ),
-                              ],
-                            ),
-                          ),
+                         
                           RaisedButton(
                             color: Colors.red[100],
                             shape: RoundedRectangleBorder(

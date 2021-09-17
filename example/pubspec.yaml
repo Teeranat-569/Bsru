@@ -137,6 +137,9 @@ flutter:
     - images/admin.png
     - images/pin.png
     - images/flag.png
+    - images/o365.png
+    - images/googleEdu.png
+    - images/cer.png
   fonts:
     - family: Pridi
       fonts:

@@ -85,7 +85,7 @@ class _AddState extends State<Add> {
                             width: 5,
                           ),
                           Text(
-                            'ปฏิทินวิชาการ',
+                            'แก้ไขปฏิทินและการลงทะเบียน',
                             style: TextStyle(fontSize: 20, color: Colors.white),
                           ),
                         ],

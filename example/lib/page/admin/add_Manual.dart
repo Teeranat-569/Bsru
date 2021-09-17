@@ -128,7 +128,7 @@ class _AddManualState extends State<AddManual> {
         context: context,
         builder: (BuildContext constext) {
           return AlertDialog(
-            title: Text('คุณแน่ใจใช่ไหม ?'),
+            title: Text('คุณแน่ใจใช่ไหม?'),
             content: Text('คุณต้องการที่จะลบรายการนี้?'),
             actions: <Widget>[
               FlatButton(
@@ -170,7 +170,6 @@ class _AddManualState extends State<AddManual> {
 
                 setState(() {
                   widgets.add(map);
-
                 });
                 print(widgets.toList());
               })
@@ -343,6 +342,7 @@ class _AddManualState extends State<AddManual> {
                 ),
                 // )
                 RaisedButton(
+                  color: Colors.blue[200],
                   onPressed: () {
                     // ignore: curly_braces_in_flow_control_structures
                     insertData();
@@ -351,17 +351,32 @@ class _AddManualState extends State<AddManual> {
                   child: Text('เพิ่มคู่มือ'),
                 ),
                 if (textEditController.text.isEmpty)
-                  Text('ตัวอย่างคู่มือ')
+                  Expanded(
+                      child: Column(
+                    children: [
+                      Text('ตัวอย่างคู่มือ'),
+                      Text(
+                        'ไม่ได้ระบุ link คู่มือ',
+                        style: TextStyle(color: Colors.grey),
+                      )
+                    ],
+                  ))
                 else
                   Expanded(
-                    child: SingleChildScrollView(
-                      child: Container(
-                          height: MediaQuery.of(context).size.height,
-                          color: Colors.deepOrange,
-                          child: SfPdfViewer.network(
-                              '${textEditController.text}')),
+                    child: Column(
+                      children: [
+                        Text('ตัวอย่างคู่มือ'),
+                        SingleChildScrollView(
+                          child: Container(
+                              height: MediaQuery.of(context).size.height,
+                              color: Colors.deepOrange,
+                              child: SfPdfViewer.network(
+                                  '${textEditController.text}')),
+                        ),
+                      ],
                     ),
                   ),
+
                 SizedBox(
                   height: 10.0,
                 ),
