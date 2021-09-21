@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_google_maps_example/page/admin/ex_manual.dart';
 import 'package:flutter_google_maps_example/page/admin/fdf_manualAdmin.dart';
 import 'package:flutter_google_maps_example/page/manual/link_model.dart';
 import 'package:fluttertoast/fluttertoast.dart';
@@ -350,32 +351,41 @@ class _AddManualState extends State<AddManual> {
                   },
                   child: Text('เพิ่มคู่มือ'),
                 ),
-                if (textEditController.text.isEmpty)
-                  Expanded(
-                      child: Column(
-                    children: [
-                      Text('ตัวอย่างคู่มือ'),
-                      Text(
-                        'ไม่ได้ระบุ link คู่มือ',
-                        style: TextStyle(color: Colors.grey),
-                      )
-                    ],
-                  ))
-                else
-                  Expanded(
-                    child: Column(
-                      children: [
-                        Text('ตัวอย่างคู่มือ'),
-                        SingleChildScrollView(
-                          child: Container(
-                              height: MediaQuery.of(context).size.height,
-                              color: Colors.deepOrange,
-                              child: SfPdfViewer.network(
-                                  '${textEditController.text}')),
-                        ),
-                      ],
-                    ),
-                  ),
+                // Text('ตัวอย่างคู่มือ'),
+                RaisedButton(
+                  color: Colors.deepOrange[200],
+                  onPressed: () {
+                    // ignore: curly_braces_in_flow_control_structures
+                    // insertData();
+                    route2(ExManual(
+                      nameFormm: textEditController.text,
+                    ));
+                  },
+                  child: Text('ดูตัวอย่างคู่มือ'),
+                ),
+                // if (textEditController.text.isEmpty)
+                //   Column(
+                //     children: [
+                //       Text(
+                //         'ไม่ได้ระบุ link คู่มือ',
+                //         style: TextStyle(color: Colors.grey),
+                //       )
+                //     ],
+                //   )
+                // else
+                //   Column(
+                //     children: [
+                //       // Text('ตัวอย่างคู่มือ'),
+                //       SingleChildScrollView(
+                //         child: Container(
+
+                //             height: 200,
+                //             color: Colors.deepOrange,
+                //             child: SfPdfViewer.network(
+                //                 '${textEditController.text}')),
+                //       ),
+                //     ],
+                //   ),
 
                 SizedBox(
                   height: 10.0,
